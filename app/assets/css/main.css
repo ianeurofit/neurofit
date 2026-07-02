@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme static {
+  /* Neurofit AI brand palette, derived from brand reference screens */
+  --color-brand-50: #eefdf3;
+  --color-brand-100: #d6f9e0;
+  --color-brand-200: #aef2c3;
+  --color-brand-300: #75e69f;
+  --color-brand-400: #3ed079;
+  --color-brand-500: #17b45c;
+  --color-brand-600: #0e9a4c;
+  --color-brand-700: #0c7a40;
+  --color-brand-800: #0d6136;
+  --color-brand-900: #0c502f;
+  --color-brand-950: #042d19;
+
+  --color-ink-900: #04120c;
+  --color-ink-950: #020b07;
+
+  --font-sans: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply antialiased text-neutral-900 dark:text-neutral-100 bg-white dark:bg-ink-950;
+}
+
+.section-eyebrow {
+  @apply text-xs font-bold tracking-[0.14em] uppercase text-brand-600 dark:text-brand-400;
+}
+
+.bg-radial-dots {
+  background-image: radial-gradient(currentColor 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
