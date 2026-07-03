@@ -50,7 +50,7 @@ const pillars = [
     <UContainer>
       <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
         <div>
-          <UiSectionEyebrow number="06" label="¿A quién ayudamos?" />
+          <UiSectionEyebrow label="¿A quién ayudamos?" />
           <h2 class="mt-3 max-w-lg text-3xl font-extrabold leading-tight tracking-tight text-neutral-900 sm:text-4xl dark:text-white">
             Neurofit AI está diseñado para <span class="text-brand-600 dark:text-brand-400">diferentes personas y organizaciones</span>
           </h2>

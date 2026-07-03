@@ -2,7 +2,7 @@
 const trust = [
   { icon: 'i-lucide-shield-check', text: 'Ciencia y tecnología\nde vanguardia' },
   { icon: 'i-lucide-lock', text: 'Privacidad y seguridad\nde tus datos' },
-  { icon: 'i-lucide-trending-up', text: 'Enfocado en prevención\ny bienestar' }
+  { icon: 'i-lucide-trending-up', text: 'Enfocado en prevención\ny bienestar' },
 ]
 </script>
 

@@ -28,7 +28,7 @@ const dimensions = [
     <UContainer>
       <div class="grid gap-14 lg:grid-cols-2 lg:items-center">
         <div>
-          <UiSectionEyebrow number="03" label="Nuestra solución" />
+          <UiSectionEyebrow label="Nuestra solución" />
           <h2 class="mt-3 text-3xl font-extrabold leading-tight tracking-tight text-neutral-900 sm:text-4xl dark:text-white">
             Neurofit AI<br>
             <span class="text-brand-600 dark:text-brand-400">Brain Intelligence™</span>
