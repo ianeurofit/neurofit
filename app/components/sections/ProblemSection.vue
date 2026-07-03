@@ -77,7 +77,10 @@ const problems = [
         </div>
 
         <div class="relative flex items-center justify-center">
-          <UIcon name="i-lucide-scan-face" class="size-64 text-brand-400/70 sm:size-80" />
+                  <NuxtPicture
+          format="avif,webp"
+          src="/neurofit-person-pefil-1.webp"
+        />
         </div>
       </div>
 

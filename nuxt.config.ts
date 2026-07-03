@@ -8,12 +8,7 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  modules: [
-    '@nuxt/ui',
-    '@nuxt/icon',
-    '@nuxt/eslint',
-    '@formkit/auto-animate/nuxt'
-  ],
+  modules: ['@nuxt/ui', '@nuxt/icon', '@nuxt/eslint', '@formkit/auto-animate/nuxt', '@nuxt/image'],
 
   css: ['~/assets/css/main.css'],
 

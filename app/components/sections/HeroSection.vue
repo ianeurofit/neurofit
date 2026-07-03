@@ -60,9 +60,9 @@ const trust = [
 
       <div class="relative flex items-center justify-center">
         <div class="absolute size-72 rounded-full bg-brand-500/10 blur-3xl sm:size-96" />
-        <UIcon
-          name="i-lucide-brain-circuit"
-          class="relative size-72 text-brand-400/90 drop-shadow-[0_0_45px_rgba(23,180,92,0.45)] sm:size-96"
+        <NuxtPicture
+          format="avif,webp"
+          src="/Brain-section-1.webp"
         />
       </div>
     </UContainer>

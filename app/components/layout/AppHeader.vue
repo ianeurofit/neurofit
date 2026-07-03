@@ -10,9 +10,9 @@ const isDark = computed({
 
 const links = [
   { label: 'Inicio', to: '#inicio' },
-  { label: 'Solución', to: '#solucion' },
-  { label: 'Brain Score', to: '#brain-score' },
-  { label: 'Tecnología', to: '#tecnologia' },
+  { label: 'Sobre Neurofit IA', to: '#solucion' },
+  //{ label: 'Brain Score', to: '#brain-score' },
+  { label: 'Plataforma', to: '#tecnologia' },
   { label: 'Contacto', to: '#contacto' }
 ]
 

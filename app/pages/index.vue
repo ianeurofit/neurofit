@@ -19,8 +19,8 @@ useSeoMeta({
       <SectionsEvaluationSection />
       <SectionsBrainScoreSection />
       <SectionsAudienceSection />
-      <SectionsMissionVisionSection />
       <SectionsBenefitsSection />
+      <SectionsMissionVisionSection />
       <SectionsTeamSection />
       <SectionsNewsletterSection />
     </main>
