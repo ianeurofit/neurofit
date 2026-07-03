@@ -10,7 +10,7 @@ const projection = [
   { year: 'Hoy', score: 82 },
   { year: '5 años', score: 78 },
   { year: '10 años', score: 72 },
-  { year: '20 años', score: 65 }
+  { year: '20 años', score: 65 },
 ]
 
 const recommendations = [
@@ -19,7 +19,7 @@ const recommendations = [
   'Manejo del estrés',
   'Entrenamiento cognitivo',
   'Alimentación saludable',
-  'Fortalecer relaciones sociales'
+  'Fortalecer relaciones sociales',
 ]
 
 const deliverables = [
@@ -28,7 +28,7 @@ const deliverables = [
   { icon: 'i-lucide-bell', title: 'Alertas tempranas', description: 'Notificaciones inteligentes' },
   { icon: 'i-lucide-lightbulb', title: 'Recomendaciones', description: 'Acciones basadas en ciencia' },
   { icon: 'i-lucide-calendar-check', title: 'Plan de optimización', description: 'Estrategias para mejorar tu cerebro' },
-  { icon: 'i-lucide-line-chart', title: 'Seguimiento continuo', description: 'Monitorea tu evolución en el tiempo' }
+  { icon: 'i-lucide-line-chart', title: 'Seguimiento continuo', description: 'Monitorea tu evolución en el tiempo' },
 ]
 
 const maxScore = 100
@@ -39,7 +39,7 @@ const maxScore = 100
     <UContainer>
       <div class="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
         <div>
-          <UiSectionEyebrow number="05" label="Brain Score™" />
+          <UiSectionEyebrow label="Brain Score™" />
           <h2 class="mt-3 text-3xl font-extrabold leading-tight tracking-tight text-neutral-900 sm:text-4xl dark:text-white">
             Tu indicador integral de <span class="text-brand-600 dark:text-brand-400">salud cerebral</span>
           </h2>
@@ -48,6 +48,10 @@ const maxScore = 100
             <span class="font-semibold text-neutral-900 dark:text-white">estado cerebral actual</span>
             y tu <span class="font-semibold text-neutral-900 dark:text-white">proyección futura</span>.
           </p>
+          <NuxtPicture
+            format="avif,webp"
+            src="/hand-brain.webp"
+          />
           <div class="mt-6 h-px w-16 bg-neutral-300 dark:bg-neutral-700" />
 
           <p class="mt-8 font-serif text-lg italic text-neutral-500 dark:text-neutral-400">

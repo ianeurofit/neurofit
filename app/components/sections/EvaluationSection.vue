@@ -47,7 +47,7 @@ const colorMap: Record<string, { text: string, dot: string, ring: string }> = {
     <UContainer>
       <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
         <div>
-          <UiSectionEyebrow number="04" label="¿Qué evalúa Neurofit AI?" />
+          <UiSectionEyebrow label="¿Qué evalúa Neurofit AI?" />
           <h2 class="mt-3 max-w-lg text-3xl font-extrabold leading-tight tracking-tight text-neutral-900 sm:text-4xl dark:text-white">
             Un análisis integral de tu <span class="text-brand-600 dark:text-brand-400">salud cerebral</span>
           </h2>

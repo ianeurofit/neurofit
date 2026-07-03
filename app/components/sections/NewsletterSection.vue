@@ -23,7 +23,7 @@ const countries = ['Colombia', 'México', 'España', 'Estados Unidos', 'Argentin
     <div class="bg-radial-dots pointer-events-none absolute inset-0 text-white/5" />
 
     <UContainer class="relative">
-      <UiSectionEyebrow number="11" label="Sé de los primeros en conocer" />
+      <UiSectionEyebrow label="Sé de los primeros en conocer" />
       <div class="mt-12 grid gap-12 lg:grid-cols-[1fr_1fr_0.6fr] lg:items-start">
         <div>
           <h2 class="text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl">

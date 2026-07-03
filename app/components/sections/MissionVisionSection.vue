@@ -22,11 +22,11 @@ const impact = [
 </script>
 
 <template>
-  <section class="bg-neutral-50 py-20 dark:bg-neutral-900/40 lg:py-28">
+  <section id="vision" class="bg-neutral-50 py-20 dark:bg-neutral-900/40 lg:py-28">
     <UContainer>
       <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
         <div>
-          <UiSectionEyebrow number="07" label="Nuestra misión y visión" />
+          <UiSectionEyebrow label="Nuestra misión y visión" />
           <h2 class="mt-3 max-w-lg text-3xl font-extrabold leading-tight tracking-tight text-neutral-900 sm:text-4xl dark:text-white">
             Un mundo donde cada cerebro pueda alcanzar su <span class="text-brand-600 dark:text-brand-400">máximo potencial</span>
           </h2>

@@ -38,7 +38,7 @@ const problems = [
     <UContainer>
       <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
         <div>
-          <UiSectionEyebrow number="02" label="El problema" />
+          <UiSectionEyebrow label="El problema" />
           <h2 class="mt-3 text-3xl font-extrabold leading-tight tracking-tight text-neutral-900 sm:text-4xl dark:text-white">
             Estamos viviendo una crisis silenciosa de
             <span class="text-brand-600 dark:text-brand-400">salud cerebral</span>

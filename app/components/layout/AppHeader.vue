@@ -5,15 +5,14 @@ const isDark = computed({
   get: () => colorMode.value === 'dark',
   set: (val) => {
     colorMode.preference = val ? 'dark' : 'light'
-  }
+  },
 })
 
 const links = [
   { label: 'Inicio', to: '#inicio' },
-  { label: 'Sobre Neurofit IA', to: '#solucion' },
-  //{ label: 'Brain Score', to: '#brain-score' },
   { label: 'Plataforma', to: '#tecnologia' },
-  { label: 'Contacto', to: '#contacto' }
+  { label: 'Sobre Neurofit IA', to: '#vision' },
+  { label: 'Contacto', to: '#contacto' },
 ]
 
 const mobileOpen = ref(false)

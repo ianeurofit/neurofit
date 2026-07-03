@@ -18,14 +18,14 @@ const stats = [
   { icon: 'i-lucide-globe', value: 25, prefix: '+', label: 'Países alcanzados con nuestros estudios' },
   { icon: 'i-lucide-user-check', value: 100, prefix: '+', suffix: 'K', label: 'Personas evaluadas en piloto y validaciones' },
   { icon: 'i-lucide-database', value: 1, prefix: '+', suffix: 'M', label: 'Datos procesados para entender el cerebro' },
-  { icon: 'i-lucide-shield-check', value: 100, suffix: '%', label: 'Comprometidos con la ética y la privacidad' }
+  { icon: 'i-lucide-shield-check', value: 100, suffix: '%', label: 'Comprometidos con la ética y la privacidad' },
 ]
 </script>
 
 <template>
   <section class="bg-neutral-50 py-20 dark:bg-neutral-900/40 lg:py-28">
     <UContainer>
-      <UiSectionEyebrow number="09" label="Equipo" />
+      <UiSectionEyebrow label="Equipo" />
       <h2 class="mt-3 max-w-xl text-3xl font-extrabold leading-tight tracking-tight text-neutral-900 sm:text-4xl dark:text-white">
         Ciencia, empatía y propósito al <span class="text-brand-600 dark:text-brand-400">servicio del cerebro</span>
       </h2>
@@ -48,11 +48,10 @@ const stats = [
         </div>
 
         <div class="flex flex-col items-center text-center">
-          <UAvatar
-            icon="i-lucide-brain-circuit"
-            size="3xl"
-            class="size-40 bg-gradient-to-br from-brand-500 to-brand-700 text-white ring-4 ring-white dark:ring-neutral-900"
-          />
+          <NuxtPicture
+          format="avif,webp"
+          src="/marisol-ia.webp"
+        />
           <h3 class="mt-5 text-xl font-extrabold text-neutral-900 dark:text-white">Marisol Uribe Vergara</h3>
           <p class="text-sm font-medium text-brand-600 dark:text-brand-400">Psicóloga</p>
           <p class="mt-1 flex items-center gap-1.5 text-sm text-neutral-500 dark:text-neutral-400">
