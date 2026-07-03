@@ -24,15 +24,13 @@ const mobileOpen = ref(false)
   >
     <UContainer class="flex h-20 items-center justify-between">
       <NuxtLink to="#inicio" class="flex items-center gap-2.5">
-        <UIcon name="i-lucide-brain-circuit" class="size-8 text-brand-600 dark:text-brand-400" />
-        <span class="leading-tight">
-          <span class="block text-lg font-extrabold tracking-tight text-neutral-900 dark:text-white">
-            NEUROFIT <span class="text-brand-600 dark:text-brand-400">AI</span>
-          </span>
-          <span class="block text-[10px] font-semibold tracking-[0.18em] text-neutral-500 dark:text-neutral-400">
-            BRAIN INTELLIGENCE
-          </span>
-        </span>
+       
+        <NuxtPicture
+          format="avif,webp"
+          src="/logo-teal-gray.svg"
+           sizes="50vw sm:20vw md:400px lg:10vw" 
+        />
+
       </NuxtLink>
 
       <nav class="hidden items-center gap-8 lg:flex">

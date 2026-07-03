@@ -51,6 +51,7 @@ const maxScore = 100
           <NuxtPicture
             format="avif,webp"
             src="/hand-brain.webp"
+            fit="fill"
           />
           <div class="mt-6 h-px w-16 bg-neutral-300 dark:bg-neutral-700" />
 
