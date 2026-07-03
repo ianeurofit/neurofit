@@ -46,7 +46,7 @@ const trust = [
             color="neutral"
             variant="outline"
             size="xl"
-            class="rounded-full border-white/25 px-6 text-white hover:bg-white/10"
+            class="rounded-full border-white/25 px-6 hover:bg-white/10"
           />
         </div>
 
