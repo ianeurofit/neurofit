@@ -55,7 +55,7 @@ const impact = [
           </ul>
         </UCard>
 
-        <UCard :ui="{ body: 'p-7' }">
+        <UCard :ui="{ body: 'p-7 ' }">
           <div class="flex size-12 items-center justify-center rounded-full bg-brand-50 text-brand-600 dark:bg-brand-950/40 dark:text-brand-400">
             <UIcon name="i-lucide-flag" class="size-6" />
           </div>
@@ -72,7 +72,7 @@ const impact = [
           </ul>
         </UCard>
 
-        <div class="relative overflow-hidden rounded-2xl bg-ink-950 p-7 text-white bg-[url('worldlines.webp')] bg-scroll bg-cover bg-center">
+        <div class="relative overflow-hidden rounded-2xl bg-ink-950 p-7 text-white bg-[url('/worldlines.webp')] bg-scroll bg-cover bg-center">
           <div class="bg-radial-dots pointer-events-none absolute inset-0 text-white/5" />
           <p class="relative text-lg font-bold">
             Un impacto global. <span class="text-brand-400">Un futuro mejor.</span>

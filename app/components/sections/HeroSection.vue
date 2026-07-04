@@ -39,6 +39,7 @@ const trust = [
             color="primary"
             size="xl"
             class="rounded-full px-6"
+            href="#formulario"
           />
           <UButton
             label="Ver cómo funciona"
