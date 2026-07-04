@@ -28,7 +28,7 @@ const mobileOpen = ref(false)
         <NuxtPicture
           format="avif,webp"
           src="/logo-teal-gray.svg"
-           sizes="50vw sm:20vw md:400px lg:10vw" 
+           sizes="50vw sm:20vw md:20vw lg:10vw" 
         />
 
       </NuxtLink>

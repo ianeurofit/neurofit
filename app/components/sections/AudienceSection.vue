@@ -3,6 +3,7 @@ const audiences = [
   {
     icon: 'i-lucide-user',
     title: 'Personas',
+    image:'person.webp',
     tagline: 'Mejora tu salud cerebral y calidad de vida.',
     items: ['Conoce tu estado cerebral', 'Identifica factores de riesgo', 'Recibe recomendaciones personalizadas', 'Mejora tu bienestar y rendimiento diario'],
     cta: 'Para tu bienestar'
@@ -10,6 +11,7 @@ const audiences = [
   {
     icon: 'i-lucide-building-2',
     title: 'Empresas',
+    image:'company.webp',
     tagline: 'Equipos más saludables, enfocados y productivos.',
     items: ['Bienestar y salud cerebral de tus colaboradores', 'Reducción del estrés y ausentismo', 'Mejora del enfoque, la productividad y toma de decisiones', 'Programas corporativos personalizados'],
     cta: 'Para equipos de alto desempeño'
@@ -17,6 +19,7 @@ const audiences = [
   {
     icon: 'i-lucide-plus',
     title: 'Sector Salud',
+    image:'salud.webp',
     tagline: 'Mejores decisiones clínicas con datos objetivos.',
     items: ['Apoyo en diagnóstico y evaluación', 'Monitoreo de pacientes y tratamiento', 'Prevención y manejo de trastornos cognitivos', 'Herramienta complementaria basada en evidencia'],
     cta: 'Para profesionales de la salud'
@@ -24,6 +27,7 @@ const audiences = [
   {
     icon: 'i-lucide-landmark',
     title: 'Gobiernos',
+    image:'guvernamental.webp',
     tagline: 'Poblaciones más sanas, productivas y resilientes.',
     items: ['Estrategias nacionales de salud cerebral', 'Programas de prevención y detección temprana', 'Datos para políticas públicas basadas en evidencia', 'Mejora de la calidad de vida de la población'],
     cta: 'Para sociedades más saludables'
@@ -31,6 +35,7 @@ const audiences = [
   {
     icon: 'i-lucide-graduation-cap',
     title: 'Investigación',
+    image:'neurofit-lab.webp',
     tagline: 'Datos de alta calidad para impulsar el conocimiento.',
     items: ['Acceso a datos anonimizados y agregados', 'Colaboración en estudios científicos', 'Validación de modelos y biomarcadores', 'Impulso a la innovación en neurociencia'],
     cta: 'Para investigadores y científicos'
@@ -67,6 +72,11 @@ const pillars = [
             <UIcon :name="item.icon" class="size-5" />
           </div>
           <h3 class="mt-4 font-bold text-neutral-900 dark:text-white">{{ item.title }}</h3>
+          <NuxtPicture
+            format="avif,webp"
+            :src="item.image"
+            fit="fill"
+          />
           <p class="mt-1 text-sm text-neutral-500 dark:text-neutral-400">{{ item.tagline }}</p>
 
           <ul class="mt-4 flex-1 space-y-2.5">
