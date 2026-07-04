@@ -28,7 +28,7 @@ const mobileOpen = ref(false)
         <NuxtPicture
           format="avif,webp"
           src="/logo-teal-gray.svg"
-           sizes="50vw sm:20vw md:20vw lg:10vw" 
+          :imgAttrs="{ class: 'w-[15vw] sm:w-[20vw] md:w-[20vw] lg:w-[15vw] h-auto' }"
         />
 
       </NuxtLink>
@@ -62,6 +62,7 @@ const mobileOpen = ref(false)
           color="primary"
           size="md"
           class="hidden rounded-full px-5 sm:inline-flex"
+          href="#formulario"
         />
 
         <UButton

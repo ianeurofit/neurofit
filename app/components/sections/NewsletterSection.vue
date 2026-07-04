@@ -19,7 +19,7 @@ const countries = ['Colombia', 'México', 'España', 'Estados Unidos', 'Argentin
 </script>
 
 <template>
-  <section class="relative overflow-hidden bg-ink-950 py-20 text-white lg:py-28">
+  <section id="formulario" class="relative overflow-hidden bg-ink-950 py-20 text-white lg:py-28">
     <div class="bg-radial-dots pointer-events-none absolute inset-0 text-white/5" />
 
     <UContainer class="relative">
