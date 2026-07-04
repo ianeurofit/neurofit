@@ -88,7 +88,7 @@ const email = ref('')
             color="neutral"
             variant="outline"
             :aria-label="item.label"
-            class="rounded-full border-white/15 text-white hover:bg-white/10"
+            class="rounded-full border-white/15 hover:bg-white/10"
           />
         </div>
       </div>

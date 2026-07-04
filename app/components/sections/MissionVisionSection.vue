@@ -72,12 +72,12 @@ const impact = [
           </ul>
         </UCard>
 
-        <div class="relative overflow-hidden rounded-2xl bg-ink-950 p-7 text-white">
+        <div class="relative overflow-hidden rounded-2xl bg-ink-950 p-7 text-white bg-[url('worldlines.webp')] bg-scroll bg-cover bg-center">
           <div class="bg-radial-dots pointer-events-none absolute inset-0 text-white/5" />
           <p class="relative text-lg font-bold">
             Un impacto global. <span class="text-brand-400">Un futuro mejor.</span>
           </p>
-          <div class="relative mt-8 grid grid-cols-2 gap-6">
+          <div class="relative mt-64 grid grid-cols-4 gap-6">
             <div v-for="item in impact" :key="item.icon" class="flex flex-col items-center gap-2 text-center">
               <UIcon :name="item.icon" class="size-6 text-brand-400" />
               <span class="whitespace-pre-line text-xs text-neutral-300">{{ item.label }}</span>
