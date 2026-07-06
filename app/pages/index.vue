@@ -2,6 +2,7 @@
 useSeoMeta({
   title: 'Neurofit AI | Conoce hoy el estado de tu cerebro',
   ogTitle: 'Neurofit AI | Brain Intelligence',
+  ogImage: '/neurofit-logo-tealgray-.svg',
   description:
     'Neurofit AI utiliza inteligencia artificial para analizar variables cognitivas, emocionales, conductuales y de estilo de vida, generando indicadores de salud cerebral, alertas tempranas y recomendaciones personalizadas.',
   ogDescription:

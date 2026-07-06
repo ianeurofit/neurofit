@@ -28,7 +28,7 @@ const mobileOpen = ref(false)
         <NuxtPicture
           format="avif,webp"
           src="/logo-teal-gray.svg"
-          :imgAttrs="{ class: 'w-[15vw] sm:w-[20vw] md:w-[20vw] lg:w-[15vw] h-auto' }"
+          :imgAttrs="{ class: ' sm:w-[40vw] md:w-[30vw] lg:w-[15vw] h-auto' }"
         />
 
       </NuxtLink>
@@ -86,7 +86,7 @@ const mobileOpen = ref(false)
       >
         {{ link.label }}
       </a>
-      <UButton label="Solicitar acceso" color="primary" block class="mt-2 rounded-full" />
+      <UButton label="Solicitar acceso" color="primary" block class="mt-2 rounded-full" href="#formulario" />
     </div>
   </header>
 </template>
