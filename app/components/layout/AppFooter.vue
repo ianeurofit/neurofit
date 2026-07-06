@@ -29,17 +29,12 @@ const email = ref('')
   <footer id="contacto" class="bg-ink-950 text-neutral-300">
     <UContainer class="grid gap-12 py-16 lg:grid-cols-3">
       <div>
-        <div class="flex items-center gap-2.5">
-          <UIcon name="i-lucide-brain-circuit" class="size-8 text-brand-400" />
-          <span class="leading-tight">
-            <span class="block text-lg font-extrabold tracking-tight text-white">
-              NEUROFIT <span class="text-brand-400">AI</span>
-            </span>
-            <span class="block text-[10px] font-semibold tracking-[0.18em] text-neutral-400">
-              BRAIN INTELLIGENCE
-            </span>
-          </span>
-        </div>
+        <NuxtPicture
+          format="avif,webp"
+          src="/logo-teal-gray.svg"
+          :imgAttrs="{ class: 'sm:w-[40vw] md:w-[30vw] lg:w-[30vw]  h-auto' }"
+        />
+
         <p class="mt-5 font-semibold text-white">Inteligencia que transforma vidas.</p>
         <p class="mt-3 text-sm leading-relaxed text-neutral-400">
           En Neurofit AI usamos ciencia, datos e inteligencia artificial para comprender, prevenir y optimizar
