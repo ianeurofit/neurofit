@@ -62,22 +62,24 @@ const countries = ['Colombia', 'México', 'España', 'Estados Unidos', 'Argentin
           </div>
 
           <form class="mt-6 space-y-4" @submit.prevent>
-            <div class="grid gap-4 sm:grid-cols-2">
-              <UInput v-model="form.name" icon="i-lucide-user" placeholder="Nombre" size="lg" />
-              <UInput v-model="form.email" type="email" icon="i-lucide-mail" placeholder="Correo electrónico" size="lg" />
-            </div>
-            <USelect
+            <!--
+              <div class="grid gap-4 sm:grid-cols-2">
+                <UInput v-model="form.name" icon="i-lucide-user" placeholder="Nombre" size="lg" />
+                <UInput v-model="form.email" type="email" icon="i-lucide-mail" placeholder="Correo electrónico" size="lg" />
+              </div>
+              <USelect
               v-model="form.country"
               :items="countries"
               icon="i-lucide-globe"
               placeholder="País"
               size="lg"
               class="w-full"
-            />
-            <UCheckbox
+              />
+              <UCheckbox
               v-model="form.accepted"
               label="Acepto recibir comunicaciones de Neurofit IA sobre novedades, lanzamientos y contenido relacionado con salud cerebral."
-            />
+              />
+              -->
             <UButton label="Quiero ser de los primeros" color="primary" block size="lg" class="rounded-full" href="https://docs.google.com/forms/d/e/1FAIpQLSfEehtSB5qn6izKZrFTB-06HkK_2_SM8rqWLwZBI-gw3va9lw/viewform?usp=publish-editor" />
             <p class="flex items-center justify-center gap-1.5 text-xs text-neutral-500">
               <UIcon name="i-lucide-lock" class="size-3.5" />

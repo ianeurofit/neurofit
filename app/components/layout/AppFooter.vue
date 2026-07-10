@@ -100,14 +100,16 @@ const email = ref('')
         </p>
 
         <form class="mt-5 space-y-3" @submit.prevent>
-          <UInput
+          <!-- 
+            <UInput
             v-model="email"
             type="email"
             placeholder="Tu correo electrónico"
             icon="i-lucide-mail"
             size="lg"
             class="w-full"
-          />
+            />
+           -->
           <UButton label="Suscribirme" color="primary" block size="lg" class="rounded-full" href="https://docs.google.com/forms/d/e/1FAIpQLSfEehtSB5qn6izKZrFTB-06HkK_2_SM8rqWLwZBI-gw3va9lw/viewform?usp=publish-editor"/>
         </form>
         <p class="mt-3 flex items-center gap-1.5 text-xs text-neutral-500">

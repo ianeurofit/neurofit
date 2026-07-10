@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const values = [
-  { icon: 'i-lucide-users', title: 'Enfoque humano', description: 'Ponemos a las personas en el centro, escuchamos, comprendemos y acompañamos cada historia.' },
-  { icon: 'i-lucide-heart', title: 'Ciencia con propósito', description: 'Utilizamos el conocimiento científico y la tecnología para prevenir, intervenir y mejorar la salud cerebral.' },
-  { icon: 'i-lucide-globe', title: 'Impacto en comunidad', description: 'Trabajamos de la mano con comunidades para generar bienestar y oportunidades accesibles para todos.' },
+  { icon: 'i-lucide-users', title: 'Enfoque humano', description: 'Escuchamos, comprendemos y diseñamos soluciones centradas en las personas y sus historias.' },
+  { icon: 'i-lucide-heart', title: 'Ciencia con propósito', description: 'Utilizamos evidencia científica y tecnología para prevenir, intervenir y mejorar la salud cerebral.' },
+  { icon: 'i-lucide-globe', title: 'Impacto en comunidad', description: 'Trabajamos junto a comunidades, instituciones y organizaciones para generar bienestar y oportunidades accesibles para todos.' },
   { icon: 'i-lucide-handshake', title: 'Innovación con valores', description: 'Desarrollamos soluciones éticas, inclusivas y sostenibles que construyen un futuro más consciente.' }
 ]
 
@@ -30,8 +30,7 @@ const stats = [
         Ciencia, empatía y propósito al <span class="text-brand-600 dark:text-brand-400">servicio del cerebro</span>
       </h2>
       <p class="mt-4 max-w-2xl text-neutral-600 dark:text-neutral-400">
-        Neurofit IA nace de la visión y pasión de su fundadora por transformar la salud cerebral a través de la
-        ciencia, la innovación tecnológica y un enfoque humano e integral.
+        En Neurofit AI somos un equipo científico, tecnológico y humano comprometido con transformar la salud cerebral a través de la ciencia, la innovación y un enfoque integral centrado en las personas.
       </p>
 
       <div class="mt-12 grid gap-10 lg:grid-cols-[1fr_1.3fr_1fr]">
@@ -61,7 +60,12 @@ const stats = [
         </div>
 
         <div>
-          <p class="mb-4 text-sm font-bold tracking-wide text-neutral-500 dark:text-neutral-400">MI EXPERIENCIA</p>
+          <h2 class="mt-3 max-w-xl text-3xl font-extrabold leading-tight tracking-tight text-neutral-900 sm:text-4xl dark:text-white">
+        Un equipo multidisciplinario al<span class="text-brand-600 dark:text-brand-400">servicio del cerebro</span>
+          </h2>
+          <p class="mt-4 max-w-2xl text-neutral-600 dark:text-neutral-400">
+            Científicos, tecnólogos, psicólogos, neurocientíficos, diseñadores, ingenieros y especialistas en datos trabajamos juntos para crear soluciones innovadoras con impacto real.
+          </p>
           <div class="space-y-5">
             <div v-for="item in experience" :key="item.title" class="flex items-start gap-3">
               <UIcon :name="item.icon" class="mt-0.5 size-5 shrink-0 text-brand-600 dark:text-brand-400" />
