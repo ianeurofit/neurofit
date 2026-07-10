@@ -47,13 +47,13 @@ const colorMap: Record<string, { text: string, dot: string, ring: string }> = {
     <UContainer>
       <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
         <div>
-          <UiSectionEyebrow label="¿Qué evalúa Neurofit AI?" />
+          <UiSectionEyebrow label="¿Qué evalúa Neurofit IA?" />
           <h2 class="mt-3 max-w-lg text-3xl font-extrabold leading-tight tracking-tight text-neutral-900 sm:text-4xl dark:text-white">
             Un análisis integral de tu <span class="text-brand-600 dark:text-brand-400">salud cerebral</span>
           </h2>
         </div>
         <p class="max-w-md text-neutral-600 dark:text-neutral-400">
-          Neurofit AI evalúa múltiples dimensiones que influyen en tu salud cerebral para generar una visión
+          Neurofit IA evalúa múltiples dimensiones que influyen en tu salud cerebral para generar una visión
           completa y precisa.
         </p>
       </div>
@@ -85,7 +85,7 @@ const colorMap: Record<string, { text: string, dot: string, ring: string }> = {
       <div class="mt-8 grid gap-4 rounded-2xl bg-neutral-50 p-6 sm:grid-cols-2 dark:bg-neutral-900/40">
         <p class="flex items-start gap-3 text-sm text-neutral-700 dark:text-neutral-300">
           <UIcon name="i-lucide-brain-circuit" class="mt-0.5 size-5 shrink-0 text-brand-600 dark:text-brand-400" />
-          Al integrar todas estas dimensiones, Neurofit AI genera un
+          Al integrar todas estas dimensiones, Neurofit IA genera un
           <span class="font-semibold text-brand-700 dark:text-brand-400">diagnóstico preventivo personalizado</span>
           y recomendaciones accionables para ti.
         </p>

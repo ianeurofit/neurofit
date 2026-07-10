@@ -27,7 +27,7 @@ const countries = ['Colombia', 'México', 'España', 'Estados Unidos', 'Argentin
       <div class="mt-12 grid gap-12 lg:grid-cols-[1fr_1fr_0.6fr] lg:items-start">
         <div>
           <h2 class="text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl">
-            Sé de los primeros en conocer <span class="text-brand-400">Neurofit AI</span>
+            Sé de los primeros en conocer <span class="text-brand-400">Neurofit IA</span>
           </h2>
           <p class="mt-4 text-neutral-300">
             Únete a nuestra lista exclusiva y recibe novedades, acceso anticipado y contenido especial sobre
@@ -56,7 +56,7 @@ const countries = ['Colombia', 'México', 'España', 'Estados Unidos', 'Argentin
               Déjanos tu información y te avisaremos <span class="text-brand-600">muy pronto.</span>
             </h3>
             <p class="mt-2 text-sm text-neutral-500">
-              Neurofit AI estará disponible en todo el mundo.<br>
+              Neurofit IA estará disponible en todo el mundo.<br>
               No te quedes fuera.
             </p>
           </div>
@@ -76,9 +76,9 @@ const countries = ['Colombia', 'México', 'España', 'Estados Unidos', 'Argentin
             />
             <UCheckbox
               v-model="form.accepted"
-              label="Acepto recibir comunicaciones de Neurofit AI sobre novedades, lanzamientos y contenido relacionado con salud cerebral."
+              label="Acepto recibir comunicaciones de Neurofit IA sobre novedades, lanzamientos y contenido relacionado con salud cerebral."
             />
-            <UButton label="Quiero ser de los primeros" color="primary" block size="lg" class="rounded-full" />
+            <UButton label="Quiero ser de los primeros" color="primary" block size="lg" class="rounded-full" href="https://docs.google.com/forms/d/e/1FAIpQLSfEehtSB5qn6izKZrFTB-06HkK_2_SM8rqWLwZBI-gw3va9lw/viewform?usp=publish-editor" />
             <p class="flex items-center justify-center gap-1.5 text-xs text-neutral-500">
               <UIcon name="i-lucide-lock" class="size-3.5" />
               Tu información está segura y nunca será compartida.

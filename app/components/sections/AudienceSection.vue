@@ -57,7 +57,7 @@ const pillars = [
         <div>
           <UiSectionEyebrow label="¿A quién ayudamos?" />
           <h2 class="mt-3 max-w-lg text-3xl font-extrabold leading-tight tracking-tight text-neutral-900 sm:text-4xl dark:text-white">
-            Neurofit AI está diseñado para <span class="text-brand-600 dark:text-brand-400">diferentes personas y organizaciones</span>
+             está diseñado para <span class="text-brand-600 dark:text-brand-400">diferentes personas y organizaciones</span>
           </h2>
         </div>
         <p class="max-w-md text-neutral-600 dark:text-neutral-400">

@@ -44,7 +44,7 @@ const maxScore = 100
             Tu indicador integral de <span class="text-brand-600 dark:text-brand-400">salud cerebral</span>
           </h2>
           <p class="mt-4 text-neutral-600 dark:text-neutral-400">
-            Neurofit AI genera tu Brain Score™, un puntaje personalizado que refleja tu
+            Neurofit IA genera tu Brain Score™, un puntaje personalizado que refleja tu
             <span class="font-semibold text-neutral-900 dark:text-white">estado cerebral actual</span>
             y tu <span class="font-semibold text-neutral-900 dark:text-white">proyección futura</span>.
           </p>

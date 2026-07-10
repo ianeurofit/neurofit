@@ -30,7 +30,7 @@ const dimensions = [
         <div>
           <UiSectionEyebrow label="Nuestra solución" />
           <h2 class="mt-3 text-3xl font-extrabold leading-tight tracking-tight text-neutral-900 sm:text-4xl dark:text-white">
-            Neurofit AI<br>
+            Neurofit IA<br>
             <span class="text-brand-600 dark:text-brand-400">Brain Intelligence™</span>
           </h2>
           <p class="mt-4 text-neutral-600 dark:text-neutral-400">
@@ -44,7 +44,7 @@ const dimensions = [
             <template #description>
               <span class="flex items-start gap-3 text-neutral-700 dark:text-neutral-300">
                 <UIcon name="i-lucide-brain-circuit" class="mt-0.5 size-5 shrink-0 text-brand-600 dark:text-brand-400" />
-                Neurofit AI transforma datos en información accionable para que puedas tomar
+                Neurofit IA transforma datos en información accionable para que puedas tomar
                 <span class="font-semibold text-brand-700 dark:text-brand-400">decisiones preventivas</span>
                 hoy, y construir un mejor futuro.
               </span>
@@ -52,7 +52,7 @@ const dimensions = [
           </UAlert>
 
           <p class="mt-8 text-sm font-bold tracking-wide text-neutral-900 dark:text-white">
-            NEUROFIT AI TE PERMITE:
+            Neurofit IA TE PERMITE:
           </p>
           <div class="mt-4 grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-2">
             <div v-for="item in capabilities" :key="item.title" class="flex items-start gap-3">

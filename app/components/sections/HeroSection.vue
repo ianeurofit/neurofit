@@ -25,7 +25,7 @@ const trust = [
         <div class="mt-6 h-1 w-16 rounded-full bg-brand-400" />
 
         <p class="mt-6 max-w-xl text-base leading-relaxed text-neutral-300 sm:text-lg">
-          Neurofit AI utiliza inteligencia artificial para analizar variables cognitivas, emocionales,
+          Neurofit IA utiliza inteligencia artificial para analizar variables cognitivas, emocionales,
           conductuales y de estilo de vida, generando
           <span class="font-semibold text-brand-400">indicadores de salud cerebral</span>,
           <span class="font-semibold text-brand-400">alertas tempranas</span> y
