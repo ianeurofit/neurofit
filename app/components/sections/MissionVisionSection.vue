@@ -32,7 +32,7 @@ const impact = [
           </h2>
         </div>
         <p class="max-w-md text-neutral-600 dark:text-neutral-400">
-          En Neurofit AI trabajamos para transformar la salud cerebral a escala global, combinando ciencia,
+          En Neurofit IA trabajamos para transformar la salud cerebral a escala global, combinando ciencia,
           tecnología e inteligencia artificial para generar un impacto positivo en millones de vidas.
         </p>
       </div>

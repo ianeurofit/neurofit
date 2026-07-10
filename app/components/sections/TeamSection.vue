@@ -7,10 +7,10 @@ const values = [
 ]
 
 const experience = [
-  { icon: 'i-lucide-graduation-cap', title: 'Psicóloga', description: 'Profesional con formación en psicología, comprometida con la salud mental y el bienestar integral.' },
-  { icon: 'i-lucide-flask-conical', title: 'Investigadora', description: 'Apasionada por la investigación científica y su aplicación para mejorar la calidad de vida de las personas.' },
-  { icon: 'i-lucide-users', title: 'Emprendedora', description: 'Crea y lidera proyectos con impacto social y tecnológico, orientados a transformar el futuro de la salud cerebral.' },
-  { icon: 'i-lucide-globe', title: 'Visión global', description: 'Trabajamos para que la innovación y el conocimiento lleguen a más personas, en cualquier lugar del mundo.' }
+  { icon: 'i-lucide-graduation-cap', title: 'Equipo científico', description: 'Neurocientíficos, psicólogos e investigadores que generan conocimiento y validan cada solución.' },
+  { icon: 'i-lucide-flask-conical', title: 'Equipo tecnológico', description: 'Ingenieros, desarrolladores y analistas de datos que transforman la ciencia en tecnología inteligente.' },
+  { icon: 'i-lucide-users', title: 'Equipo clínico', description: 'Profesionales en salud mental que diseñan e implementan programas basados en evidencia y empatía.' },
+  { icon: 'i-lucide-globe', title: 'Equipo de innovación', description: 'Creativos, estrategas y especialistas en diseño de experiencias que llevan nuestras soluciones al siguiente nivel.' }
 ]
 
 const stats = [
@@ -30,7 +30,7 @@ const stats = [
         Ciencia, empatía y propósito al <span class="text-brand-600 dark:text-brand-400">servicio del cerebro</span>
       </h2>
       <p class="mt-4 max-w-2xl text-neutral-600 dark:text-neutral-400">
-        Neurofit AI nace de la visión y pasión de su fundadora por transformar la salud cerebral a través de la
+        Neurofit IA nace de la visión y pasión de su fundadora por transformar la salud cerebral a través de la
         ciencia, la innovación tecnológica y un enfoque humano e integral.
       </p>
 
@@ -49,14 +49,14 @@ const stats = [
 
         <div class="flex flex-col items-center text-center">
           <NuxtPicture
-          format="avif,webp"
-          src="/marisol-ia.webp"
-        />
+            format="avif,webp"
+            src="/team-ia.webp"
+          />
           <h3 class="mt-5 text-xl font-extrabold text-neutral-900 dark:text-white">Marisol Uribe Vergara</h3>
           <p class="text-sm font-medium text-brand-600 dark:text-brand-400">Psicóloga</p>
           <p class="mt-1 flex items-center gap-1.5 text-sm text-neutral-500 dark:text-neutral-400">
             <UIcon name="i-lucide-badge-check" class="size-4" />
-            Fundadora & CEO de Neurofit AI
+            Fundadora & CEO de Neurofit IA
           </p>
         </div>
 
@@ -75,7 +75,7 @@ const stats = [
       </div>
 
       <div class="mt-12 rounded-2xl bg-ink-950 p-8 text-white">
-        <p class="mb-6 text-sm font-bold tracking-wide text-brand-400">NEUROFIT AI EN NÚMEROS</p>
+        <p class="mb-6 text-sm font-bold tracking-wide text-brand-400">Neurofit IA EN NÚMEROS</p>
         <div class="grid grid-cols-2 gap-6 sm:grid-cols-5">
           <UiStatCounter
             v-for="stat in stats"

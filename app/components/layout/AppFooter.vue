@@ -7,11 +7,11 @@ const trust = [
 ]
 
 const social = [
-  { icon: 'i-simple-icons-linkedin', label: 'LinkedIn' },
-  { icon: 'i-simple-icons-x', label: 'X' },
-  { icon: 'i-simple-icons-instagram', label: 'Instagram' },
-  { icon: 'i-simple-icons-youtube', label: 'YouTube' },
-  { icon: 'i-simple-icons-tiktok', label: 'TikTok' }
+  { icon: 'i-simple-icons-linkedin', label: 'LinkedIn' ,to:'https://www.linkedin.com/in/neurofit-ia-ab4362421/'},
+  { icon: 'i-simple-icons-facebook', label: 'Facebook', to:'https://www.facebook.com/profile.php?id=61591624239632'},
+  { icon: 'i-simple-icons-instagram', label: 'Instagram', to:'https://www.instagram.com/neurofitia/' },
+  { icon: 'i-simple-icons-youtube', label: 'YouTube', to:'https://www.youtube.com/@Neurofit-IA' },
+  { icon: 'i-simple-icons-tiktok', label: 'TikTok', to:'https://www.facebook.com/profile.php?id=61591624239632' }
 ]
 
 const regions = [
@@ -37,7 +37,7 @@ const email = ref('')
 
         <p class="mt-5 font-semibold text-white">Inteligencia que transforma vidas.</p>
         <p class="mt-3 text-sm leading-relaxed text-neutral-400">
-          En Neurofit AI usamos ciencia, datos e inteligencia artificial para comprender, prevenir y optimizar
+          En Neurofit IA usamos ciencia, datos e inteligencia artificial para comprender, prevenir y optimizar
           la salud cerebral de las personas en todo el mundo.
         </p>
 
@@ -69,7 +69,7 @@ const email = ref('')
             </div>
             <div>
               <p class="text-xs text-neutral-500">WhatsApp</p>
-              <p class="font-medium text-white">+57 300 123 4567</p>
+              <p class="font-medium text-white">+57 3105423860</p>
             </div>
           </div>
         </div>
@@ -83,6 +83,7 @@ const email = ref('')
             color="neutral"
             variant="outline"
             :aria-label="item.label"
+            :to="item.to"
             class="rounded-full border-white/15 hover:bg-white/10"
           />
         </div>
@@ -91,7 +92,7 @@ const email = ref('')
       <div>
         <p class="section-eyebrow text-brand-400">Sé de los primeros</p>
         <h3 class="mt-3 text-xl font-extrabold text-white">
-          Recibe novedades exclusivas de <span class="text-brand-400">Neurofit AI</span>
+          Recibe novedades exclusivas de <span class="text-brand-400">Neurofit IA</span>
         </h3>
         <p class="mt-3 text-sm text-neutral-400">
           Únete a nuestra comunidad global y recibe información sobre lanzamientos, investigaciones y
@@ -107,7 +108,7 @@ const email = ref('')
             size="lg"
             class="w-full"
           />
-          <UButton label="Suscribirme" color="primary" block size="lg" class="rounded-full" />
+          <UButton label="Suscribirme" color="primary" block size="lg" class="rounded-full" href="https://docs.google.com/forms/d/e/1FAIpQLSfEehtSB5qn6izKZrFTB-06HkK_2_SM8rqWLwZBI-gw3va9lw/viewform?usp=publish-editor"/>
         </form>
         <p class="mt-3 flex items-center gap-1.5 text-xs text-neutral-500">
           <UIcon name="i-lucide-lock" class="size-3.5" />
@@ -132,9 +133,9 @@ const email = ref('')
     </UContainer>
 
     <UContainer class="flex flex-col items-center justify-between gap-4 border-t border-white/10 py-6 text-xs text-neutral-500 sm:flex-row">
-      <p>© {{ new Date().getFullYear() }} Neurofit AI. Todos los derechos reservados.</p>
+      <p>© {{ new Date().getFullYear() }} Neurofit IA. Todos los derechos reservados.</p>
       <div class="flex flex-wrap items-center gap-x-5 gap-y-2">
-        <span>Neurofit AI es una marca registrada.</span>
+        <span>Neurofit IA es una marca registrada.</span>
         <a href="#" class="hover:text-white">Términos de uso</a>
         <a href="#" class="hover:text-white">Política de privacidad</a>
         <a href="#" class="hover:text-white">Política de cookies</a>

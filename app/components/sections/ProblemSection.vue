@@ -68,7 +68,7 @@ const problems = [
           >
             <template #description>
               <span class="text-neutral-700 dark:text-neutral-300">
-                Neurofit AI busca cambiar ese paradigma, pasando de un modelo
+                Neurofit IA busca cambiar ese paradigma, pasando de un modelo
                 <span class="font-bold">reactivo</span> a un modelo
                 <span class="font-bold text-brand-600 dark:text-brand-400">preventivo</span>.
               </span>

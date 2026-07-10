@@ -29,7 +29,7 @@ const closing = [
           </h2>
         </div>
         <p class="max-w-md text-neutral-600 dark:text-neutral-400">
-          Neurofit AI combina ciencia, tecnología e inteligencia artificial para generar impacto positivo y
+          Neurofit IA combina ciencia, tecnología e inteligencia artificial para generar impacto positivo y
           medible en la salud cerebral de las personas y en los resultados de las organizaciones.
         </p>
       </div>
@@ -50,7 +50,7 @@ const closing = [
             <UIcon name="i-lucide-target" class="size-6" />
           </div>
           <p class="text-neutral-700 dark:text-neutral-300">
-            En Neurofit AI creemos que un cerebro sano es la base de una vida plena y de un
+            En Neurofit IA creemos que un cerebro sano es la base de una vida plena y de un
             <span class="font-bold text-neutral-900 dark:text-white">futuro mejor</span> para todos.
           </p>
         </div>
