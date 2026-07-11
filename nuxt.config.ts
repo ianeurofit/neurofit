@@ -8,13 +8,16 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  modules: ['@nuxt/ui', '@nuxt/icon', '@nuxt/eslint', '@formkit/auto-animate/nuxt', '@nuxt/image', 'nuxt-gtag'],
+  modules: ['@nuxt/ui', '@nuxt/icon', '@nuxt/eslint', '@formkit/auto-animate/nuxt', '@nuxt/image', 'nuxt-gtag','@nuxt/content'],
 
   css: ['~/assets/css/main.css'],
 
   app: {
     head: {
-      title: 'Neurofit AI | Brain Intelligence',
+      title: 'Neurofit IA | Brain Intelligence',
+      link: [
+        { rel: 'icon', type: 'image/png', href: '/favicon.png' }
+      ],
       htmlAttrs: { lang: 'es' },
       meta: [
         { charset: 'utf-8' },
@@ -22,7 +25,7 @@ export default defineNuxtConfig({
         {
           name: 'description',
           content:
-            'Neurofit AI utiliza inteligencia artificial para analizar variables cognitivas, emocionales, conductuales y de estilo de vida, generando indicadores de salud cerebral, alertas tempranas y recomendaciones personalizadas.'
+            'Neurofit IA utiliza inteligencia artificial para analizar variables cognitivas, emocionales, conductuales y de estilo de vida, generando indicadores de salud cerebral, alertas tempranas y recomendaciones personalizadas.'
         }
       ]
     }
@@ -40,7 +43,7 @@ export default defineNuxtConfig({
   gtag: {
     id: 'G-J3S9JXFVCN'
   },
-
+  
   eslint: {
     config: {
       stylistic: true

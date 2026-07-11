@@ -26,14 +26,29 @@ const stats = [
   <section class="bg-neutral-50 py-20 dark:bg-neutral-900/40 lg:py-28">
     <UContainer>
       <UiSectionEyebrow label="Equipo" />
-      <h2 class="mt-3 max-w-xl text-3xl font-extrabold leading-tight tracking-tight text-neutral-900 sm:text-4xl dark:text-white">
-        Ciencia, empatía y propósito al <span class="text-brand-600 dark:text-brand-400">servicio del cerebro</span>
-      </h2>
-      <p class="mt-4 max-w-2xl text-neutral-600 dark:text-neutral-400">
-        En Neurofit AI somos un equipo científico, tecnológico y humano comprometido con transformar la salud cerebral a través de la ciencia, la innovación y un enfoque integral centrado en las personas.
-      </p>
+      <div class="mt-12 grid gap-10 lg:grid-cols-[2fr_1.6fr]">
+        <div>
 
-      <div class="mt-12 grid gap-10 lg:grid-cols-[1fr_1.3fr_1fr]">
+          <h2 class="mt-3 max-w-xl text-3xl font-extrabold leading-tight tracking-tight text-neutral-900 sm:text-4xl dark:text-white">
+            Ciencia, empatía y propósito al <span class="text-brand-600 dark:text-brand-400">servicio del cerebro</span>
+          </h2>
+          <p class="mt-4 max-w-2xl text-neutral-600 dark:text-neutral-400">
+            En Neurofit AI somos un equipo científico, tecnológico y humano comprometido con transformar la salud cerebral a través de la ciencia, la innovación y un enfoque integral centrado en las personas.
+          </p>
+        </div>
+        <div>
+<h2 class="mt-3 max-w-xl text-3xl font-extrabold leading-tight tracking-tight text-neutral-900 sm:text-4xl dark:text-white">
+        Un equipo multidisciplinario al <span class="text-brand-600 dark:text-brand-400">servicio del cerebro</span>
+          </h2>
+          <p class="mt-4 max-w-2xl text-neutral-600 dark:text-neutral-400">
+            Científicos, tecnólogos, psicólogos, neurocientíficos, diseñadores, ingenieros y especialistas en datos trabajamos juntos para crear soluciones innovadoras con impacto real.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="mt-12 grid gap-10 lg:grid-cols-[1fr_2.3fr_1fr]">
         <div class="space-y-6">
           <div v-for="item in values" :key="item.title" class="flex items-start gap-3">
             <div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-white text-brand-600 ring-1 ring-neutral-200 dark:bg-neutral-900 dark:text-brand-400 dark:ring-neutral-800">
@@ -55,17 +70,11 @@ const stats = [
           <p class="text-sm font-medium text-brand-600 dark:text-brand-400">Psicóloga</p>
           <p class="mt-1 flex items-center gap-1.5 text-sm text-neutral-500 dark:text-neutral-400">
             <UIcon name="i-lucide-badge-check" class="size-4" />
-            Fundadora & CEO de Neurofit IA
+            Fundadora de Neurofit IA
           </p>
         </div>
 
         <div>
-          <h2 class="mt-3 max-w-xl text-3xl font-extrabold leading-tight tracking-tight text-neutral-900 sm:text-4xl dark:text-white">
-        Un equipo multidisciplinario al<span class="text-brand-600 dark:text-brand-400">servicio del cerebro</span>
-          </h2>
-          <p class="mt-4 max-w-2xl text-neutral-600 dark:text-neutral-400">
-            Científicos, tecnólogos, psicólogos, neurocientíficos, diseñadores, ingenieros y especialistas en datos trabajamos juntos para crear soluciones innovadoras con impacto real.
-          </p>
           <div class="space-y-5">
             <div v-for="item in experience" :key="item.title" class="flex items-start gap-3">
               <UIcon :name="item.icon" class="mt-0.5 size-5 shrink-0 text-brand-600 dark:text-brand-400" />

@@ -67,25 +67,28 @@ const dimensions = [
           </div>
         </div>
 
-        <div class="space-y-6">
-          <UCard :ui="{ body: 'p-6' }" class="shadow-xl shadow-brand-950/5">
-            <div class="flex items-center justify-between">
-              <p class="font-bold text-neutral-900 dark:text-white">Tu Brain Score™</p>
-              <UBadge color="primary" variant="subtle" class="rounded-full">Bueno</UBadge>
-            </div>
-            <div class="mt-5 flex items-center gap-6">
-              <UiStatRing :value="82" />
-              <div class="flex-1 space-y-4">
-                <UiDimensionBar
+        <div class="space-y-8">
+          <NuxtImg src="/brain-score-pc.webp"></NuxtImg>
+          <!--
+            <UCard :ui="{ body: 'p-6' }" class="shadow-xl shadow-brand-950/5">
+              <div class="flex items-center justify-between">
+                <p class="font-bold text-neutral-900 dark:text-white">Tu Brain Score™</p>
+                <UBadge color="primary" variant="subtle" class="rounded-full">Bueno</UBadge>
+              </div>
+              <div class="mt-5 flex items-center gap-6">
+                <UiStatRing :value="82" />
+                <div class="flex-1 space-y-4">
+                  <UiDimensionBar
                   v-for="dim in dimensions"
                   :key="dim.label"
                   :label="dim.label"
                   :value="dim.value"
                   :color="dim.color"
-                />
+                  />
+                </div>
               </div>
-            </div>
-          </UCard>
+            </UCard>
+            -->
 
           <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
             <UiStatCounter
