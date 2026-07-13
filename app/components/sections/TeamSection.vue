@@ -33,7 +33,7 @@ const stats = [
             Ciencia, empatía y propósito al <span class="text-brand-600 dark:text-brand-400">servicio del cerebro</span>
           </h2>
           <p class="mt-4 max-w-2xl text-neutral-600 dark:text-neutral-400">
-            En Neurofit AI somos un equipo científico, tecnológico y humano comprometido con transformar la salud cerebral a través de la ciencia, la innovación y un enfoque integral centrado en las personas.
+            En Neurofit IA somos un equipo científico, tecnológico y humano comprometido con transformar la salud cerebral a través de la ciencia, la innovación y un enfoque integral centrado en las personas.
           </p>
         </div>
         <div>
@@ -66,12 +66,7 @@ const stats = [
             format="avif,webp"
             src="/team-ia.webp"
           />
-          <h3 class="mt-5 text-xl font-extrabold text-neutral-900 dark:text-white">Marisol Uribe Vergara</h3>
-          <p class="text-sm font-medium text-brand-600 dark:text-brand-400">Psicóloga</p>
-          <p class="mt-1 flex items-center gap-1.5 text-sm text-neutral-500 dark:text-neutral-400">
-            <UIcon name="i-lucide-badge-check" class="size-4" />
-            Fundadora de Neurofit IA
-          </p>
+          
         </div>
 
         <div>
@@ -102,6 +97,17 @@ const stats = [
           />
         </div>
       </div>
+      <UCard :ui="{ root: 'mt-10 bg-white/5 ring-white/10', body: 'p-8' }" class="text-center">
+        <UIcon name="i-lucide-quote" class="mx-auto size-8 text-brand-400" />
+        <p class="mt-3 text-lg font-medium">"En Neurofit AI trabajamos cada día para impulsar la salud cerebral, prevenir enfermedades y mejorar la calidad de vida de millones de personas en el mundo."</p>
+        <h3 class="mt-5 text-xl font-extrabold text-neutral-900 dark:text-white">Marisol Uribe Vergara</h3>
+          <p class="text-sm font-medium text-brand-600 dark:text-brand-400">Psicóloga
+            
+          </p>
+          <p class="mt-1 text-sm text-neutral-500 dark:text-neutral-400">
+            Fundadora de Neurofit IA
+          </p>
+      </UCard>
     </UContainer>
   </section>
 </template>

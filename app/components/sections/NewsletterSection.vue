@@ -87,17 +87,22 @@ const countries = ['Colombia', 'México', 'España', 'Estados Unidos', 'Argentin
             </p>
           </form>
         </UCard>
-
-        <div class="flex flex-col items-center gap-4 lg:items-start">
-          <div class="relative flex w-full max-w-[220px] flex-col items-center rounded-[2rem] border border-white/15 bg-white/5 p-6 text-center">
-            <UIcon name="i-lucide-brain-circuit" class="size-16 text-brand-400" />
-            <p class="mt-4 text-sm font-bold">Tu cerebro.<br>Tu mejor versión.</p>
-            <p class="mt-2 text-xs text-neutral-400">
-              Muy pronto podrás conocer tu Brain Score™ y transformar tu salud cerebral.
-            </p>
-            <UBadge color="primary" variant="soft" class="mt-4 rounded-full">Próximamente</UBadge>
+        <NuxtPicture
+          format="avif,webp"
+          src="/Celular-app.webp"
+        />
+        <!--
+          <div class="flex flex-col items-center gap-4 lg:items-start">
+            <div class="relative flex w-full max-w-[220px] flex-col items-center rounded-[2rem] border border-white/15 bg-white/5 p-6 text-center">
+              <UIcon name="i-lucide-brain-circuit" class="size-16 text-brand-400" />
+              <p class="mt-4 text-sm font-bold">Tu cerebro.<br>Tu mejor versión.</p>
+              <p class="mt-2 text-xs text-neutral-400">
+                Muy pronto podrás conocer tu Brain Score™ y transformar tu salud cerebral.
+              </p>
+              <UBadge color="primary" variant="soft" class="mt-4 rounded-full">Próximamente</UBadge>
+            </div>
           </div>
-        </div>
+          -->
       </div>
 
       <div class="mt-14 grid grid-cols-2 gap-6 border-t border-white/10 pt-10 sm:grid-cols-4">
