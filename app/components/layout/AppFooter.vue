@@ -11,7 +11,7 @@ const social = [
   { icon: 'i-simple-icons-facebook', label: 'Facebook', to:'https://www.facebook.com/profile.php?id=61591624239632'},
   { icon: 'i-simple-icons-instagram', label: 'Instagram', to:'https://www.instagram.com/neurofitia/' },
   { icon: 'i-simple-icons-youtube', label: 'YouTube', to:'https://www.youtube.com/@Neurofit-IA' },
-  { icon: 'i-simple-icons-tiktok', label: 'TikTok', to:'https://www.facebook.com/profile.php?id=61591624239632' }
+  { icon: 'i-simple-icons-tiktok', label: 'TikTok', to:'https://www.tiktok.com/@neurofit.ia' }
 ]
 
 const regions = [
