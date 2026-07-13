@@ -9,7 +9,7 @@ const isDark = computed({
 })
 
 const links = [
-  { label: 'Inicio', to: '#inicio' },
+  { label: 'Inicio', to: '/' },
   { label: 'Plataforma', to: '#tecnologia' },
   { label: 'Sobre Neurofit IA', to: '#vision' },
   { label: 'Contacto', to: '#contacto' },
@@ -23,7 +23,7 @@ const mobileOpen = ref(false)
     class="sticky top-0 z-50 border-b border-neutral-200/70 bg-white/80 backdrop-blur-md dark:border-white/10 dark:bg-ink-950/80"
   >
     <UContainer class="flex h-20 items-center justify-between">
-      <NuxtLink to="#inicio" class="flex items-center gap-2.5">
+      <NuxtLink to="/" class="flex items-center gap-2.5">
        
         <NuxtPicture
           format="avif,webp"
