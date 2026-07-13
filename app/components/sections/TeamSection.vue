@@ -99,7 +99,7 @@ const stats = [
       </div>
       <UCard :ui="{ root: 'mt-10 bg-white/5 ring-white/10', body: 'p-8' }" class="text-center">
         <UIcon name="i-lucide-quote" class="mx-auto size-8 text-brand-400" />
-        <p class="mt-3 text-lg font-medium">"En Neurofit AI trabajamos cada día para impulsar la salud cerebral, prevenir enfermedades y mejorar la calidad de vida de millones de personas en el mundo."</p>
+        <p class="mt-3 text-lg font-medium">"En Neurofit IA trabajamos cada día para impulsar la salud cerebral, prevenir enfermedades y mejorar la calidad de vida de millones de personas en el mundo."</p>
         <h3 class="mt-5 text-xl font-extrabold text-neutral-900 dark:text-white">Marisol Uribe Vergara</h3>
           <p class="text-sm font-medium text-brand-600 dark:text-brand-400">Psicóloga
             
