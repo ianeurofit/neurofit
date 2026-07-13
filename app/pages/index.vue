@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Neurofit AI | Conoce hoy el estado de tu cerebro',
-  ogTitle: 'Neurofit AI | Brain Intelligence',
+  title: 'Neurofit IA | Conoce hoy el estado de tu cerebro',
+  ogTitle: 'Neurofit IA | Brain Intelligence',
   ogImage: '/neurofit-logo-tealgray-.png',
   description:
     'Neurofit AI utiliza inteligencia artificial para analizar variables cognitivas, emocionales, conductuales y de estilo de vida, generando indicadores de salud cerebral, alertas tempranas y recomendaciones personalizadas.',
@@ -10,7 +10,7 @@ useSeoMeta({
   ogType: 'website',
   ogUrl:'https://neurofitia.com',
   twitterCard: 'summary_large_image',
-  twitterTitle: 'Neurofit AI | Conoce hoy el estado de tu cerebro',
+  twitterTitle: 'Neurofit IA | Conoce hoy el estado de tu cerebro',
   twitterDescription: 'Plataforma de inteligencia artificial para evaluar, monitorear y optimizar la salud cerebral.',
   twitterImage:  '/neurofit-logo-tealgray-.png'
 })

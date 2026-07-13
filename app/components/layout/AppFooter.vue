@@ -90,14 +90,17 @@ const email = ref('')
       </div>
 
       <div>
-        <p class="section-eyebrow text-brand-400">Sé de los primeros</p>
-        <h3 class="mt-3 text-xl font-extrabold text-white">
-          Recibe novedades exclusivas de <span class="text-brand-400">Neurofit IA</span>
-        </h3>
-        <p class="mt-3 text-sm text-neutral-400">
-          Únete a nuestra comunidad global y recibe información sobre lanzamientos, investigaciones y
-          contenido especial sobre salud cerebral.
-        </p>
+        <iframe width="540" height="305" src="https://b663cbbf.sibforms.com/v2/serve/MUIFAAwHGI63c-ja7lsxWmmGkuMrkrgpnIaRjTz19OQ3F2Wy-cvYVMgVOae-c77nKE1MvN6iwquAdDuCEWtKZQJmUo24OjK4-Y6vsFOUL87WtEM30TAP-u4-A0knPaDC2VaLBX-t7zAjAc5vxcUwB2B1qGDK4eh444H2_LzvGi-wgBqd6uJgz1xdfbptqKoNE-_5oGBM-SHSUu74Tw==" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
+        <!--
+          <p class="section-eyebrow text-brand-400">Sé de los primeros</p>
+          <h3 class="mt-3 text-xl font-extrabold text-white">
+            Recibe novedades exclusivas de <span class="text-brand-400">Neurofit IA</span>
+          </h3>
+          <p class="mt-3 text-sm text-neutral-400">
+            Únete a nuestra comunidad global y recibe información sobre lanzamientos, investigaciones y
+            contenido especial sobre salud cerebral.
+          </p>
+          -->
 
         <form class="mt-5 space-y-3" @submit.prevent>
           <!-- 
@@ -110,7 +113,9 @@ const email = ref('')
             class="w-full"
             />
            -->
-          <UButton label="Suscribirme" color="primary" block size="lg" class="rounded-full" href="https://docs.google.com/forms/d/e/1FAIpQLSfEehtSB5qn6izKZrFTB-06HkK_2_SM8rqWLwZBI-gw3va9lw/viewform?usp=publish-editor"/>
+            <!--
+              <UButton label="Suscribirme" color="primary" block size="lg" class="rounded-full" href="https://docs.google.com/forms/d/e/1FAIpQLSfEehtSB5qn6izKZrFTB-06HkK_2_SM8rqWLwZBI-gw3va9lw/viewform?usp=publish-editor"/>
+              -->
         </form>
         <p class="mt-3 flex items-center gap-1.5 text-xs text-neutral-500">
           <UIcon name="i-lucide-lock" class="size-3.5" />
@@ -138,9 +143,9 @@ const email = ref('')
       <p>© {{ new Date().getFullYear() }} Neurofit IA. Todos los derechos reservados.</p>
       <div class="flex flex-wrap items-center gap-x-5 gap-y-2">
         <span>Neurofit IA es una marca registrada.</span>
-        <a href="#" class="hover:text-white">Términos de uso</a>
-        <a href="#" class="hover:text-white">Política de privacidad</a>
-        <a href="#" class="hover:text-white">Política de cookies</a>
+        <a href="/politicas" class="hover:text-white">Tratamiento de datos</a>
+        <a href="/politicas" class="hover:text-white">Política de privacidad</a>
+        <a href="/politicas" class="hover:text-white">Política de cookies</a>
       </div>
     </UContainer>
   </footer>
