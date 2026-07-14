@@ -61,8 +61,10 @@ const countries = ['Colombia', 'México', 'España', 'Estados Unidos', 'Argentin
             </p>
           </div>
 
+          <iframe width="540" height="305" src="https://b663cbbf.sibforms.com/v2/serve/MUIFAAu_MBfB3EvZOjLodOdbwBGrt7C6NkvVbSFDFxXDYg6hXLLFLUC3soTYXZFhOFIMiouWpSkMbVns_Pi3XNeqwxkpKgs-ZcIa-oOQxIxmgXg8TCL1FKzjLLOkoVoe6Mo4MA9fvaQsiBDa1Wrj-p306x3LzPaO9gKayAVNCQFNDpie0zuVVSzI6HJB29QwGlJYr2O5VsHlpXWPQA==" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
+
+          <!--
           <form class="mt-6 space-y-4" @submit.prevent>
-            <!--
               <div class="grid gap-4 sm:grid-cols-2">
                 <UInput v-model="form.name" icon="i-lucide-user" placeholder="Nombre" size="lg" />
                 <UInput v-model="form.email" type="email" icon="i-lucide-mail" placeholder="Correo electrónico" size="lg" />
@@ -79,13 +81,13 @@ const countries = ['Colombia', 'México', 'España', 'Estados Unidos', 'Argentin
               v-model="form.accepted"
               label="Acepto recibir comunicaciones de Neurofit IA sobre novedades, lanzamientos y contenido relacionado con salud cerebral."
               />
-              -->
-            <UButton label="Quiero ser de los primeros" color="primary" block size="lg" class="rounded-full" href="https://docs.google.com/forms/d/e/1FAIpQLSfEehtSB5qn6izKZrFTB-06HkK_2_SM8rqWLwZBI-gw3va9lw/viewform?usp=publish-editor" />
-            <p class="flex items-center justify-center gap-1.5 text-xs text-neutral-500">
-              <UIcon name="i-lucide-lock" class="size-3.5" />
-              Tu información está segura y nunca será compartida.
-            </p>
-          </form>
+              <UButton label="Quiero ser de los primeros" color="primary" block size="lg" class="rounded-full" href="https://docs.google.com/forms/d/e/1FAIpQLSfEehtSB5qn6izKZrFTB-06HkK_2_SM8rqWLwZBI-gw3va9lw/viewform?usp=publish-editor" />
+              <p class="flex items-center justify-center gap-1.5 text-xs text-neutral-500">
+                <UIcon name="i-lucide-lock" class="size-3.5" />
+                Tu información está segura y nunca será compartida.
+              </p>
+            </form>
+            -->
         </UCard>
         <NuxtPicture
           format="avif,webp"

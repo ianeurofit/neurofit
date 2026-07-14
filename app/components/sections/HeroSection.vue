@@ -39,7 +39,7 @@ const trust = [
             color="primary"
             size="xl"
             class="rounded-full px-6"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfEehtSB5qn6izKZrFTB-06HkK_2_SM8rqWLwZBI-gw3va9lw/viewform?usp=publish-editor"
+            href="#formulario"
           />
           <UButton
             label="Ver cómo funciona"

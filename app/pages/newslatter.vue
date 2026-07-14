@@ -18,7 +18,7 @@ useSeoMeta({
 
 <template>
   <div>
-    <LayoutAppHeader />
+    <LayoutAppHeaderBasic />
     <main>
       <SectionsNewslatterSection />/
     </main>
