@@ -18,9 +18,9 @@ useSeoMeta({
 
 <template>
   <div>
-    <LayoutAppHeader />
+    <LayoutAppHeaderBasic />
     <main>
-      <SectionsPolicySection />
+      <SectionsPolicySection />/
     </main>
     <LazySharedWhatsappFloat/>
     <LayoutAppFooter />

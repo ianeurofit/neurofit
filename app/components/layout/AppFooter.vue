@@ -60,7 +60,7 @@ const email = ref('')
             </div>
             <div>
               <p class="text-xs text-neutral-500">Correo</p>
-              <p class="font-medium text-white">info@neurofitai.com</p>
+              <p class="font-medium text-white">info@neurofitia.com</p>
             </div>
           </div>
           <div class="flex items-center gap-3">

@@ -9,9 +9,7 @@ const isDark = computed({
 })
 
 const links = [
-  { label: 'Inicio', to: '#inicio' },
-  { label: 'Plataforma', to: '#tecnologia' },
-  { label: 'Sobre Neurofit IA', to: '#vision' },
+  { label: 'Inicio', to: '/' },
   { label: 'Contacto', to: '#contacto' },
 ]
 
@@ -58,14 +56,6 @@ const mobileOpen = ref(false)
         </ClientOnly>
 
         <UButton
-          label="Solicitar acceso"
-          color="primary"
-          size="md"
-          class="hidden rounded-full px-5 sm:inline-flex"
-          href="#formulario"
-        />
-
-        <UButton
           icon="i-lucide-menu"
           color="neutral"
           variant="ghost"
@@ -86,7 +76,7 @@ const mobileOpen = ref(false)
       >
         {{ link.label }}
       </a>
-      <UButton label="Solicitar acceso" color="primary" block class="mt-2 rounded-full" href="#formulario" />
+      
     </div>
   </header>
 </template>
