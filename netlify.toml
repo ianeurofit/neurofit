@@ -1,0 +1,13 @@
+[build]
+  command = "pnpm run build"
+  publish = "dist"
+
+[build.environment]
+  # Nitro incrusta estas variables en el bundle de la función de servidor
+  # (nunca llegan al navegador): SUPABASE_URL/SUPABASE_KEY son públicas por
+  # diseño (Nuxt las expone como runtimeConfig.public para el cliente de
+  # Supabase) y SUPABASE_SERVICE_KEY solo se usa en server/api/admin/*.
+  # El escáner de secretos de Netlify las marca como "encontradas en el
+  # build" al verlas embebidas ahí; se excluyen explícitamente en vez de
+  # desactivar el escaneo por completo.
+  SECRETS_SCAN_OMIT_KEYS = "SUPABASE_URL,SUPABASE_KEY,SUPABASE_SERVICE_KEY"
