@@ -1,13 +1,18 @@
 <script setup lang="ts">
+const { t } = useI18n()
+
 const trust = [
-  { icon: 'i-lucide-shield-check', text: 'Ciencia y tecnología\nde vanguardia' },
-  { icon: 'i-lucide-lock', text: 'Privacidad y seguridad\nde tus datos' },
-  { icon: 'i-lucide-trending-up', text: 'Enfocado en prevención\ny bienestar' },
+  { icon: 'i-lucide-shield-check', key: 'hero.trust.science' },
+  { icon: 'i-lucide-lock', key: 'hero.trust.privacy' },
+  { icon: 'i-lucide-trending-up', key: 'hero.trust.prevention' },
 ]
 </script>
 
 <template>
-  <section id="inicio" class="relative overflow-hidden bg-ink-950 text-white">
+  <section
+    id="inicio"
+    class="relative overflow-hidden bg-ink-950 text-white"
+  >
     <div class="bg-radial-dots pointer-events-none absolute inset-0 text-white/5" />
     <div
       class="pointer-events-none absolute -right-40 top-1/2 size-[560px] -translate-y-1/2 rounded-full bg-brand-500/20 blur-[120px]"
@@ -15,26 +20,40 @@ const trust = [
 
     <UContainer class="relative grid gap-12 py-20 lg:grid-cols-2 lg:items-center lg:py-28">
       <div>
-        <h1 class="text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl lg:text-[3.4rem]">
-          Conoce hoy el estado
-          de <span class="text-brand-400">tu cerebro</span> y descubre
-          cómo podría estar en
-          <span class="text-brand-400">5, 10 o 20 años.</span>
-        </h1>
+        <i18n-t
+          keypath="hero.title"
+          tag="h1"
+          class="text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl lg:text-[3.4rem]"
+        >
+          <template #brain>
+            <span class="text-brand-400">{{ t('hero.titleBrain') }}</span>
+          </template>
+          <template #years>
+            <span class="text-brand-400">{{ t('hero.titleYears') }}</span>
+          </template>
+        </i18n-t>
 
         <div class="mt-6 h-1 w-16 rounded-full bg-brand-400" />
 
-        <p class="mt-6 max-w-xl text-base leading-relaxed text-neutral-300 sm:text-lg">
-          Neurofit IA utiliza inteligencia artificial para analizar variables cognitivas, emocionales,
-          conductuales y de estilo de vida, generando
-          <span class="font-semibold text-brand-400">indicadores de salud cerebral</span>,
-          <span class="font-semibold text-brand-400">alertas tempranas</span> y
-          <span class="font-semibold text-brand-400">recomendaciones personalizadas.</span>
-        </p>
+        <i18n-t
+          keypath="hero.subtitle"
+          tag="p"
+          class="mt-6 max-w-xl text-base leading-relaxed text-neutral-300 sm:text-lg"
+        >
+          <template #indicators>
+            <span class="font-semibold text-brand-400">{{ t('hero.indicators') }}</span>
+          </template>
+          <template #alerts>
+            <span class="font-semibold text-brand-400">{{ t('hero.alerts') }}</span>
+          </template>
+          <template #recommendations>
+            <span class="font-semibold text-brand-400">{{ t('hero.recommendations') }}</span>
+          </template>
+        </i18n-t>
 
         <div class="mt-8 flex flex-wrap gap-4">
           <UButton
-            label="Solicitar acceso anticipado"
+            :label="t('hero.ctaPrimary')"
             icon="i-lucide-brain-circuit"
             color="primary"
             size="xl"
@@ -42,19 +61,29 @@ const trust = [
             href="#formulario"
           />
           <UButton
-            label="Ver cómo funciona"
+            :label="t('hero.ctaSecondary')"
             icon="i-lucide-play-circle"
             color="neutral"
             variant="outline"
             size="xl"
             class="rounded-full border-white/25 px-6 hover:bg-white/10"
+            href="/demo"
           />
         </div>
 
         <div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
-          <div v-for="item in trust" :key="item.icon" class="flex items-start gap-3">
-            <UIcon :name="item.icon" class="mt-0.5 size-6 shrink-0 text-brand-400" />
-            <p class="whitespace-pre-line text-sm text-neutral-300">{{ item.text }}</p>
+          <div
+            v-for="item in trust"
+            :key="item.key"
+            class="flex items-start gap-3"
+          >
+            <UIcon
+              :name="item.icon"
+              class="mt-0.5 size-6 shrink-0 text-brand-400"
+            />
+            <p class="whitespace-pre-line text-sm text-neutral-300">
+              {{ t(item.key) }}
+            </p>
           </div>
         </div>
       </div>

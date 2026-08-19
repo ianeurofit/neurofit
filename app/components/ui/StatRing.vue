@@ -7,8 +7,8 @@ const props = withDefaults(
   }>(),
   {
     max: 100,
-    size: 132
-  }
+    size: 132,
+  },
 )
 
 const { current, el } = useCountUp(props.value)
@@ -19,8 +19,16 @@ const offset = computed(() => circumference.value * (1 - current.value / props.m
 </script>
 
 <template>
-  <div ref="el" class="relative shrink-0" :style="{ width: `${size}px`, height: `${size}px` }">
-    <svg :width="size" :height="size" class="-rotate-90">
+  <div
+    ref="el"
+    class="relative shrink-0"
+    :style="{ width: `${size}px`, height: `${size}px` }"
+  >
+    <svg
+      :width="size"
+      :height="size"
+      class="-rotate-90"
+    >
       <circle
         :cx="size / 2"
         :cy="size / 2"

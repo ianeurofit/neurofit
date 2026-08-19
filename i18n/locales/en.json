@@ -1,0 +1,888 @@
+{
+  "audience": {
+    "eyebrow": "Who do we help?",
+    "intro": "Our platform adapts to the needs of each user and organization, delivering actionable information to improve brain health, well-being and performance.",
+    "items": {
+      "companies": {
+        "cta": "For high-performing teams",
+        "items": [
+          "Well-being and brain health for your people",
+          "Lower stress and absenteeism",
+          "Better focus, productivity and decision making",
+          "Tailored corporate programs"
+        ],
+        "tagline": "Healthier, more focused and productive teams.",
+        "title": "Companies"
+      },
+      "governments": {
+        "cta": "For healthier societies",
+        "items": [
+          "National brain health strategies",
+          "Prevention and early detection programs",
+          "Data for evidence-based public policy",
+          "Better quality of life for the population"
+        ],
+        "tagline": "Healthier, more productive and resilient populations.",
+        "title": "Governments"
+      },
+      "health": {
+        "cta": "For healthcare professionals",
+        "items": [
+          "Support for diagnosis and assessment",
+          "Patient and treatment monitoring",
+          "Prevention and management of cognitive disorders",
+          "Evidence-based complementary tool"
+        ],
+        "tagline": "Better clinical decisions with objective data.",
+        "title": "Healthcare"
+      },
+      "people": {
+        "cta": "For your well-being",
+        "items": [
+          "Know the state of your brain",
+          "Identify risk factors",
+          "Get personalized recommendations",
+          "Improve your daily well-being and performance"
+        ],
+        "tagline": "Improve your brain health and quality of life.",
+        "title": "Individuals"
+      },
+      "research": {
+        "cta": "For researchers and scientists",
+        "items": [
+          "Access to anonymized and aggregated data",
+          "Collaboration on scientific studies",
+          "Validation of models and biomarkers",
+          "Driving innovation in neuroscience"
+        ],
+        "tagline": "High-quality data to advance knowledge.",
+        "title": "Research"
+      }
+    },
+    "pillars": {
+      "impact": {
+        "description": "Better brain health, more well-being, better quality of life.",
+        "title": "Real impact"
+      },
+      "personalization": {
+        "description": "Every brain is unique. So are our recommendations.",
+        "title": "Personalization"
+      },
+      "prevention": {
+        "description": "We detect risks before they become problems.",
+        "title": "Prevention"
+      },
+      "science": {
+        "description": "Neuroscience, artificial intelligence and scientific evidence.",
+        "title": "Science-based"
+      }
+    },
+    "pillarsIntro": "We work with people and organizations that want to make better decisions today for a healthier brain tomorrow.",
+    "pillarsTitle": "One goal, different paths",
+    "title": "is designed for {highlight}",
+    "titleHighlight": "different people and organizations"
+  },
+  "auth": {
+    "backHome": "Back to home",
+    "brandEyebrow": "Brain Intelligence",
+    "brandText": "Cognitive, emotional, behavioral and lifestyle indicators in a single dashboard.",
+    "brandTitle": "Measure, monitor and optimize your brain health with artificial intelligence.",
+    "confirm": {
+      "checking": "Verifying your access…"
+    },
+    "login": {
+      "email": "Email address",
+      "inactive": "Your account is deactivated. Contact the administrator.",
+      "invalidCredentials": "Incorrect email or password.",
+      "noAccount": "Don't have an account?",
+      "noProfile": "We couldn't find your profile. Contact the administrator.",
+      "noticeInactive": "Your account is deactivated. Contact the administrator.",
+      "noticeNoProfile": "Your account has no associated profile. Contact the administrator.",
+      "password": "Password",
+      "register": "Sign up",
+      "submit": "Sign in",
+      "subtitle": "Access your brain health dashboard.",
+      "title": "Sign in",
+      "welcome": "Welcome, {name}"
+    },
+    "register": {
+      "backToLogin": "Back to sign in",
+      "checkEmail": "Check your email",
+      "checkEmailText": "We sent a confirmation link to {email}.",
+      "confirm": "Confirm password",
+      "created": "Account created",
+      "createdText": "Welcome to Neurofit IA",
+      "email": "Email address",
+      "errors": {
+        "confirm": "Passwords do not match",
+        "email": "Invalid email",
+        "name": "Enter your full name",
+        "password": "At least 8 characters"
+      },
+      "fullName": "Full name",
+      "haveAccount": "Already have an account?",
+      "login": "Sign in",
+      "namePlaceholder": "Ana Perez",
+      "password": "Password",
+      "passwordHelp": "At least 8 characters",
+      "submit": "Create account",
+      "subtitle": "Start measuring and optimizing your brain health.",
+      "terms": "By signing up you accept our {link}.",
+      "termsLink": "data processing policies",
+      "title": "Create your account"
+    }
+  },
+  "benefits": {
+    "closing": {
+      "communities": "Better communities",
+      "lives": "Better lives",
+      "minds": "Better minds",
+      "world": "Better world"
+    },
+    "closingFuture": "better future",
+    "closingText": "At Neurofit IA we believe a healthy brain is the foundation of a full life and of a {future} for everyone.",
+    "eyebrow": "Benefits",
+    "intro": "Neurofit IA combines science, technology and artificial intelligence to create positive, measurable impact on people's brain health and on organizational results.",
+    "items": {
+      "decisions": {
+        "description": "Clear, evidence-based information to make conscious decisions about brain health.",
+        "title": "Informed decisions"
+      },
+      "global": {
+        "description": "A digital platform accessible from anywhere, promoting brain health worldwide.",
+        "title": "Global accessibility"
+      },
+      "optimized": {
+        "description": "Personalized recommendations to improve cognitive, emotional and physical performance.",
+        "title": "Optimized brain health"
+      },
+      "organizations": {
+        "description": "Improves productivity, reduces stress and absenteeism, and boosts team well-being.",
+        "title": "Impact on organizations"
+      },
+      "prevention": {
+        "description": "Detect risk factors in time to prevent cognitive decline and mental health problems.",
+        "title": "Early prevention"
+      },
+      "professionals": {
+        "description": "Advanced tools for health professionals that enable accurate assessments and effective intervention plans.",
+        "title": "Support for professionals"
+      },
+      "purpose": {
+        "description": "Integrates science, technology and humanity to drive real, sustainable change in society.",
+        "title": "Science with purpose"
+      },
+      "wellbeing": {
+        "description": "Promotes healthy habits with a positive impact on mind, body and emotions.",
+        "title": "Holistic well-being"
+      }
+    },
+    "title": "Benefits that transform {highlight}",
+    "titleHighlight": "lives and organizations"
+  },
+  "brainScore": {
+    "cardBadge": "Good · in good shape",
+    "cardCta": "See personalized plan",
+    "cardDimensions": "Dimensions analyzed",
+    "cardProjection": "Future projection",
+    "cardRecommendations": "Key recommendations",
+    "cardScore": "Your Brain Score™",
+    "deliverables": {
+      "alerts": {
+        "description": "Smart notifications",
+        "title": "Early warnings"
+      },
+      "plan": {
+        "description": "Strategies to improve your brain",
+        "title": "Optimization plan"
+      },
+      "recommendations": {
+        "description": "Science-based actions",
+        "title": "Recommendations"
+      },
+      "risk": {
+        "description": "Factors that need attention",
+        "title": "Risk profile"
+      },
+      "score": {
+        "description": "Your personalized score",
+        "title": "Brain Score™"
+      },
+      "tracking": {
+        "description": "Monitor how you evolve over time",
+        "title": "Continuous tracking"
+      }
+    },
+    "deliverablesTitle": "WHAT DO YOU GET?",
+    "dimensions": {
+      "cognition": "Cognition",
+      "emotional": "Emotional health",
+      "lifestyle": "Lifestyle",
+      "risk": "Risk factors"
+    },
+    "eyebrow": "Brain Score™",
+    "intro": "Neurofit IA generates your Brain Score™, a personalized score that reflects your {current} and your {future}.",
+    "introCurrent": "current brain state",
+    "introFuture": "future projection",
+    "projection": {
+      "today": "Today",
+      "y10": "10 years",
+      "y20": "20 years",
+      "y5": "5 years"
+    },
+    "quote": "Know your brain today, care for it always.",
+    "recommendations": [
+      "Improve sleep quality",
+      "Increase physical activity",
+      "Stress management",
+      "Cognitive training",
+      "Healthy nutrition",
+      "Strengthen social relationships"
+    ],
+    "title": "Your comprehensive {highlight} indicator",
+    "titleHighlight": "brain health"
+  },
+  "dashboard": {
+    "defaultTitle": "Welcome",
+    "evaluator": {
+      "active": "Active accounts",
+      "activeBadge": "Active",
+      "empty": "No people match your search.",
+      "eyebrow": "Clinical assessment",
+      "greeting": "Hi, {name}",
+      "greetingFallback": "evaluator",
+      "inactiveBadge": "Inactive",
+      "intro": "Review the people assigned to you and follow up on their brain health indicators.",
+      "listTitle": "People to assess",
+      "registered": "Registered people",
+      "role": "Assigned role",
+      "search": "Search by name or email",
+      "since": "Joined: {date}"
+    },
+    "eyebrow": "Neurofit IA dashboard",
+    "loading": "Loading…",
+    "nav": {
+      "myPanel": "My dashboard",
+      "newUser": "Create user",
+      "overview": "Overview",
+      "users": "Users"
+    },
+    "newUser": {
+      "activeAccount": "Active account",
+      "activeAccountHelp": "Turn it off to create the account without granting access yet.",
+      "back": "Back to users",
+      "cancel": "Cancel",
+      "createError": "Could not create the user",
+      "created": "User created",
+      "createdText": "{email} can now sign in as {role}.",
+      "email": "Email address",
+      "emailPlaceholder": "ana{'@'}neurofitia.com",
+      "errors": {
+        "email": "Invalid email",
+        "name": "Enter the full name",
+        "password": "At least 8 characters"
+      },
+      "fullName": "Full name",
+      "generateAria": "Generate password",
+      "intro": "The account is confirmed instantly: the person can sign in with the email and password you set.",
+      "namePlaceholder": "Ana Perez",
+      "password": "Temporary password",
+      "passwordHelp": "At least 8 characters.",
+      "role": "Role",
+      "rolesTitle": "Available roles",
+      "shareText": "The person can change it from their own dashboard after signing in.",
+      "shareTitle": "Share the password securely",
+      "submit": "Create user",
+      "title": "Create user"
+    },
+    "noName": "No name",
+    "redirecting": "Redirecting to your dashboard…",
+    "signOut": "Sign out",
+    "superuser": {
+      "createUser": "Create user",
+      "empty": "There are no registered users yet.",
+      "evaluators": "Evaluators",
+      "eyebrow": "Full control",
+      "greeting": "Hi, {name}",
+      "greetingFallback": "superuser",
+      "inactive": "Inactive accounts",
+      "intro": "Manage accounts, roles and access across the whole Neurofit IA platform.",
+      "latest": "Latest sign-ups",
+      "manageUsers": "Manage users",
+      "seeAll": "See all",
+      "superusers": "Superusers",
+      "totalUsers": "Total users"
+    },
+    "titles": {
+      "dashboard": "Dashboard",
+      "evaluator": "Evaluator dashboard",
+      "newUser": "Create user",
+      "superuser": "Superuser dashboard",
+      "user": "My dashboard",
+      "users": "Users"
+    },
+    "user": {
+      "comingSoon": "Available very soon.",
+      "dimensions": {
+        "behavioral": "Behavioral",
+        "cognitive": "Cognitive",
+        "emotional": "Emotional",
+        "lifestyle": "Lifestyle"
+      },
+      "email": "Email address",
+      "emailHelp": "The email cannot be changed from here.",
+      "eyebrow": "Your brain health",
+      "fullName": "Full name",
+      "greeting": "Hi, {name}",
+      "greetingFallback": "welcome",
+      "intro": "Here you will see your Brain Score and your personalized recommendations once you complete your first assessment.",
+      "myData": "My details",
+      "myDataIntro": "Update your personal information.",
+      "pending": "Pending",
+      "save": "Save changes",
+      "saveError": "Could not save",
+      "saved": "Details updated",
+      "startEvaluation": "Start assessment"
+    },
+    "users": {
+      "active": "Active",
+      "activeAccount": "Active account",
+      "activeAccountHelp": "If deactivated, the person will not be able to access the dashboard.",
+      "allRoles": "All roles",
+      "cancel": "Cancel",
+      "columns": {
+        "actions": "Actions",
+        "created": "Joined",
+        "role": "Role",
+        "status": "Status",
+        "user": "User"
+      },
+      "create": "Create user",
+      "delete": "Delete",
+      "deleteAria": "Delete user",
+      "deleteError": "Could not delete",
+      "deleteText": "You are about to permanently delete the account {email} and all its associated data. This action cannot be undone.",
+      "deleteTitle": "Delete user",
+      "deleted": "User deleted",
+      "editAria": "Edit user",
+      "editTitle": "Edit {email}",
+      "empty": "No users match the filters.",
+      "fullName": "Full name",
+      "inactive": "Inactive",
+      "intro": "Create accounts, change roles, activate or delete platform users.",
+      "loading": "Loading users…",
+      "newPassword": "New password",
+      "newPasswordHelp": "Leave empty to keep it unchanged. At least 8 characters.",
+      "role": "Role",
+      "roleSelfHelp": "You cannot change your own superuser role.",
+      "save": "Save",
+      "search": "Search by name or email",
+      "title": "User management",
+      "unknownError": "Unknown error",
+      "updateError": "Could not update",
+      "updated": "User updated",
+      "you": "(you)"
+    }
+  },
+  "evaluation": {
+    "columns": {
+      "cognition": {
+        "description": "We assess your key cognitive abilities to understand how your mind works.",
+        "items": [
+          "Memory",
+          "Attention",
+          "Executive functions",
+          "Processing speed",
+          "Reasoning",
+          "Learning"
+        ],
+        "title": "Cognition"
+      },
+      "emotional": {
+        "description": "We analyze your emotional well-being and factors that may affect your mental balance.",
+        "items": [
+          "Stress",
+          "Anxiety",
+          "Mood",
+          "Emotional well-being",
+          "Resilience",
+          "Motivation"
+        ],
+        "title": "Emotional health"
+      },
+      "lifestyle": {
+        "description": "We study the daily habits that directly impact your brain health.",
+        "items": [
+          "Sleep quality",
+          "Physical activity",
+          "Nutrition",
+          "Social relationships",
+          "Time management",
+          "Habits and routines"
+        ],
+        "title": "Lifestyle"
+      },
+      "risk": {
+        "description": "We identify factors that may increase the risk of cognitive decline or future problems.",
+        "items": [
+          "Cognitive factors",
+          "Behavioral factors",
+          "Emotional factors",
+          "Family history",
+          "Brain aging",
+          "Other relevant factors"
+        ],
+        "title": "Risk factors"
+      }
+    },
+    "eyebrow": "What does Neurofit IA assess?",
+    "footerClaim": "More than data: intelligence for your well-being.",
+    "footerDiagnosis": "personalized preventive assessment",
+    "footerNote": "By integrating all of these dimensions, Neurofit IA generates a {diagnosis} and actionable recommendations for you.",
+    "intro": "Neurofit IA assesses multiple dimensions that influence your brain health to build a complete and accurate picture.",
+    "title": "A comprehensive analysis of your {highlight}",
+    "titleHighlight": "brain health"
+  },
+  "footer": {
+    "contactTitle": "Contact Neurofit IA",
+    "cookiePolicy": "Cookie policy",
+    "dataPolicy": "Data processing",
+    "description": "At Neurofit IA we use science, data and artificial intelligence to understand, prevent and optimize people's brain health around the world.",
+    "emailLabel": "Email",
+    "followUs": "FOLLOW US ON",
+    "newsletterCta": "View Demo",
+    "newsletterEyebrow": "Be the first",
+    "newsletterText": "Our development team is hard at work building the Brain Intelligence™ system.",
+    "newsletterTitle": "See how {brand} works",
+    "places": {
+      "america": "Miami, USA",
+      "apac": "Singapore",
+      "europe": "Barcelona, Spain",
+      "latam": "Medellín, Colombia",
+      "middleEast": "Dubai, UAE"
+    },
+    "presence": "Global presence,",
+    "presenceHighlight": "real impact.",
+    "privacyNote": "Your information is safe. We never share your data.",
+    "privacyPolicy": "Privacy policy",
+    "regions": {
+      "america": "North America",
+      "apac": "Asia Pacific",
+      "europe": "Europe",
+      "latam": "Latin America",
+      "middleEast": "Middle East"
+    },
+    "rights": "© {year} Neurofit IA. All rights reserved.",
+    "tagline": "Intelligence that transforms lives.",
+    "trademark": "Neurofit IA is a registered trademark.",
+    "trust": {
+      "global": "Global impact",
+      "privacy": "Privacy and security",
+      "science": "Science with purpose",
+      "wellbeing": "Well-being for all"
+    },
+    "whatsappLabel": "WhatsApp"
+  },
+  "hero": {
+    "alerts": "early warnings",
+    "ctaPrimary": "Request early access",
+    "ctaSecondary": "See how it works",
+    "indicators": "brain health indicators",
+    "recommendations": "personalized recommendations.",
+    "subtitle": "Neurofit IA uses artificial intelligence to analyze cognitive, emotional, behavioral and lifestyle variables, generating {indicators}, {alerts} and {recommendations}",
+    "title": "Find out the state of {brain} today and discover how it could be in {years}",
+    "titleBrain": "your brain",
+    "titleYears": "5, 10 or 20 years.",
+    "trust": {
+      "prevention": "Focused on prevention\nand well-being",
+      "privacy": "Privacy and security\nfor your data",
+      "science": "Cutting-edge science\nand technology"
+    }
+  },
+  "mission": {
+    "eyebrow": "Our mission and vision",
+    "footerHighlight": "intelligent and healthy",
+    "footerText": "We believe in the power of science, technology and collaboration to create a world where every brain has the chance to thrive.",
+    "footerTitle": "Together we build a more {highlight} future",
+    "impact": {
+      "countries": "In every\ncountry",
+      "generational": "With generational\nimpact",
+      "people": "For every\nperson",
+      "stages": "At every\nstage of life"
+    },
+    "impactHighlight": "A better future.",
+    "impactTitle": "Global impact.",
+    "intro": "At Neurofit IA we work to transform brain health on a global scale, combining science, technology and artificial intelligence to create a positive impact on millions of lives.",
+    "missionItems": [
+      "Make science-based brain assessment accessible.",
+      "Detect risks and improvement opportunities early.",
+      "Guide decisions and habits that transform lives.",
+      "Drive a healthier, more productive and more conscious future."
+    ],
+    "missionText": "Empower people and organizations with accurate information and personalized recommendations to improve brain health, well-being and performance.",
+    "missionTitle": "Our Mission",
+    "title": "A world where every brain can reach its {highlight}",
+    "titleHighlight": "full potential",
+    "visionItems": [
+      "Reach one billion people around the world.",
+      "Set the global standard for digital brain health.",
+      "Collaborate with governments, companies, institutions and communities.",
+      "Contribute to a more resilient, equitable world full of opportunity."
+    ],
+    "visionText": "To be the world's leading brain intelligence platform, recognized for transforming the way the world understands, cares for and optimizes the brain.",
+    "visionTitle": "Our Vision"
+  },
+  "nav": {
+    "about": "About Neurofit IA",
+    "accountMenu": "Account menu",
+    "closeMenu": "Close menu",
+    "contact": "Contact",
+    "demo": "View demo",
+    "home": "Home",
+    "language": "Language",
+    "login": "Sign in",
+    "openMenu": "Open menu",
+    "platform": "Platform",
+    "requestAccess": "Request access",
+    "theme": "Theme",
+    "themeDark": "Dark",
+    "themeLight": "Light",
+    "toggleTheme": "Switch light or dark theme"
+  },
+  "newsletter": {
+    "badges": {
+      "global": {
+        "description": "For everyone, in every country.",
+        "title": "Globally available"
+      },
+      "purpose": {
+        "description": "Improving lives through brain health.",
+        "title": "One purpose"
+      },
+      "science": {
+        "description": "Based on evidence and neuroscience.",
+        "title": "Real science"
+      },
+      "trust": {
+        "description": "Privacy, transparency and data security.",
+        "title": "Trust and ethics"
+      }
+    },
+    "cardHighlight": "very soon.",
+    "cardText": "Neurofit IA will be available worldwide.\nDon't miss out.",
+    "cardTitle": "Leave us your details and we will let you know {highlight}",
+    "eyebrow": "Be the first to know",
+    "intro": "Join our exclusive list and receive news, early access and special content about brain health, science and innovation.",
+    "perks": {
+      "community": {
+        "description": "Join a global community focused on boosting the brain and well-being.",
+        "title": "Neurofit community"
+      },
+      "content": {
+        "description": "Receive insights, research and practical guides to care for your brain health.",
+        "title": "Exclusive content"
+      },
+      "early": {
+        "description": "Be among the first to try our platform and new features.",
+        "title": "Early access"
+      },
+      "global": {
+        "description": "Be part of a movement that will transform brain health worldwide.",
+        "title": "Global impact"
+      }
+    },
+    "quote": "The future of brain health starts today.",
+    "quoteHighlight": "Be part of the change.",
+    "title": "Be among the first to discover {brand}"
+  },
+  "policy": {
+    "badge": "Data Protection",
+    "claims": {
+      "alertText": "If you want to unsubscribe from our email marketing list, you can also do so at any time by clicking the \"Unsubscribe\" link at the bottom of our emails.",
+      "alertTitle": "Unsubscribe",
+      "text": "To exercise your rights (access, update, rectify or delete your data), you can send a formal request to the email address {email}. Your request will be answered within a maximum of {days} business days."
+    },
+    "collected": {
+      "intro": "Through our forms we may request the following data:",
+      "items": [
+        "First and last names.",
+        "Email address.",
+        "Phone number (optional).",
+        "General information about your interest in the Neurofit IA project."
+      ]
+    },
+    "intro": "At Neurofit IA we are committed to protecting and respecting our users' privacy. This policy describes how we collect, use, store and protect the personal data obtained through our contact forms, newsletter subscriptions (email marketing) and interest registrations for our services focused on assessing, treating and improving the quality of life of people with Alzheimer's and their families.",
+    "lastUpdated": "Last updated: {date}",
+    "project": "Project:",
+    "purpose": {
+      "intro": "The personal data collected will be used for the following purposes:",
+      "items": [
+        "Send newsletters and email marketing campaigns with news, progress and updates about Neurofit IA.",
+        "Contact interested people to provide advice or detailed information about our assessment and treatment services.",
+        "Perform internal statistical analysis to improve our services and the user experience.",
+        "Handle requests, complaints or claims."
+      ]
+    },
+    "responsible": {
+      "addressLabel": "Address",
+      "companyLabel": "Legal Name / Project Name",
+      "emailLabel": "Contact Email",
+      "idLabel": "Identification (Tax ID / Registration Number)",
+      "phoneLabel": "Phone"
+    },
+    "rights": {
+      "intro": "As the owner of the information, you have the right to:",
+      "items": [
+        "Access, update and rectify your personal data held by Neurofit IA.",
+        "Request proof of the authorization granted for the processing of your data.",
+        "Be informed about how your personal data has been used.",
+        "Withdraw your authorization and/or request deletion of the data at any time, especially if you no longer wish to receive email marketing communications.",
+        "Access your processed personal data free of charge."
+      ]
+    },
+    "sections": {
+      "claims": "7. Procedure for Enquiries and Complaints",
+      "collected": "2. Information We Collect",
+      "purpose": "4. Purpose of Data Processing",
+      "responsible": "1. Data Controller",
+      "rights": "5. Rights of Data Subjects",
+      "security": "6. Information Security",
+      "sensitive": "3. Processing of Sensitive Data",
+      "validity": "8. Validity"
+    },
+    "security": {
+      "text": "At Neurofit IA we implement the technical, human and administrative measures needed to keep records secure, preventing their alteration, loss, or unauthorized or fraudulent consultation, use or access. Information is stored on secure email management platforms and databases with restricted access."
+    },
+    "sensitive": {
+      "alertText": "Given the nature of our project (focused on Alzheimer's), users may voluntarily share information about their own health or that of a family member. Such data is considered sensitive.",
+      "alertTitle": "Health information",
+      "items": [
+        "Neurofit IA guarantees that providing sensitive data is strictly optional and voluntary for the user.",
+        "That information will be used solely and exclusively to better understand the user's needs and to properly guide information about our services."
+      ]
+    },
+    "seoDescription": "Learn how Neurofit IA collects, uses, stores and protects your personal data.",
+    "seoTitle": "Privacy Policy and Personal Data Processing | Neurofit IA",
+    "title": "Privacy Policy and Personal Data Processing",
+    "toc": "Contents",
+    "validity": {
+      "text": "This policy applies from the date of publication. The databases in which personal data is recorded will remain valid for as long as the information is kept and used for the purposes described, or until the data subject requests its deletion."
+    }
+  },
+  "problem": {
+    "alert": "Neurofit IA aims to change that paradigm, moving from a {reactive} model to a {preventive} one.",
+    "alertPreventive": "preventive",
+    "alertReactive": "reactive",
+    "eyebrow": "The problem",
+    "items": {
+      "burnout": {
+        "description": "Physical and mental exhaustion that reduces productivity and quality of life.",
+        "title": "Burnout"
+      },
+      "cognitive": {
+        "description": "Progressive loss of memory, attention and other functions.",
+        "title": "Cognitive decline"
+      },
+      "mental": {
+        "description": "Emotional disorders that impact personal and social life.",
+        "title": "Mental health problems"
+      },
+      "quality": {
+        "description": "It affects relationships, performance and overall happiness.",
+        "title": "Lower quality of life"
+      },
+      "stress": {
+        "description": "High stress levels that affect mental well-being.",
+        "title": "Stress and anxiety"
+      }
+    },
+    "p1": "Millions of people have risk factors related to stress, anxiety, cognitive decline and mental health without knowing it.",
+    "p2": "Most brain problems begin years before visible symptoms appear.",
+    "p3": "By the time people seek help, {highlight}",
+    "p3Highlight": "the problem is often already advanced.",
+    "title": "We are living through a silent {highlight} crisis",
+    "titleHighlight": "brain health"
+  },
+  "roles": {
+    "evaluator": {
+      "description": "Reviews users' assessments and results.",
+      "label": "Evaluator"
+    },
+    "superuser": {
+      "description": "Full control over the platform and every account.",
+      "label": "Superuser"
+    },
+    "user": {
+      "description": "Accesses their own assessments and Brain Score.",
+      "label": "User"
+    }
+  },
+  "seo": {
+    "confirm": {
+      "title": "Neurofit IA | Confirming access"
+    },
+    "evaluator": {
+      "title": "Neurofit IA | Evaluator"
+    },
+    "home": {
+      "description": "Neurofit IA uses artificial intelligence to analyze cognitive, emotional, behavioral and lifestyle variables, generating brain health indicators, early warnings and personalized recommendations.",
+      "ogDescription": "Artificial intelligence platform to assess, monitor and optimize brain health.",
+      "ogTitle": "Neurofit IA | Brain Intelligence",
+      "title": "Neurofit IA | Find out the state of your brain today"
+    },
+    "login": {
+      "description": "Access your Neurofit IA dashboard.",
+      "title": "Neurofit IA | Sign in"
+    },
+    "newUser": {
+      "title": "Neurofit IA | Create user"
+    },
+    "newsletter": {
+      "title": "Neurofit IA | Newsletter"
+    },
+    "policies": {
+      "title": "Neurofit IA | Policies and data processing"
+    },
+    "register": {
+      "description": "Create your Neurofit IA account.",
+      "title": "Neurofit IA | Create account"
+    },
+    "superuser": {
+      "title": "Neurofit IA | Superuser"
+    },
+    "user": {
+      "title": "Neurofit IA | My dashboard"
+    },
+    "users": {
+      "title": "Neurofit IA | User management"
+    }
+  },
+  "solution": {
+    "alert": "Neurofit IA turns data into actionable information so you can make {decisions} today and build a better future.",
+    "alertDecisions": "preventive decisions",
+    "capabilities": {
+      "alerts": {
+        "description": "Smart notifications when we detect signals worth your attention.",
+        "title": "Early warnings"
+      },
+      "evaluate": {
+        "description": "We analyze your cognitive, emotional and behavioral health.",
+        "title": "Assess"
+      },
+      "monitor": {
+        "description": "Continuous tracking to see how you evolve over time.",
+        "title": "Monitor"
+      },
+      "optimize": {
+        "description": "Plans and actions to strengthen your brain health and well-being.",
+        "title": "Optimize your brain"
+      },
+      "recommendations": {
+        "description": "Personalized strategies based on science and on your unique profile.",
+        "title": "Recommendations"
+      },
+      "risks": {
+        "description": "We identify risk factors before it is too late.",
+        "title": "Detect risks"
+      }
+    },
+    "capabilitiesTitle": "NEUROFIT IA LETS YOU:",
+    "eyebrow": "Our solution",
+    "intro": "An artificial intelligence platform designed to assess, monitor and optimize brain health through a comprehensive analysis of your information.",
+    "stats": {
+      "data": "Data points processed with AI",
+      "dimensions": "Dimensions analyzed",
+      "focus": "Focused on your brain health",
+      "variables": "Variables assessed"
+    },
+    "title": "Neurofit IA",
+    "titleHighlight": "Brain Intelligence™"
+  },
+  "subscribed": {
+    "backHome": "Back to home",
+    "badge": "Subscription confirmed",
+    "confirmedGeneric": "Your email has been registered successfully.",
+    "confirmedTo": "We sent the confirmation to {email}.",
+    "followUs": "Follow us for more brain health content",
+    "intro": "From now on you will stay up to date with every advance in assessment, treatment and quality of life for people with Alzheimer's and their families.",
+    "nextTitle": "What's next",
+    "seoDescription": "Thank you for joining the Neurofit IA community. You are on your way to receiving news about brain health and Alzheimer's.",
+    "seoTitle": "Subscription confirmed! | Neurofit IA",
+    "services": "Explore our services",
+    "steps": {
+      "brain": {
+        "description": "You will receive Neurofit IA updates, brain health findings and practical resources for families.",
+        "title": "Specialized content on the way"
+      },
+      "community": {
+        "description": "We will share how other families are using these resources to improve their day to day.",
+        "title": "You are part of our community"
+      },
+      "inbox": {
+        "description": "We sent you a welcome email. If you don't see it within a few minutes, check your spam or promotions folder.",
+        "title": "Check your inbox"
+      }
+    },
+    "title": "Thank you for joining Neurofit IA!"
+  },
+  "team": {
+    "experience": {
+      "clinical": {
+        "description": "Mental health professionals who design and deliver programs based on evidence and empathy.",
+        "title": "Clinical team"
+      },
+      "innovation": {
+        "description": "Creatives, strategists and experience design specialists who take our solutions to the next level.",
+        "title": "Innovation team"
+      },
+      "scientific": {
+        "description": "Neuroscientists, psychologists and researchers who generate knowledge and validate every solution.",
+        "title": "Scientific team"
+      },
+      "tech": {
+        "description": "Engineers, developers and data analysts who turn science into intelligent technology.",
+        "title": "Technology team"
+      }
+    },
+    "eyebrow": "Team",
+    "founderName": "Marisol Uribe Vergara",
+    "founderRole": "Psychologist",
+    "founderTitle": "Founder of Neurofit IA",
+    "intro": "At Neurofit IA we are a scientific, technological and human team committed to transforming brain health through science, innovation and a comprehensive people-centered approach.",
+    "quote": "\"At Neurofit IA we work every day to advance brain health, prevent disease and improve the quality of life of millions of people around the world.\"",
+    "secondIntro": "Scientists, technologists, psychologists, neuroscientists, designers, engineers and data specialists work together to create innovative solutions with real impact.",
+    "secondTitle": "A multidisciplinary team {highlight}",
+    "stats": {
+      "countries": "Countries reached by our studies",
+      "data": "Data points processed to understand the brain",
+      "ethics": "Committed to ethics and privacy",
+      "experts": "Experts and scientists collaborating",
+      "people": "People assessed in pilots and validations"
+    },
+    "statsTitle": "NEUROFIT IA IN NUMBERS",
+    "title": "Science, empathy and purpose {highlight}",
+    "titleHighlight": "in service of the brain",
+    "values": {
+      "community": {
+        "description": "We work alongside communities, institutions and organizations to create well-being and opportunities accessible to all.",
+        "title": "Community impact"
+      },
+      "human": {
+        "description": "We listen, understand and design solutions centered on people and their stories.",
+        "title": "Human focus"
+      },
+      "innovation": {
+        "description": "We build ethical, inclusive and sustainable solutions for a more conscious future.",
+        "title": "Innovation with values"
+      },
+      "science": {
+        "description": "We use scientific evidence and technology to prevent, intervene and improve brain health.",
+        "title": "Science with purpose"
+      }
+    }
+  },
+  "whatsapp": {
+    "aria": "Contact us on WhatsApp",
+    "message": "Hi, I need more information. I'm browsing the website:"
+  }
+}

@@ -8,8 +8,8 @@ const props = withDefaults(
   }>(),
   {
     max: 100,
-    color: 'brand'
-  }
+    color: 'brand',
+  },
 )
 
 const { current, el } = useCountUp(props.value)
@@ -18,14 +18,17 @@ const barColor: Record<string, string> = {
   brand: 'bg-brand-500',
   blue: 'bg-blue-500',
   violet: 'bg-violet-500',
-  orange: 'bg-orange-500'
+  orange: 'bg-orange-500',
 }
 
 const widthPct = computed(() => `${Math.min(100, (current.value / props.max) * 100)}%`)
 </script>
 
 <template>
-  <div ref="el" class="w-full">
+  <div
+    ref="el"
+    class="w-full"
+  >
     <div class="mb-1.5 flex items-center justify-between text-sm">
       <span class="font-medium text-neutral-700 dark:text-neutral-300">{{ label }}</span>
       <span class="font-bold tabular-nums text-neutral-900 dark:text-white">{{ current }}/{{ max }}</span>

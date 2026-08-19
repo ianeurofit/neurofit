@@ -38,6 +38,47 @@ body {
   background-size: 22px 22px;
 }
 
+/* ---------------------------------------------------------------
+   Animaciones del panel demo.
+   Se definen en CSS (no en JS) para que el contenido sea visible
+   aunque el JavaScript falle y para que el bloque de
+   `prefers-reduced-motion` de abajo las neutralice por completo.
+   --------------------------------------------------------------- */
+
+@keyframes demo-enter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+@keyframes demo-ring-draw {
+  from {
+    stroke-dashoffset: var(--ring-length);
+  }
+}
+
+@keyframes demo-bar-grow {
+  from {
+    width: 0;
+  }
+}
+
+/* Entrada escalonada: el retraso se pasa con `--delay` en el elemento. */
+.demo-enter {
+  animation: demo-enter 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--delay, 0ms);
+}
+
+.demo-ring-draw {
+  animation: demo-ring-draw 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.demo-bar-grow {
+  animation: demo-bar-grow 1.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--delay, 0ms);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -49,4 +90,39 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Transición entre etapas del demo (Vue <Transition name="demo-stage">). */
+.demo-stage-enter-active,
+.demo-stage-leave-active {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.demo-stage-enter-from {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.demo-stage-leave-to {
+  opacity: 0;
+  transform: translateY(-6px);
+}
+
+/* Cursor de la máquina de escribir del tamizaje conversacional. */
+@keyframes demo-caret-blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  50%,
+  95% {
+    opacity: 0;
+  }
+}
+
+.demo-caret {
+  display: inline-block;
+  margin-left: 1px;
+  font-weight: 400;
+  animation: demo-caret-blink 1s steps(1, end) infinite;
 }
