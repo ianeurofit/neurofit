@@ -27,6 +27,24 @@ export default defineNuxtRouteMiddleware(async (to) => {
     return navigateTo(localePath(profile ? ROLE_HOME[profile.role] : '/dashboard'))
   }
 
+  // El listado de pacientes de la demo (/demo) solo es visible para el
+  // superusuario, dentro del panel; el resto de visitantes va directo al
+  // caso publico de la demo.
+  if (name === 'demo') {
+    const fallback = localePath('/demo/carlos-gomez')
+
+    if (!user.value) return navigateTo(fallback)
+
+    const { fetchProfile } = useProfile()
+    const profile = await fetchProfile()
+
+    if (!profile || !profile.is_active || profile.role !== 'superuser') {
+      return navigateTo(fallback)
+    }
+
+    return
+  }
+
   if (!isDashboard) return
 
   if (!user.value) {

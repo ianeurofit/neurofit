@@ -66,7 +66,7 @@ const mobileOpen = ref(false)
         </ClientOnly>
 
         <UButton
-          :to="localePath('/demo')"
+          :to="localePath('/demo/carlos-gomez')"
           :label="t('nav.demo')"
           color="neutral"
           variant="ghost"
@@ -111,7 +111,7 @@ const mobileOpen = ref(false)
         {{ t(link.key) }}
       </a>
       <UButton
-        :to="localePath('/demo')"
+        :to="localePath('/demo/carlos-gomez')"
         :label="t('nav.demo')"
         color="neutral"
         variant="soft"
@@ -126,7 +126,6 @@ const mobileOpen = ref(false)
         block
         class="mt-2 rounded-full"
       />
-
     </div>
   </header>
 </template>
