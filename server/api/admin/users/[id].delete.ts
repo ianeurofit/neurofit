@@ -1,14 +1,14 @@
 import { requireSuperuser } from '~~/server/utils/adminGuard'
 
 export default defineEventHandler(async (event) => {
-  const { admin, user } = await requireSuperuser(event)
+  const { admin, userId } = await requireSuperuser(event)
   const id = getRouterParam(event, 'id')
 
   if (!id) {
     throw createError({ statusCode: 400, statusMessage: 'Identificador requerido' })
   }
 
-  if (id === user.id) {
+  if (id === userId) {
     throw createError({ statusCode: 400, statusMessage: 'No puedes eliminar tu propia cuenta' })
   }
 

@@ -91,7 +91,7 @@ app/
 
 ### Configuración
 
-Copia `.env.example` a `.env` y completa `SUPABASE_SERVICE_KEY` con la clave
+Copia `.env.example` a `.env` y completa `NUXT_SUPABASE_SECRET_KEY` con la clave
 `service_role` del proyecto (Supabase Dashboard → Project Settings → API Keys).
 Sin esa clave, el panel funciona en modo lectura: crear, editar y eliminar
 usuarios devuelve error 500 desde `/api/admin/*`.

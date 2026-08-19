@@ -8,7 +8,7 @@ interface Body {
 }
 
 export default defineEventHandler(async (event) => {
-  const { admin, user } = await requireSuperuser(event)
+  const { admin, userId } = await requireSuperuser(event)
   const id = getRouterParam(event, 'id')
 
   if (!id) {
@@ -23,11 +23,11 @@ export default defineEventHandler(async (event) => {
   if (body.is_active !== undefined) updates.is_active = Boolean(body.is_active)
 
   // Nadie puede quitarse a si mismo el rol de superusuario ni desactivarse
-  if (id === user.id && updates.role !== undefined && updates.role !== 'superuser') {
+  if (id === userId && updates.role !== undefined && updates.role !== 'superuser') {
     throw createError({ statusCode: 400, statusMessage: 'No puedes cambiar tu propio rol de superusuario' })
   }
 
-  if (id === user.id && updates.is_active === false) {
+  if (id === userId && updates.is_active === false) {
     throw createError({ statusCode: 400, statusMessage: 'No puedes desactivar tu propia cuenta' })
   }
 

@@ -150,7 +150,7 @@ const regions = ['america', 'europe', 'latam', 'apac', 'middleEast']
             block
             size="lg"
             class="rounded-full"
-            href="/demo"
+            :to="localePath('/demo/carlos-gomez')"
           />
         </form>
         <p class="mt-3 flex items-center gap-1.5 text-xs text-neutral-500">

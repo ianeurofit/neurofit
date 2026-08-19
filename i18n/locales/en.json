@@ -262,6 +262,7 @@
     "eyebrow": "Neurofit IA dashboard",
     "loading": "Loading…",
     "nav": {
+      "demo": "Public demo",
       "myPanel": "My dashboard",
       "newUser": "Create user",
       "overview": "Overview",
@@ -315,6 +316,7 @@
     },
     "titles": {
       "dashboard": "Dashboard",
+      "demo": "Demo patients",
       "evaluator": "Evaluator dashboard",
       "newUser": "Create user",
       "superuser": "Superuser dashboard",

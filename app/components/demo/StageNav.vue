@@ -20,7 +20,7 @@ const localePath = useLocalePath()
     <!-- Escritorio: barra lateral -->
     <div class="hidden h-full flex-col lg:flex">
       <NuxtLink
-        :to="localePath('/demo')"
+        :to="localePath('/demo/carlos-gomez')"
         class="inline-flex items-center gap-1.5 text-sm font-medium text-neutral-500 transition-colors hover:text-brand-600 dark:text-neutral-400 dark:hover:text-brand-400"
       >
         <UIcon
@@ -112,7 +112,7 @@ const localePath = useLocalePath()
     <div class="lg:hidden">
       <div class="flex items-center gap-3 px-4 pt-4">
         <NuxtLink
-          :to="localePath('/demo')"
+          :to="localePath('/demo/carlos-gomez')"
           class="flex size-9 shrink-0 items-center justify-center rounded-full bg-white text-neutral-500 ring-1 ring-neutral-200 dark:bg-ink-900 dark:text-neutral-400 dark:ring-white/10"
           :aria-label="ui.backToPatients"
         >

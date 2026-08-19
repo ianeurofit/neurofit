@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t, tm, rt } = useI18n()
+const localePath = useLocalePath()
 
 const dimensions = [
   { icon: 'i-lucide-brain', value: 85, key: 'cognition', color: 'brand' as const },
@@ -154,7 +155,7 @@ const maxScore = 100
                 color="primary"
                 size="sm"
                 class="mt-4 rounded-full"
-                href="/demo"
+                :to="localePath('/demo/carlos-gomez')"
               />
             </div>
           </div>

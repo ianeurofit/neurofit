@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n()
+const localePath = useLocalePath()
 
 const trust = [
   { icon: 'i-lucide-shield-check', key: 'hero.trust.science' },
@@ -67,7 +68,7 @@ const trust = [
             variant="outline"
             size="xl"
             class="rounded-full border-white/25 px-6 hover:bg-white/10"
-            href="/demo"
+            :to="localePath('/demo/carlos-gomez')"
           />
         </div>
 

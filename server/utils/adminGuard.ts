@@ -8,18 +8,21 @@ export type UserRole = 'superuser' | 'evaluator' | 'user'
  * el cliente con service_role para operar sobre auth.users.
  */
 export async function requireSuperuser(event: H3Event) {
-  const user = await serverSupabaseUser(event)
+  // serverSupabaseUser devuelve los claims del JWT: el id del usuario
+  // viene en `sub`, no en `id` (esa es la forma del objeto User clasico).
+  const claims = await serverSupabaseUser(event)
 
-  if (!user) {
+  if (!claims) {
     throw createError({ statusCode: 401, statusMessage: 'No autenticado' })
   }
 
+  const userId = claims.sub
   const admin = serverSupabaseServiceRole(event)
 
   const { data: profile, error } = await admin
     .from('profiles')
     .select('id, role, is_active')
-    .eq('id', user.id)
+    .eq('id', userId)
     .maybeSingle()
 
   if (error) {
@@ -30,7 +33,7 @@ export async function requireSuperuser(event: H3Event) {
     throw createError({ statusCode: 403, statusMessage: 'Se requieren permisos de superusuario' })
   }
 
-  return { admin, user }
+  return { admin, userId }
 }
 
 export function assertRole(role: unknown): UserRole {

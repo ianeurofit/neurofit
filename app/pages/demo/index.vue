@@ -1,5 +1,7 @@
 <script setup lang="ts">
-definePageMeta({ layout: 'demo' })
+// Solo el superusuario puede ver el listado de pacientes de la demo
+// (ver app/middleware/roles.global.ts); por eso usa el layout del panel.
+definePageMeta({ layout: 'dashboard', titleKey: 'dashboard.titles.demo' })
 
 const { t } = useI18n()
 const { content, ui } = useDemo()
@@ -35,7 +37,7 @@ const fullCase = computed(() => patients.value.find(p => p.hasFullCase))
 </script>
 
 <template>
-  <div class="mx-auto w-full max-w-[1600px] px-4 py-8 sm:px-6 sm:py-10">
+  <div class="space-y-8">
     <!-- Encabezado -->
     <div class="demo-enter flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
       <div>
@@ -59,7 +61,7 @@ const fullCase = computed(() => patients.value.find(p => p.hasFullCase))
     </div>
 
     <!-- Métricas -->
-    <div class="mt-8 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+    <div class="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
       <div
         v-for="(stat, index) in stats"
         :key="stat.key"
@@ -79,7 +81,7 @@ const fullCase = computed(() => patients.value.find(p => p.hasFullCase))
     </div>
 
     <!-- Pacientes -->
-    <div class="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+    <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
       <DemoPatientCard
         v-for="(patient, index) in patients"
         :key="patient.id"
@@ -88,7 +90,7 @@ const fullCase = computed(() => patients.value.find(p => p.hasFullCase))
       />
     </div>
 
-    <p class="mt-6 flex items-start gap-2 text-xs text-neutral-400">
+    <p class="flex items-start gap-2 text-xs text-neutral-400">
       <UIcon
         name="i-lucide-info"
         class="mt-0.5 size-3.5 shrink-0"
@@ -98,7 +100,7 @@ const fullCase = computed(() => patients.value.find(p => p.hasFullCase))
 
     <!-- Cierre comercial -->
     <div
-      class="demo-enter mt-10 flex flex-col gap-5 overflow-hidden rounded-2xl bg-ink-950 p-6 text-white sm:flex-row sm:items-center sm:justify-between sm:p-8"
+      class="demo-enter flex flex-col gap-5 overflow-hidden rounded-2xl bg-ink-950 p-6 text-white sm:flex-row sm:items-center sm:justify-between sm:p-8"
       :style="{ '--delay': '300ms' }"
     >
       <div class="relative">
@@ -123,7 +125,7 @@ const fullCase = computed(() => patients.value.find(p => p.hasFullCase))
       />
     </div>
 
-    <p class="mt-6 text-center text-xs text-neutral-400">
+    <p class="text-center text-xs text-neutral-400">
       <NuxtLink
         :to="localePath('/')"
         class="font-semibold hover:text-brand-600 dark:hover:text-brand-400"
