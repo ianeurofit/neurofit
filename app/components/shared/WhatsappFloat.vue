@@ -9,23 +9,24 @@
       rounded="full"
       icon="i-simple-icons-whatsapp"
       class="shadow-xl hover:scale-115 transition-transform duration-200 h-14 w-14 flex items-center justify-center rounded-full"
-      aria-label="Contactar por WhatsApp"
+      :aria-label="t('whatsapp.aria')"
     />
   </div>
 </template>
 
 <script setup>
+const { t } = useI18n()
+
 // Obtenemos la URL actual de forma reactiva
 const url = useRequestURL()
 
-// Configuración del mensaje y número
-const phone = '573105423860' 
-const baseMessage = 'Hola, necesito más información. Estoy viendo el sitio web:'
+// Configuración del número
+const phone = '573105423860'
 
 const whatsappUrl = computed(() => {
   // Construimos el mensaje incluyendo la URL actual (href incluye protocolo y dominio)
-  const fullMessage = `${baseMessage} ${url.href}`
-  
+  const fullMessage = `${t('whatsapp.message')} ${url.href}`
+
   return `https://wa.me/${phone}?text=${encodeURIComponent(fullMessage)}`
 })
 </script>

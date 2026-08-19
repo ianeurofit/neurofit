@@ -10,9 +10,12 @@
 
 import { useAutoAnimate } from '@formkit/auto-animate/vue'
 
+const { t } = useI18n()
+const localePath = useLocalePath()
+
 useSeoMeta({
-  title: '¡Suscripción confirmada! | Neurofit IA',
-  description: 'Gracias por unirte a la comunidad de Neurofit IA. Ya estás en camino de recibir novedades sobre salud cerebral y Alzheimer.',
+  title: () => t('subscribed.seoTitle'),
+  description: () => t('subscribed.seoDescription'),
 })
 
 // Email opcional recibido por query param desde el formulario (?email=...)
@@ -30,29 +33,12 @@ const [stepsList] = useAutoAnimate({ duration: 350, easing: 'ease-out' })
 interface NextStep {
   id: string
   icon: string
-  title: string
-  description: string
 }
 
 const allSteps: NextStep[] = [
-  {
-    id: 'inbox',
-    icon: 'i-lucide-mail-check',
-    title: 'Revisa tu bandeja de entrada',
-    description: 'Te enviamos un correo de bienvenida. Si no lo ves en unos minutos, revisa la carpeta de spam o promociones.',
-  },
-  {
-    id: 'brain',
-    icon: 'i-lucide-brain-circuit',
-    title: 'Contenido especializado en camino',
-    description: 'Recibirás avances de Neurofit IA, hallazgos sobre salud cerebral y recursos prácticos para familias.',
-  },
-  {
-    id: 'community',
-    icon: 'i-lucide-users',
-    title: 'Formas parte de nuestra comunidad',
-    description: 'Te iremos contando cómo otras familias están usando estos recursos para mejorar su día a día.',
-  },
+  { id: 'inbox', icon: 'i-lucide-mail-check' },
+  { id: 'brain', icon: 'i-lucide-brain-circuit' },
+  { id: 'community', icon: 'i-lucide-users' },
 ]
 
 // Revelado escalonado: los pasos se van agregando al array observado
@@ -87,38 +73,52 @@ const socialLinks = [
           aria-hidden="true"
         />
         <div class="relative flex items-center justify-center size-20 rounded-full bg-primary/10 ring-1 ring-primary/30">
-          <UIcon name="i-lucide-check" class="size-10 text-primary" />
+          <UIcon
+            name="i-lucide-check"
+            class="size-10 text-primary"
+          />
         </div>
       </div>
 
-      <UBadge color="primary" variant="subtle" size="lg" icon="i-lucide-sparkles" class="mb-4">
-        Suscripción confirmada
+      <UBadge
+        color="primary"
+        variant="subtle"
+        size="lg"
+        icon="i-lucide-sparkles"
+        class="mb-4"
+      >
+        {{ t('subscribed.badge') }}
       </UBadge>
 
       <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-highlighted mb-3">
-        ¡Gracias por unirte a Neurofit IA!
+        {{ t('subscribed.title') }}
       </h1>
 
       <p class="text-lg text-toned leading-relaxed">
-        <template v-if="email">
-          Enviamos la confirmación a
-          <span class="font-medium text-highlighted">{{ email }}</span>.
-        </template>
-        <template v-else>
-          Tu correo ha sido registrado correctamente.
-        </template>
-        A partir de ahora estarás al tanto de cada avance en evaluación, tratamiento
-        y calidad de vida para personas con Alzheimer y sus familias.
+        <i18n-t
+          v-if="email"
+          keypath="subscribed.confirmedTo"
+          tag="span"
+        >
+          <template #email>
+            <span class="font-medium text-highlighted">{{ email }}</span>
+          </template>
+        </i18n-t>
+        <span v-else>{{ t('subscribed.confirmedGeneric') }}</span>
+        {{ ' ' }}{{ t('subscribed.intro') }}
       </p>
     </div>
 
     <!-- Próximos pasos -->
     <div class="max-w-2xl mx-auto mt-12">
       <p class="text-xs font-semibold uppercase tracking-wide text-dimmed mb-4 text-center">
-        Qué sigue
+        {{ t('subscribed.nextTitle') }}
       </p>
 
-      <div ref="stepsList" class="space-y-4">
+      <div
+        ref="stepsList"
+        class="space-y-4"
+      >
         <UCard
           v-for="step in visibleSteps"
           :key="step.id"
@@ -126,11 +126,18 @@ const socialLinks = [
         >
           <div class="flex items-start gap-4">
             <div class="flex items-center justify-center size-10 rounded-lg bg-primary/10 shrink-0">
-              <UIcon :name="step.icon" class="size-5 text-primary" />
+              <UIcon
+                :name="step.icon"
+                class="size-5 text-primary"
+              />
             </div>
             <div>
-              <p class="font-medium text-highlighted">{{ step.title }}</p>
-              <p class="text-sm text-toned mt-1">{{ step.description }}</p>
+              <p class="font-medium text-highlighted">
+                {{ t(`subscribed.steps.${step.id}.title`) }}
+              </p>
+              <p class="text-sm text-toned mt-1">
+                {{ t(`subscribed.steps.${step.id}.description`) }}
+              </p>
             </div>
           </div>
         </UCard>
@@ -140,25 +147,25 @@ const socialLinks = [
     <!-- Acciones -->
     <div class="max-w-2xl mx-auto mt-12 flex flex-col sm:flex-row items-center justify-center gap-3">
       <UButton
-        to="/"
+        :to="localePath('/')"
         icon="i-lucide-home"
         size="lg"
-        label="Volver al inicio"
+        :label="t('subscribed.backHome')"
       />
       <UButton
-        to="/#servicios"
+        :to="`${localePath('/')}#servicios`"
         icon="i-lucide-stethoscope"
         variant="ghost"
         color="neutral"
         size="lg"
-        label="Conocer nuestros servicios"
+        :label="t('subscribed.services')"
       />
     </div>
 
     <!-- Redes sociales -->
     <div class="max-w-2xl mx-auto mt-14 pt-8 border-t border-default text-center">
       <p class="text-sm text-dimmed mb-4">
-        Síguenos para más contenido sobre salud cerebral
+        {{ t('subscribed.followUs') }}
       </p>
       <div class="flex items-center justify-center gap-2">
         <UButton

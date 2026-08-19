@@ -1,35 +1,12 @@
 <script setup lang="ts">
+const { t } = useI18n()
+
 const problems = [
-  {
-    icon: 'i-lucide-brain',
-    title: 'Deterioro cognitivo',
-    description: 'Pérdida progresiva de memoria, atención y otras funciones.',
-    color: 'brand' as const
-  },
-  {
-    icon: 'i-lucide-frown',
-    title: 'Estrés y ansiedad',
-    description: 'Niveles elevados de estrés que afectan el bienestar mental.',
-    color: 'brand' as const
-  },
-  {
-    icon: 'i-lucide-flame',
-    title: 'Burnout',
-    description: 'Agotamiento físico y mental que reduce la productividad y la calidad de vida.',
-    color: 'orange' as const
-  },
-  {
-    icon: 'i-lucide-heart-pulse',
-    title: 'Problemas de salud mental',
-    description: 'Trastornos emocionales que impactan la vida personal y social.',
-    color: 'blue' as const
-  },
-  {
-    icon: 'i-lucide-trending-down',
-    title: 'Disminución de calidad de vida',
-    description: 'Afecta las relaciones, el desempeño y la felicidad general.',
-    color: 'violet' as const
-  }
+  { icon: 'i-lucide-brain', key: 'cognitive', color: 'brand' as const },
+  { icon: 'i-lucide-frown', key: 'stress', color: 'brand' as const },
+  { icon: 'i-lucide-flame', key: 'burnout', color: 'orange' as const },
+  { icon: 'i-lucide-heart-pulse', key: 'mental', color: 'blue' as const },
+  { icon: 'i-lucide-trending-down', key: 'quality', color: 'violet' as const },
 ]
 </script>
 
@@ -38,24 +15,30 @@ const problems = [
     <UContainer>
       <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
         <div>
-          <UiSectionEyebrow label="El problema" />
-          <h2 class="mt-3 text-3xl font-extrabold leading-tight tracking-tight text-neutral-900 sm:text-4xl dark:text-white">
-            Estamos viviendo una crisis silenciosa de
-            <span class="text-brand-600 dark:text-brand-400">salud cerebral</span>
-          </h2>
+          <UiSectionEyebrow :label="t('problem.eyebrow')" />
+          <i18n-t
+            keypath="problem.title"
+            tag="h2"
+            class="mt-3 text-3xl font-extrabold leading-tight tracking-tight text-neutral-900 sm:text-4xl dark:text-white"
+          >
+            <template #highlight>
+              <span class="text-brand-600 dark:text-brand-400">{{ t('problem.titleHighlight') }}</span>
+            </template>
+          </i18n-t>
 
           <div class="mt-6 space-y-4 text-neutral-600 dark:text-neutral-400">
-            <p>
-              Millones de personas presentan factores de riesgo relacionados con estrés, ansiedad, deterioro
-              cognitivo y salud mental sin saberlo.
-            </p>
-            <p>La mayoría de los problemas cerebrales comienzan años antes de la aparición de síntomas visibles.</p>
-            <p>
-              Cuando las personas buscan ayuda,
-              <span class="font-semibold text-neutral-900 dark:text-white">
-                muchas veces el problema ya está avanzado.
-              </span>
-            </p>
+            <p>{{ t('problem.p1') }}</p>
+            <p>{{ t('problem.p2') }}</p>
+            <i18n-t
+              keypath="problem.p3"
+              tag="p"
+            >
+              <template #highlight>
+                <span class="font-semibold text-neutral-900 dark:text-white">
+                  {{ t('problem.p3Highlight') }}
+                </span>
+              </template>
+            </i18n-t>
           </div>
 
           <div class="mt-6 h-px w-16 bg-neutral-300 dark:bg-neutral-700" />
@@ -67,30 +50,37 @@ const problems = [
             class="mt-6 rounded-xl"
           >
             <template #description>
-              <span class="text-neutral-700 dark:text-neutral-300">
-                Neurofit IA busca cambiar ese paradigma, pasando de un modelo
-                <span class="font-bold">reactivo</span> a un modelo
-                <span class="font-bold text-brand-600 dark:text-brand-400">preventivo</span>.
-              </span>
+              <i18n-t
+                keypath="problem.alert"
+                tag="span"
+                class="text-neutral-700 dark:text-neutral-300"
+              >
+                <template #reactive>
+                  <span class="font-bold">{{ t('problem.alertReactive') }}</span>
+                </template>
+                <template #preventive>
+                  <span class="font-bold text-brand-600 dark:text-brand-400">{{ t('problem.alertPreventive') }}</span>
+                </template>
+              </i18n-t>
             </template>
           </UAlert>
         </div>
 
         <div class="relative flex items-center justify-center">
-                  <NuxtPicture
-          format="avif,webp"
-          src="/neurofit-person-pefil-1.webp"
-        />
+          <NuxtPicture
+            format="avif,webp"
+            src="/neurofit-person-pefil-1.webp"
+          />
         </div>
       </div>
 
       <div class="mt-14 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5">
         <UiFeatureCard
           v-for="item in problems"
-          :key="item.title"
+          :key="item.key"
           :icon="item.icon"
-          :title="item.title"
-          :description="item.description"
+          :title="t(`problem.items.${item.key}.title`)"
+          :description="t(`problem.items.${item.key}.description`)"
           :color="item.color"
         />
       </div>

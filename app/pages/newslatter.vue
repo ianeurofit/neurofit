@@ -1,18 +1,18 @@
 <script setup lang="ts">
+const { t } = useI18n()
+
 useSeoMeta({
-  title: 'Neurofit IA | ',
-  ogTitle: 'Neurofit IA |  ',
+  title: () => t('seo.newsletter.title'),
+  ogTitle: () => t('seo.newsletter.title'),
   ogImage: '/neurofit-logo-tealgray-.png',
-  description:
-    'Neurofit IA utiliza inteligencia artificial para analizar variables cognitivas, emocionales, conductuales y de estilo de vida, generando indicadores de salud cerebral, alertas tempranas y recomendaciones personalizadas.',
-  ogDescription:
-    'Plataforma de inteligencia artificial para evaluar, monitorear y optimizar la salud cerebral.',
+  description: () => t('seo.home.description'),
+  ogDescription: () => t('seo.home.ogDescription'),
   ogType: 'website',
-  ogUrl:'https://neurofitia.com',
+  ogUrl: 'https://neurofitia.com',
   twitterCard: 'summary_large_image',
-  twitterTitle: 'Neurofit IA | ',
-  twitterDescription: 'Plataforma de inteligencia artificial para evaluar, monitorear y optimizar la salud cerebral.',
-  twitterImage:  '/neurofit-logo-tealgray-.png'
+  twitterTitle: () => t('seo.newsletter.title'),
+  twitterDescription: () => t('seo.home.ogDescription'),
+  twitterImage: '/neurofit-logo-tealgray-.png',
 })
 </script>
 
@@ -22,7 +22,7 @@ useSeoMeta({
     <main>
       <SectionsNewslatterSection />/
     </main>
-    <LazySharedWhatsappFloat/>
+    <LazySharedWhatsappFloat />
     <LayoutAppFooter />
   </div>
 </template>

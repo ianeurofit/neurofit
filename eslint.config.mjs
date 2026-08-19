@@ -5,7 +5,7 @@ export default withNuxt(
   // Add your own rule overrides here
   {
     rules: {
-      'vue/multi-word-component-names': 'on',
-    }
-  }
+      'vue/multi-word-component-names': 'off',
+    },
+  },
 )

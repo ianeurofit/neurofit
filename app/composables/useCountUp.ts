@@ -23,7 +23,8 @@ export function useCountUp(target: Ref<number> | number, options?: { duration?: 
 
       if (progress < 1) {
         requestAnimationFrame(tick)
-      } else {
+      }
+      else {
         current.value = to
       }
     }
@@ -46,7 +47,7 @@ export function useCountUp(target: Ref<number> | number, options?: { duration?: 
           }
         })
       },
-      { threshold: 0.4 }
+      { threshold: 0.4 },
     )
 
     observer.observe(el.value)
