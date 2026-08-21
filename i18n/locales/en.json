@@ -266,6 +266,7 @@
       "myPanel": "My dashboard",
       "newUser": "Create user",
       "overview": "Overview",
+      "roadmap": "Road Map",
       "users": "Users"
     },
     "newUser": {
@@ -298,6 +299,62 @@
     },
     "noName": "No name",
     "redirecting": "Redirecting to your dashboard…",
+    "roadmap": {
+      "actions": {
+        "confirmDelete": "Delete",
+        "delete": "Delete node",
+        "deleteText": "You are about to delete the node “{title}” and its {count} milestones. This action cannot be undone.",
+        "deleteTitle": "Delete node",
+        "edit": "Edit node"
+      },
+      "empty": "There are no Road Map nodes yet.",
+      "emptyManage": "Create the first time node to start the roadmap.",
+      "errors": {
+        "date": "Pick a date",
+        "items": "Add at least one milestone",
+        "title": "Enter the node label"
+      },
+      "eyebrow": "Roadmap",
+      "form": {
+        "cancel": "Cancel",
+        "create": "Create node",
+        "createTitle": "New time node",
+        "date": "Date",
+        "dateHelp": "Orders the node within the timeline.",
+        "editTitle": "Edit node",
+        "items": "Milestones",
+        "itemsHelp": "One milestone per line.",
+        "itemsPlaceholder": "Write one milestone per line",
+        "label": "Label",
+        "labelHelp": "Text shown on the timeline, e.g. “August 12”.",
+        "labelPlaceholder": "August 12",
+        "position": "Order",
+        "positionHelp": "Only used when two nodes share the same date.",
+        "save": "Save",
+        "status": "Status"
+      },
+      "intro": "Neurofit IA project milestones over time.",
+      "loading": "Loading Road Map…",
+      "manageMode": "Manage",
+      "milestones": "milestone | milestone | milestones",
+      "missingTable": "The Road Map migration still needs to run in Supabase (supabase/migrations/20260821090000_create_roadmap.sql).",
+      "newNode": "New node",
+      "progress": "Overall progress",
+      "statuses": {
+        "done": "Completed",
+        "in_progress": "In progress",
+        "planned": "Planned"
+      },
+      "title": "Road Map",
+      "toast": {
+        "created": "Node created",
+        "deleteError": "Could not delete",
+        "deleted": "Node deleted",
+        "error": "Could not save",
+        "updated": "Node updated"
+      },
+      "viewMode": "View"
+    },
     "signOut": "Sign out",
     "superuser": {
       "createUser": "Create user",
@@ -319,6 +376,7 @@
       "demo": "Demo patients",
       "evaluator": "Evaluator dashboard",
       "newUser": "Create user",
+      "roadmap": "Road Map",
       "superuser": "Superuser dashboard",
       "user": "My dashboard",
       "users": "Users"

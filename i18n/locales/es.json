@@ -266,6 +266,7 @@
       "myPanel": "Mi panel",
       "newUser": "Crear usuario",
       "overview": "Resumen",
+      "roadmap": "Road Map",
       "users": "Usuarios"
     },
     "newUser": {
@@ -298,6 +299,62 @@
     },
     "noName": "Sin nombre",
     "redirecting": "Redirigiendo a tu panel…",
+    "roadmap": {
+      "actions": {
+        "confirmDelete": "Eliminar",
+        "delete": "Eliminar nodo",
+        "deleteText": "Vas a eliminar el nodo «{title}» y sus {count} hitos. Esta acción no se puede deshacer.",
+        "deleteTitle": "Eliminar nodo",
+        "edit": "Editar nodo"
+      },
+      "empty": "Todavía no hay nodos en el Road Map.",
+      "emptyManage": "Crea el primer nodo de tiempo para empezar la hoja de ruta.",
+      "errors": {
+        "date": "Selecciona una fecha",
+        "items": "Añade al menos un hito",
+        "title": "Escribe la etiqueta del nodo"
+      },
+      "eyebrow": "Hoja de ruta",
+      "form": {
+        "cancel": "Cancelar",
+        "create": "Crear nodo",
+        "createTitle": "Nuevo nodo de tiempo",
+        "date": "Fecha",
+        "dateHelp": "Ordena el nodo dentro de la línea de tiempo.",
+        "editTitle": "Editar nodo",
+        "items": "Hitos",
+        "itemsHelp": "Un hito por línea.",
+        "itemsPlaceholder": "Escribe un hito por línea",
+        "label": "Etiqueta",
+        "labelHelp": "Texto visible en la línea de tiempo, ej. «Agosto 12».",
+        "labelPlaceholder": "Agosto 12",
+        "position": "Orden",
+        "positionHelp": "Solo se usa si dos nodos comparten la misma fecha.",
+        "save": "Guardar",
+        "status": "Estado"
+      },
+      "intro": "Hitos del proyecto Neurofit IA en el tiempo.",
+      "loading": "Cargando Road Map…",
+      "manageMode": "Gestionar",
+      "milestones": "hito | hito | hitos",
+      "missingTable": "Falta ejecutar la migración del Road Map en Supabase (supabase/migrations/20260821090000_create_roadmap.sql).",
+      "newNode": "Nuevo nodo",
+      "progress": "Progreso general",
+      "statuses": {
+        "done": "Completado",
+        "in_progress": "En curso",
+        "planned": "Planeado"
+      },
+      "title": "Road Map",
+      "toast": {
+        "created": "Nodo creado",
+        "deleteError": "No se pudo eliminar",
+        "deleted": "Nodo eliminado",
+        "error": "No se pudo guardar",
+        "updated": "Nodo actualizado"
+      },
+      "viewMode": "Vista"
+    },
     "signOut": "Cerrar sesión",
     "superuser": {
       "createUser": "Crear usuario",
@@ -319,6 +376,7 @@
       "demo": "Pacientes de la demo",
       "evaluator": "Panel de evaluador",
       "newUser": "Crear usuario",
+      "roadmap": "Road Map",
       "superuser": "Panel de superusuario",
       "user": "Mi panel",
       "users": "Usuarios"

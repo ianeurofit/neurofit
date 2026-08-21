@@ -126,3 +126,23 @@ body {
   font-weight: 400;
   animation: demo-caret-blink 1s steps(1, end) infinite;
 }
+
+/* Despliegue de los hitos de cada nodo del Road Map. */
+.roadmap-panel-enter-active,
+.roadmap-panel-leave-active {
+  transition: grid-template-rows 0.3s ease, opacity 0.25s ease;
+  display: grid;
+  grid-template-rows: 1fr;
+  overflow: hidden;
+}
+
+.roadmap-panel-enter-from,
+.roadmap-panel-leave-to {
+  grid-template-rows: 0fr;
+  opacity: 0;
+}
+
+.roadmap-panel-enter-active > *,
+.roadmap-panel-leave-active > * {
+  min-height: 0;
+}

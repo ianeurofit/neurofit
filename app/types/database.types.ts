@@ -43,6 +43,39 @@ export type Database = {
         }
         Relationships: []
       }
+      roadmap_nodes: {
+        Row: {
+          created_at: string
+          event_date: string
+          id: string
+          items: string[]
+          position: number
+          status: Database['public']['Enums']['roadmap_status']
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          event_date: string
+          id?: string
+          items?: string[]
+          position?: number
+          status?: Database['public']['Enums']['roadmap_status']
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          event_date?: string
+          id?: string
+          items?: string[]
+          position?: number
+          status?: Database['public']['Enums']['roadmap_status']
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
@@ -51,6 +84,7 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
+      roadmap_status: 'done' | 'in_progress' | 'planned'
       user_role: 'superuser' | 'evaluator' | 'user'
     }
     CompositeTypes: {
