@@ -41,6 +41,8 @@ const horizontalAssets = [
   { src: `${B}/logo-neurofit-color-dark.svg`, filename: 'logo-neurofit-color.svg', label: 'Color', tone: 'light' as const },
   { src: `${B}/logo-neurofit-black.svg`, filename: 'logo-neurofit-negro.svg', label: 'Negro', tone: 'light' as const },
   { src: `${B}/logo-neurofit-white.svg`, filename: 'logo-neurofit-blanco.svg', label: 'Blanco', tone: 'dark' as const },
+  { src: `${B}/logo-neurofit-mono-black.svg`, filename: 'logo-neurofit-mono-negro.svg', label: 'Monocromo negro', tone: 'light' as const },
+  { src: `${B}/logo-neurofit-mono-white.svg`, filename: 'logo-neurofit-mono-blanco.svg', label: 'Monocromo blanco', tone: 'dark' as const },
 ]
 
 const verticalAssets = [
@@ -53,6 +55,8 @@ const allAssets = [
   { ...horizontalAssets[0]!, group: 'Logotipo horizontal' },
   { ...horizontalAssets[1]!, group: 'Logotipo horizontal' },
   { ...horizontalAssets[2]!, group: 'Logotipo horizontal' },
+  { ...horizontalAssets[3]!, group: 'Logotipo horizontal' },
+  { ...horizontalAssets[4]!, group: 'Logotipo horizontal' },
   { ...verticalAssets[0]!, group: 'Logotipo vertical' },
   { ...verticalAssets[1]!, group: 'Logotipo vertical' },
   { ...verticalAssets[2]!, group: 'Logotipo vertical' },

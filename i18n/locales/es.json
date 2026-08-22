@@ -316,22 +316,27 @@
       },
       "eyebrow": "Hoja de ruta",
       "form": {
+        "addItem": "Añadir hito",
         "cancel": "Cancelar",
         "create": "Crear nodo",
         "createTitle": "Nuevo nodo de tiempo",
         "date": "Fecha",
         "dateHelp": "Ordena el nodo dentro de la línea de tiempo.",
         "editTitle": "Editar nodo",
+        "itemAmount": "Valor del hito (COP)",
+        "itemAmountPlaceholder": "Valor COP",
         "items": "Hitos",
-        "itemsHelp": "Un hito por línea.",
-        "itemsPlaceholder": "Escribe un hito por línea",
+        "itemsHelp": "Un hito por fila, con su valor en pesos colombianos.",
+        "itemsPlaceholder": "Describe el hito",
         "label": "Etiqueta",
         "labelHelp": "Texto visible en la línea de tiempo, ej. «Agosto 12».",
         "labelPlaceholder": "Agosto 12",
         "position": "Orden",
         "positionHelp": "Solo se usa si dos nodos comparten la misma fecha.",
+        "removeItem": "Quitar hito",
         "save": "Guardar",
-        "status": "Estado"
+        "status": "Estado",
+        "total": "Total del nodo:"
       },
       "intro": "Hitos del proyecto Neurofit IA en el tiempo.",
       "loading": "Cargando Road Map…",
@@ -353,6 +358,7 @@
         "error": "No se pudo guardar",
         "updated": "Nodo actualizado"
       },
+      "totalValue": "Valor total:",
       "viewMode": "Vista"
     },
     "signOut": "Cerrar sesión",

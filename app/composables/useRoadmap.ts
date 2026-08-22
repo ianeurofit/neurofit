@@ -1,4 +1,5 @@
 import type { RoadmapNode, RoadmapNodeInput } from '~/types/roadmap'
+import { normalizeRoadmapItems } from '~/types/roadmap'
 
 /** Código de Postgres cuando la tabla todavía no existe. */
 const UNDEFINED_TABLE = '42P01'
@@ -37,7 +38,7 @@ export function useRoadmap() {
     }
 
     missingTable.value = false
-    nodes.value = (data ?? []) as RoadmapNode[]
+    nodes.value = (data ?? []).map(toNode)
   }
 
   async function createNode(input: RoadmapNodeInput) {
@@ -49,9 +50,10 @@ export function useRoadmap() {
 
     if (error) throw new Error(error.message)
 
-    nodes.value = [...nodes.value, data as RoadmapNode]
+    const node = toNode(data)
+    nodes.value = [...nodes.value, node]
     sortNodes()
-    return data as RoadmapNode
+    return node
   }
 
   async function updateNode(id: string, input: Partial<RoadmapNodeInput>) {
@@ -64,9 +66,10 @@ export function useRoadmap() {
 
     if (error) throw new Error(error.message)
 
-    nodes.value = nodes.value.map(node => (node.id === id ? (data as RoadmapNode) : node))
+    const updated = toNode(data)
+    nodes.value = nodes.value.map(node => (node.id === id ? updated : node))
     sortNodes()
-    return data as RoadmapNode
+    return updated
   }
 
   async function deleteNode(id: string) {
@@ -78,6 +81,12 @@ export function useRoadmap() {
     if (error) throw new Error(error.message)
 
     nodes.value = nodes.value.filter(node => node.id !== id)
+  }
+
+  /** Los hitos llegan como jsonb: se normalizan antes de entrar al estado. */
+  function toNode(row: unknown): RoadmapNode {
+    const node = row as RoadmapNode
+    return { ...node, items: normalizeRoadmapItems(node.items) }
   }
 
   function sortNodes() {

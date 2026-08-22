@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { motion, useScroll, useSpring } from 'motion-v'
-import { ROADMAP_STATUS_ICONS, ROADMAP_STATUS_STYLES, type RoadmapNode } from '~/types/roadmap'
+import { formatCop, ROADMAP_STATUS_ICONS, ROADMAP_STATUS_STYLES, type RoadmapNode, roadmapNodeTotal } from '~/types/roadmap'
 
 const props = defineProps<{
   nodes: RoadmapNode[]
@@ -56,6 +56,15 @@ const progressPct = computed(() =>
   totalItems.value ? Math.round((doneItems.value / totalItems.value) * 100) : 0,
 )
 
+/** Valor total comprometido en toda la hoja de ruta. */
+const totalAmount = computed(() =>
+  props.nodes.reduce((sum, node) => sum + roadmapNodeTotal(node), 0),
+)
+
+function amountLabel(value: number) {
+  return formatCop(value, locale.value)
+}
+
 function formatDate(iso: string) {
   // Se parsea por partes para no desplazar el día por zona horaria.
   const [year, month, day] = iso.split('-').map(Number)
@@ -81,6 +90,10 @@ function formatDate(iso: string) {
           {{ doneItems }} / {{ totalItems }}
         </span>
       </div>
+      <p class="mb-3 text-xs text-neutral-500">
+        {{ t('dashboard.roadmap.totalValue') }}
+        <strong class="tabular-nums text-neutral-900 dark:text-white">{{ amountLabel(totalAmount) }}</strong>
+      </p>
       <div class="h-2 w-full overflow-hidden rounded-full bg-neutral-200 dark:bg-white/10">
         <motion.div
           class="h-full rounded-full bg-brand-500"
@@ -166,6 +179,9 @@ function formatDate(iso: string) {
                 <p class="mt-1 text-xs text-neutral-500">
                   {{ formatDate(node.event_date) }} ·
                   {{ node.items.length }} {{ t('dashboard.roadmap.milestones', node.items.length) }}
+                  <template v-if="roadmapNodeTotal(node) > 0">
+                    · <span class="font-semibold tabular-nums text-neutral-700 dark:text-neutral-300">{{ amountLabel(roadmapNodeTotal(node)) }}</span>
+                  </template>
                 </p>
               </div>
 
@@ -210,7 +226,7 @@ function formatDate(iso: string) {
                 <ul class="space-y-2.5 border-t border-neutral-100 px-5 py-4 dark:border-white/5">
                   <motion.li
                     v-for="(item, itemIndex) in node.items"
-                    :key="item"
+                    :key="`${item.text}-${itemIndex}`"
                     class="flex items-start gap-2.5 text-sm text-neutral-600 dark:text-neutral-300"
                     :initial="{ opacity: 0, x: -8 }"
                     :animate="{ opacity: 1, x: 0 }"
@@ -220,7 +236,11 @@ function formatDate(iso: string) {
                       class="mt-1.5 size-1.5 shrink-0 rounded-full"
                       :class="ROADMAP_STATUS_STYLES[node.status].dot"
                     />
-                    {{ item }}
+                    <span class="min-w-0 flex-1">{{ item.text }}</span>
+                    <span
+                      v-if="item.amount > 0"
+                      class="shrink-0 tabular-nums font-semibold text-neutral-700 dark:text-neutral-200"
+                    >{{ amountLabel(item.amount) }}</span>
                   </motion.li>
                 </ul>
               </div>

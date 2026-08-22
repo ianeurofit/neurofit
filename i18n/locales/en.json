@@ -316,22 +316,27 @@
       },
       "eyebrow": "Roadmap",
       "form": {
+        "addItem": "Add milestone",
         "cancel": "Cancel",
         "create": "Create node",
         "createTitle": "New time node",
         "date": "Date",
         "dateHelp": "Orders the node within the timeline.",
         "editTitle": "Edit node",
+        "itemAmount": "Milestone value (COP)",
+        "itemAmountPlaceholder": "COP value",
         "items": "Milestones",
-        "itemsHelp": "One milestone per line.",
-        "itemsPlaceholder": "Write one milestone per line",
+        "itemsHelp": "One milestone per row, with its value in Colombian pesos.",
+        "itemsPlaceholder": "Describe the milestone",
         "label": "Label",
         "labelHelp": "Text shown on the timeline, e.g. “August 12”.",
         "labelPlaceholder": "August 12",
         "position": "Order",
         "positionHelp": "Only used when two nodes share the same date.",
+        "removeItem": "Remove milestone",
         "save": "Save",
-        "status": "Status"
+        "status": "Status",
+        "total": "Node total:"
       },
       "intro": "Neurofit IA project milestones over time.",
       "loading": "Loading Road Map…",
@@ -353,6 +358,7 @@
         "error": "Could not save",
         "updated": "Node updated"
       },
+      "totalValue": "Total value:",
       "viewMode": "View"
     },
     "signOut": "Sign out",
