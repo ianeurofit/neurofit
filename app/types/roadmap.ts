@@ -1,5 +1,12 @@
 export type RoadmapStatus = 'done' | 'in_progress' | 'planned'
 
+/** Hito de un nodo, con el valor que se le asigna. */
+export interface RoadmapItem {
+  text: string
+  /** Valor del hito en pesos colombianos (COP). */
+  amount: number
+}
+
 export interface RoadmapNode {
   id: string
   /** Etiqueta visible del nodo, ej. 'Agosto 12' */
@@ -8,10 +15,41 @@ export interface RoadmapNode {
   event_date: string
   /** Orden manual dentro de una misma fecha */
   position: number
-  items: string[]
+  items: RoadmapItem[]
   status: RoadmapStatus
   created_at: string
   updated_at: string
+}
+
+/**
+ * Normaliza lo que llega de la base. Tolera el formato antiguo (`string[]`)
+ * para que la vista no se rompa si todavía falta correr la migración.
+ */
+export function normalizeRoadmapItems(raw: unknown): RoadmapItem[] {
+  if (!Array.isArray(raw)) return []
+
+  return raw.flatMap((entry) => {
+    if (typeof entry === 'string') return [{ text: entry, amount: 0 }]
+    if (!entry || typeof entry !== 'object') return []
+
+    const { text, amount } = entry as { text?: unknown, amount?: unknown }
+    if (typeof text !== 'string') return []
+
+    return [{ text, amount: Number(amount) || 0 }]
+  })
+}
+
+/** Suma de los valores de los hitos de un nodo. */
+export function roadmapNodeTotal(node: Pick<RoadmapNode, 'items'>): number {
+  return node.items.reduce((sum, item) => sum + item.amount, 0)
+}
+
+export function formatCop(value: number, locale: string): string {
+  return new Intl.NumberFormat(locale === 'en' ? 'en-US' : 'es-CO', {
+    style: 'currency',
+    currency: 'COP',
+    maximumFractionDigits: 0,
+  }).format(value)
 }
 
 /** Campos que el superusuario edita desde el panel. */

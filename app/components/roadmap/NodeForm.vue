@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ROADMAP_STATUSES, type RoadmapNode, type RoadmapNodeInput, type RoadmapStatus } from '~/types/roadmap'
+import { formatCop, ROADMAP_STATUSES, type RoadmapNode, type RoadmapNodeInput, type RoadmapStatus } from '~/types/roadmap'
 
 const props = defineProps<{
   /** Nodo a editar; si falta, el formulario crea uno nuevo. */
@@ -11,18 +11,27 @@ const emit = defineEmits<{
   cancel: []
 }>()
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
 const isEdit = computed(() => Boolean(props.node))
 const loading = ref(false)
+
+/** Fila editable: cada hito lleva su valor en COP. */
+interface ItemRow {
+  text: string
+  amount: number
+}
+
+function emptyRow(): ItemRow {
+  return { text: '', amount: 0 }
+}
 
 const state = reactive({
   title: '',
   event_date: '',
   position: 0,
   status: 'planned' as RoadmapStatus,
-  // Los hitos se editan como texto: una línea por hito.
-  itemsText: '',
+  items: [emptyRow()] as ItemRow[],
 })
 
 watch(
@@ -32,10 +41,27 @@ watch(
     state.event_date = node?.event_date ?? ''
     state.position = node?.position ?? 0
     state.status = node?.status ?? 'planned'
-    state.itemsText = node?.items.join('\n') ?? ''
+    state.items = node?.items.length
+      ? node.items.map(item => ({ text: item.text, amount: item.amount }))
+      : [emptyRow()]
   },
   { immediate: true },
 )
+
+function addItem() {
+  state.items.push(emptyRow())
+}
+
+function removeItem(index: number) {
+  state.items.splice(index, 1)
+  if (!state.items.length) state.items.push(emptyRow())
+}
+
+const total = computed(() =>
+  state.items.reduce((sum, item) => sum + (Number(item.amount) || 0), 0),
+)
+
+const totalLabel = computed(() => formatCop(total.value, locale.value))
 
 const statusOptions = computed(() =>
   ROADMAP_STATUSES.map(value => ({
@@ -45,17 +71,16 @@ const statusOptions = computed(() =>
 )
 
 function parseItems() {
-  return state.itemsText
-    .split('\n')
-    .map(line => line.trim())
-    .filter(Boolean)
+  return state.items
+    .map(item => ({ text: item.text.trim(), amount: Math.max(0, Number(item.amount) || 0) }))
+    .filter(item => item.text)
 }
 
 function validate() {
   const errors: { name: string, message: string }[] = []
   if (!state.title.trim()) errors.push({ name: 'title', message: t('dashboard.roadmap.errors.title') })
   if (!state.event_date) errors.push({ name: 'event_date', message: t('dashboard.roadmap.errors.date') })
-  if (!parseItems().length) errors.push({ name: 'itemsText', message: t('dashboard.roadmap.errors.items') })
+  if (!parseItems().length) errors.push({ name: 'items', message: t('dashboard.roadmap.errors.items') })
   return errors
 }
 
@@ -148,15 +173,58 @@ defineExpose({ stopLoading })
     <UFormField
       :label="t('dashboard.roadmap.form.items')"
       :help="t('dashboard.roadmap.form.itemsHelp')"
-      name="itemsText"
+      name="items"
       required
     >
-      <UTextarea
-        v-model="state.itemsText"
-        :rows="6"
-        :placeholder="t('dashboard.roadmap.form.itemsPlaceholder')"
-        class="w-full"
-      />
+      <div class="space-y-2">
+        <div
+          v-for="(item, index) in state.items"
+          :key="index"
+          class="flex items-center gap-2"
+        >
+          <UInput
+            v-model="item.text"
+            size="lg"
+            :placeholder="t('dashboard.roadmap.form.itemsPlaceholder')"
+            class="flex-1"
+          />
+          <UInput
+            v-model.number="item.amount"
+            type="number"
+            min="0"
+            step="1000"
+            size="lg"
+            :aria-label="t('dashboard.roadmap.form.itemAmount')"
+            :placeholder="t('dashboard.roadmap.form.itemAmountPlaceholder')"
+            class="w-40 shrink-0"
+          />
+          <UButton
+            icon="i-lucide-trash-2"
+            color="neutral"
+            variant="ghost"
+            size="sm"
+            class="rounded-full"
+            :aria-label="t('dashboard.roadmap.form.removeItem')"
+            @click="removeItem(index)"
+          />
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-3 pt-1">
+          <UButton
+            icon="i-lucide-plus"
+            :label="t('dashboard.roadmap.form.addItem')"
+            color="neutral"
+            variant="soft"
+            size="sm"
+            class="rounded-full"
+            @click="addItem"
+          />
+          <span class="text-sm text-neutral-500">
+            {{ t('dashboard.roadmap.form.total') }}
+            <strong class="tabular-nums text-neutral-900 dark:text-white">{{ totalLabel }}</strong>
+          </span>
+        </div>
+      </div>
     </UFormField>
 
     <div class="flex flex-wrap justify-end gap-2 pt-1">

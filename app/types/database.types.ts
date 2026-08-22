@@ -48,7 +48,7 @@ export type Database = {
           created_at: string
           event_date: string
           id: string
-          items: string[]
+          items: Json
           position: number
           status: Database['public']['Enums']['roadmap_status']
           title: string
@@ -58,7 +58,7 @@ export type Database = {
           created_at?: string
           event_date: string
           id?: string
-          items?: string[]
+          items?: Json
           position?: number
           status?: Database['public']['Enums']['roadmap_status']
           title: string
@@ -68,7 +68,7 @@ export type Database = {
           created_at?: string
           event_date?: string
           id?: string
-          items?: string[]
+          items?: Json
           position?: number
           status?: Database['public']['Enums']['roadmap_status']
           title?: string
