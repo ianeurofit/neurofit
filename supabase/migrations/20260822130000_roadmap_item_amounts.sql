@@ -32,12 +32,33 @@ comment on function public.roadmap_items_valid (jsonb) is
 alter table public.roadmap_nodes
   add column items_jsonb jsonb not null default '[]'::jsonb;
 
--- Los hitos que ya existen conservan su texto y arrancan en 0.
+-- Los hitos que ya existen conservan su texto y arrancan en 0. Algunos ya se
+-- guardaron como JSON dentro del text[] (el formulario nuevo escribiendo sobre
+-- el esquema viejo): esos se desenvuelven para no perder su importe ni quedar
+-- anidados dos veces.
 update public.roadmap_nodes
 set items_jsonb = coalesce(
   (
-    select jsonb_agg(jsonb_build_object('text', item, 'amount', 0))
-    from unnest(items) as item
+    select jsonb_agg(
+      case
+        when pg_input_is_valid(item, 'jsonb')
+             and jsonb_typeof(item::jsonb) = 'object'
+             and jsonb_typeof(item::jsonb -> 'text') = 'string'
+          then jsonb_build_object(
+                 'text', item::jsonb ->> 'text',
+                 'amount', coalesce(
+                   case
+                     when jsonb_typeof(item::jsonb -> 'amount') = 'number'
+                       then (item::jsonb ->> 'amount')::numeric
+                   end,
+                   0
+                 )
+               )
+        else jsonb_build_object('text', item, 'amount', 0)
+      end
+      order by ord
+    )
+    from unnest(items) with ordinality as u (item, ord)
   ),
   '[]'::jsonb
 );
