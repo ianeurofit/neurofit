@@ -8,6 +8,7 @@ const AREAS: Array<{ name: string, roles: UserRole[] }> = [
   { name: 'dashboard-evaluador', roles: ['evaluator'] },
   { name: 'dashboard-usuario', roles: ['user'] },
   { name: 'dashboard-roadmap', roles: ['superuser', 'evaluator'] },
+  { name: 'dashboard-educacion', roles: ['superuser'] },
 ]
 
 /** 'dashboard-usuarios___en' -> 'dashboard-usuarios' */
