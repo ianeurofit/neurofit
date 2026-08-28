@@ -244,6 +244,67 @@
   },
   "dashboard": {
     "defaultTitle": "Bienvenido",
+    "education": {
+      "actions": {
+        "confirmDelete": "Eliminar",
+        "delete": "Eliminar sesión",
+        "deleteText": "Vas a eliminar «{title}». Esta acción no se puede deshacer.",
+        "deleteTitle": "Eliminar sesión",
+        "edit": "Editar sesión",
+        "publish": "Publicar",
+        "unpublish": "Quitar de la página pública"
+      },
+      "draft": "Borrador",
+      "empty": "Crea la primera sesión del catálogo.",
+      "errors": {
+        "duration": "Indica la duración",
+        "objective": "Escribe el objetivo",
+        "slug": "El identificador solo admite minúsculas, números y guiones",
+        "title": "Escribe el título de la sesión",
+        "topics": "Añade al menos un tema"
+      },
+      "eyebrow": "Contenido público",
+      "form": {
+        "cancel": "Cancelar",
+        "create": "Crear sesión",
+        "createTitle": "Nueva sesión",
+        "duration": "Duración",
+        "durationEn": "Duración en inglés",
+        "editTitle": "Editar sesión",
+        "icon": "Ícono",
+        "iconHelp": "Nombre de un ícono lucide, ej. i-lucide-brain.",
+        "line": "Línea",
+        "modality": "Modalidad",
+        "objective": "Objetivo",
+        "objectiveEn": "Objetivo en inglés",
+        "position": "Orden",
+        "positionHelp": "Ordena la sesión dentro de su línea.",
+        "published": "Publicada",
+        "publishedHelp": "Si está apagado, no aparece en la página pública.",
+        "save": "Guardar",
+        "slug": "Identificador",
+        "slugHelp": "Se usa en el enlace directo a la sesión. Se genera desde el título.",
+        "title": "Título",
+        "titleEn": "Título en inglés",
+        "topics": "Temas principales",
+        "topicsEn": "Temas en inglés",
+        "topicsHelp": "Un tema por línea.",
+        "translationHelp": "Opcional: si lo dejas vacío, la versión en inglés muestra el texto en español."
+      },
+      "intro": "Gestiona las conferencias, talleres y programas que se muestran en /educacion.",
+      "loading": "Cargando sesiones…",
+      "missingTable": "Falta ejecutar la migración de Educación en Supabase (supabase/migrations/20260827100000_create_education_programs.sql).",
+      "newProgram": "Nueva sesión",
+      "title": "Educación",
+      "toast": {
+        "created": "Sesión creada",
+        "deleteError": "No se pudo eliminar",
+        "deleted": "Sesión eliminada",
+        "error": "No se pudo guardar",
+        "updated": "Sesión actualizada"
+      },
+      "viewPublic": "Ver página pública"
+    },
     "evaluator": {
       "active": "Cuentas activas",
       "activeBadge": "Activo",
@@ -263,6 +324,7 @@
     "loading": "Cargando…",
     "nav": {
       "demo": "Demo pública",
+      "education": "Educación",
       "myPanel": "Mi panel",
       "newUser": "Crear usuario",
       "overview": "Resumen",
@@ -380,6 +442,7 @@
     "titles": {
       "dashboard": "Panel",
       "demo": "Pacientes de la demo",
+      "education": "Educación",
       "evaluator": "Panel de evaluador",
       "newUser": "Crear usuario",
       "roadmap": "Road Map",
@@ -450,6 +513,60 @@
       "you": "(tú)"
     }
   },
+  "education": {
+    "customizable": "Las conferencias pueden personalizarse según el sector, el número de participantes y los objetivos de la organización.",
+    "defaultDuration": "60 a 90 minutos",
+    "detailSubtitle": "Ficha de la sesión",
+    "empty": "Todavía no hay sesiones publicadas.",
+    "eyebrow": "Educación",
+    "intro": "Las conferencias de Neurofit están diseñadas para fortalecer el bienestar de los colaboradores mediante estrategias basadas en psicología, neurociencia y promoción de la salud. Cada conferencia combina evidencia científica con herramientas prácticas que los participantes pueden aplicar desde el primer día.",
+    "lines": {
+      "ia": {
+        "description": "La solución tecnológica en desarrollo.",
+        "name": "Neurofit IA"
+      },
+      "program": {
+        "description": "Programas de acompañamiento para empresas.",
+        "name": "Neurofit Programs"
+      },
+      "talk": {
+        "description": "Conferencias inspiradoras de 60 a 90 minutos.",
+        "name": "Neurofit Talks"
+      },
+      "workshop": {
+        "description": "Talleres prácticos de 3 a 4 horas.",
+        "name": "Neurofit Workshops"
+      }
+    },
+    "linesIntro": "Cuatro formatos para acompañar a tu organización, desde una charla inspiradora hasta un programa completo.",
+    "linesTitle": "Nuestras líneas",
+    "loading": "Cargando el catálogo…",
+    "missingTable": "Falta ejecutar la migración de Educación en Supabase (supabase/migrations/20260827100000_create_education_programs.sql).",
+    "modalities": {
+      "both": "Presencial o virtual",
+      "onsite": "Presencial",
+      "virtual": "Virtual"
+    },
+    "objective": "Objetivo",
+    "programsCount": "sesión | sesión | sesiones",
+    "requestCta": "Solicitar esta sesión",
+    "requestText": "Escríbenos por WhatsApp y coordinamos fecha, formato y contenidos según tu organización.",
+    "requestTitle": "¿Te interesa esta sesión?",
+    "seeMore": "Ver detalle",
+    "tagline": "Neurociencia • Salud Mental • Bienestar Organizacional",
+    "title": "Conferencias y talleres Neurofit",
+    "topics": "Temas principales",
+    "topicsCount": "tema | tema | temas",
+    "whatsappMessage": "Hola, me interesa la sesión «{title}» de Neurofit. ¿Podemos hablar?",
+    "why": {
+      "evidence": "Contenido basado en evidencia científica.",
+      "integration": "Integración de psicología, neurociencia e innovación.",
+      "practical": "Enfoque práctico y participativo.",
+      "sustainable": "Experiencias que promueven cambios sostenibles.",
+      "tailored": "Adaptación a las necesidades de cada organización."
+    },
+    "whyTitle": "¿Por qué elegir las conferencias de Neurofit?"
+  },
   "evaluation": {
     "columns": {
       "cognition": {
@@ -515,6 +632,7 @@
     "cookiePolicy": "Política de cookies",
     "dataPolicy": "Tratamiento de datos",
     "description": "En Neurofit IA usamos ciencia, datos e inteligencia artificial para comprender, prevenir y optimizar la salud cerebral de las personas en todo el mundo.",
+    "education": "Educación",
     "emailLabel": "Correo",
     "followUs": "SÍGUENOS EN",
     "newsletterCta": "Ver Demo",
@@ -605,6 +723,7 @@
     "closeMenu": "Cerrar menú",
     "contact": "Contacto",
     "demo": "Ver demo",
+    "education": "Educación",
     "home": "Inicio",
     "language": "Idioma",
     "login": "Ingresar",
@@ -787,6 +906,10 @@
   "seo": {
     "confirm": {
       "title": "Neurofit IA | Confirmando acceso"
+    },
+    "education": {
+      "description": "Catálogo de conferencias, talleres y programas de Neurofit: neurociencia, salud mental y bienestar organizacional, con contenido basado en evidencia y herramientas prácticas.",
+      "title": "Educación | Conferencias y talleres Neurofit IA"
     },
     "evaluator": {
       "title": "Neurofit IA | Evaluador"

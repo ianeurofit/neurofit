@@ -17,6 +17,7 @@ const NAV: Record<UserRole, NavItem[]> = {
     { key: 'users', icon: 'i-lucide-users', to: '/dashboard/usuarios' },
     { key: 'newUser', icon: 'i-lucide-user-plus', to: '/dashboard/usuarios/nuevo' },
     { key: 'roadmap', icon: 'i-lucide-map', to: '/dashboard/roadmap' },
+    { key: 'education', icon: 'i-lucide-graduation-cap', to: '/dashboard/educacion' },
     { key: 'demo', icon: 'i-lucide-monitor-play', to: '/demo' },
   ],
   evaluator: [

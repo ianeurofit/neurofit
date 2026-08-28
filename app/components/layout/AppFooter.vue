@@ -213,6 +213,12 @@ const regions = ['america', 'europe', 'latam', 'apac', 'middleEast']
           {{ t('footer.cookiePolicy') }}
         </NuxtLink>
         <NuxtLink
+          :to="localePath('/educacion')"
+          class="hover:text-white"
+        >
+          {{ t('footer.education') }}
+        </NuxtLink>
+        <NuxtLink
           :to="localePath('/manual-de-marca')"
           class="hover:text-white"
         >

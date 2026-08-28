@@ -20,15 +20,10 @@ const { t } = useI18n()
 // Obtenemos la URL actual de forma reactiva
 const url = useRequestURL()
 
-// Configuración del número
-const phone = '573105423860'
-
-const whatsappUrl = computed(() => {
-  // Construimos el mensaje incluyendo la URL actual (href incluye protocolo y dominio)
-  const fullMessage = `${t('whatsapp.message')} ${url.href}`
-
-  return `https://wa.me/${phone}?text=${encodeURIComponent(fullMessage)}`
-})
+const whatsappUrl = computed(() =>
+  // El mensaje incluye la URL actual (href incluye protocolo y dominio)
+  whatsappLink(`${t('whatsapp.message')} ${url.href}`),
+)
 </script>
 
 <style scoped>

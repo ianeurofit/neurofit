@@ -244,6 +244,67 @@
   },
   "dashboard": {
     "defaultTitle": "Welcome",
+    "education": {
+      "actions": {
+        "confirmDelete": "Delete",
+        "delete": "Delete session",
+        "deleteText": "You are about to delete \"{title}\". This cannot be undone.",
+        "deleteTitle": "Delete session",
+        "edit": "Edit session",
+        "publish": "Publish",
+        "unpublish": "Remove from the public page"
+      },
+      "draft": "Draft",
+      "empty": "Create the first session in the catalogue.",
+      "errors": {
+        "duration": "Set the duration",
+        "objective": "Write the objective",
+        "slug": "The identifier only accepts lowercase letters, numbers and hyphens",
+        "title": "Write the session title",
+        "topics": "Add at least one topic"
+      },
+      "eyebrow": "Public content",
+      "form": {
+        "cancel": "Cancel",
+        "create": "Create session",
+        "createTitle": "New session",
+        "duration": "Duration",
+        "durationEn": "English duration",
+        "editTitle": "Edit session",
+        "icon": "Icon",
+        "iconHelp": "A lucide icon name, e.g. i-lucide-brain.",
+        "line": "Line",
+        "modality": "Format",
+        "objective": "Objective",
+        "objectiveEn": "English objective",
+        "position": "Order",
+        "positionHelp": "Orders the session within its line.",
+        "published": "Published",
+        "publishedHelp": "When off, it does not appear on the public page.",
+        "save": "Save",
+        "slug": "Identifier",
+        "slugHelp": "Used in the direct link to the session. Generated from the title.",
+        "title": "Title",
+        "titleEn": "English title",
+        "topics": "Main topics",
+        "topicsEn": "English topics",
+        "topicsHelp": "One topic per line.",
+        "translationHelp": "Optional: if left empty, the English page shows the Spanish text."
+      },
+      "intro": "Manage the talks, workshops and programmes shown on /educacion.",
+      "loading": "Loading sessions…",
+      "missingTable": "The Education migration still has to run in Supabase (supabase/migrations/20260827100000_create_education_programs.sql).",
+      "newProgram": "New session",
+      "title": "Education",
+      "toast": {
+        "created": "Session created",
+        "deleteError": "Could not delete",
+        "deleted": "Session deleted",
+        "error": "Could not save",
+        "updated": "Session updated"
+      },
+      "viewPublic": "View public page"
+    },
     "evaluator": {
       "active": "Active accounts",
       "activeBadge": "Active",
@@ -263,6 +324,7 @@
     "loading": "Loading…",
     "nav": {
       "demo": "Public demo",
+      "education": "Education",
       "myPanel": "My dashboard",
       "newUser": "Create user",
       "overview": "Overview",
@@ -380,6 +442,7 @@
     "titles": {
       "dashboard": "Dashboard",
       "demo": "Demo patients",
+      "education": "Education",
       "evaluator": "Evaluator dashboard",
       "newUser": "Create user",
       "roadmap": "Road Map",
@@ -450,6 +513,60 @@
       "you": "(you)"
     }
   },
+  "education": {
+    "customizable": "Sessions can be tailored to your sector, the number of participants and your organisation goals.",
+    "defaultDuration": "60 to 90 minutes",
+    "detailSubtitle": "Session overview",
+    "empty": "No sessions published yet.",
+    "eyebrow": "Education",
+    "intro": "Neurofit talks are designed to strengthen employee wellbeing through strategies grounded in psychology, neuroscience and health promotion. Each session pairs scientific evidence with practical tools participants can apply from day one.",
+    "lines": {
+      "ia": {
+        "description": "The technology solution in development.",
+        "name": "Neurofit IA"
+      },
+      "program": {
+        "description": "Ongoing programmes for companies.",
+        "name": "Neurofit Programs"
+      },
+      "talk": {
+        "description": "Inspiring talks of 60 to 90 minutes.",
+        "name": "Neurofit Talks"
+      },
+      "workshop": {
+        "description": "Hands-on workshops of 3 to 4 hours.",
+        "name": "Neurofit Workshops"
+      }
+    },
+    "linesIntro": "Four formats to support your organisation, from an inspiring talk to a full programme.",
+    "linesTitle": "Our lines",
+    "loading": "Loading the catalogue…",
+    "missingTable": "The Education migration still has to run in Supabase (supabase/migrations/20260827100000_create_education_programs.sql).",
+    "modalities": {
+      "both": "On-site or online",
+      "onsite": "On-site",
+      "virtual": "Online"
+    },
+    "objective": "Objective",
+    "programsCount": "session | session | sessions",
+    "requestCta": "Request this session",
+    "requestText": "Message us on WhatsApp and we will arrange the date, format and content for your organisation.",
+    "requestTitle": "Interested in this session?",
+    "seeMore": "View details",
+    "tagline": "Neuroscience • Mental Health • Organisational Wellbeing",
+    "title": "Neurofit talks and workshops",
+    "topics": "Main topics",
+    "topicsCount": "topic | topic | topics",
+    "whatsappMessage": "Hi, I am interested in the Neurofit session \"{title}\". Could we talk?",
+    "why": {
+      "evidence": "Content grounded in scientific evidence.",
+      "integration": "Psychology, neuroscience and innovation combined.",
+      "practical": "Practical, participatory approach.",
+      "sustainable": "Experiences that drive lasting change.",
+      "tailored": "Tailored to each organisation."
+    },
+    "whyTitle": "Why choose Neurofit talks?"
+  },
   "evaluation": {
     "columns": {
       "cognition": {
@@ -515,6 +632,7 @@
     "cookiePolicy": "Cookie policy",
     "dataPolicy": "Data processing",
     "description": "At Neurofit IA we use science, data and artificial intelligence to understand, prevent and optimize people's brain health around the world.",
+    "education": "Education",
     "emailLabel": "Email",
     "followUs": "FOLLOW US ON",
     "newsletterCta": "View Demo",
@@ -605,6 +723,7 @@
     "closeMenu": "Close menu",
     "contact": "Contact",
     "demo": "View demo",
+    "education": "Education",
     "home": "Home",
     "language": "Language",
     "login": "Sign in",
@@ -787,6 +906,10 @@
   "seo": {
     "confirm": {
       "title": "Neurofit IA | Confirming access"
+    },
+    "education": {
+      "description": "Catalogue of Neurofit talks, workshops and programmes: neuroscience, mental health and organisational wellbeing, with evidence-based content and practical tools.",
+      "title": "Education | Neurofit IA talks and workshops"
     },
     "evaluator": {
       "title": "Neurofit IA | Evaluator"

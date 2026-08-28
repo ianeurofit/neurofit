@@ -13,6 +13,7 @@ const localePath = useLocalePath()
 
 const links = computed(() => [
   { key: 'nav.home', to: localePath('/') },
+  { key: 'nav.education', to: localePath('/educacion') },
   { key: 'nav.contact', to: '#contacto' },
 ])
 
