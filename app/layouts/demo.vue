@@ -49,7 +49,7 @@ const isDark = computed({
               size="sm"
               class="rounded-full"
               :aria-label="t('nav.toggleTheme')"
-              @click="isDark = !isDark"
+              @click="() => { isDark = !isDark }"
             />
             <template #fallback>
               <div class="size-8" />

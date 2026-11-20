@@ -78,7 +78,7 @@ const mobileOpen = ref(false)
           variant="ghost"
           class="lg:hidden"
           :aria-label="t('nav.openMenu')"
-          @click="mobileOpen = !mobileOpen"
+          @click="() => { mobileOpen = !mobileOpen }"
         />
       </div>
     </UContainer>

@@ -82,6 +82,52 @@
     "title": "está diseñado para {highlight}",
     "titleHighlight": "diferentes personas y organizaciones"
   },
+  "audit": {
+    "eyebrow": "Trazabilidad",
+    "title": "Auditoría",
+    "intro": "Quién cambió qué y cuándo en las tablas de estructura. Es un registro de solo lectura.",
+    "listTitle": "Registro de cambios",
+    "filters": {
+      "entity": "Entidad",
+      "entityAll": "Todas las entidades",
+      "actor": "Usuario",
+      "actorAll": "Todos los usuarios",
+      "from": "Desde",
+      "to": "Hasta",
+      "clear": "Limpiar filtros"
+    },
+    "columns": {
+      "date": "Fecha",
+      "actor": "Usuario",
+      "action": "Acción",
+      "entity": "Entidad",
+      "changes": "Cambios"
+    },
+    "actions": {
+      "insert": "Creación",
+      "update": "Edición",
+      "delete": "Eliminación"
+    },
+    "entities": {
+      "evaluator_patients": "Pacientes de evaluadores",
+      "tests": "Tests",
+      "test_sections": "Secciones",
+      "questions": "Preguntas",
+      "question_options": "Opciones de pregunta",
+      "scales": "Escalas",
+      "scale_options": "Opciones de escala",
+      "scoring_models": "Modelos de puntaje",
+      "alert_rules": "Reglas de alerta",
+      "recommendation_templates": "Plantillas de recomendación"
+    },
+    "system": "Sistema",
+    "empty": "Aún no hay cambios registrados.",
+    "emptyFiltered": "Ningún registro coincide con los filtros.",
+    "error": "No pudimos cargar la auditoría.",
+    "retry": "Reintentar",
+    "total": "{count} registros",
+    "pageOf": "Página {page} de {pages}"
+  },
   "auth": {
     "backHome": "Volver al inicio",
     "brandEyebrow": "Brain Intelligence",
@@ -89,6 +135,10 @@
     "brandTitle": "Mide, monitorea y optimiza tu salud cerebral con inteligencia artificial.",
     "confirm": {
       "checking": "Verificando tu acceso…"
+    },
+    "errors": {
+      "generic": "No pudimos iniciar sesión. Inténtalo de nuevo.",
+      "invalidCredentials": "Correo o contraseña incorrectos."
     },
     "login": {
       "email": "Correo electrónico",
@@ -323,12 +373,15 @@
     "eyebrow": "Panel Neurofit IA",
     "loading": "Cargando…",
     "nav": {
+      "audit": "Auditoría",
       "demo": "Demo pública",
       "education": "Educación",
       "myPanel": "Mi panel",
       "newUser": "Crear usuario",
       "overview": "Resumen",
+      "patients": "Mis pacientes",
       "roadmap": "Road Map",
+      "tests": "Gestión de evaluaciones",
       "users": "Usuarios"
     },
     "newUser": {
@@ -440,15 +493,21 @@
       "totalUsers": "Usuarios totales"
     },
     "titles": {
+      "audit": "Auditoría",
       "dashboard": "Panel",
       "demo": "Pacientes de la demo",
       "education": "Educación",
       "evaluator": "Panel de evaluador",
       "newUser": "Crear usuario",
+      "patients": "Mis pacientes",
       "roadmap": "Road Map",
       "superuser": "Panel de superusuario",
       "user": "Mi panel",
-      "users": "Usuarios"
+      "users": "Usuarios",
+      "tests": "Gestión de evaluaciones",
+      "testsNew": "Nuevo test",
+      "testDetail": "Estructura del test",
+      "testQuestions": "Preguntas del test"
     },
     "user": {
       "comingSoon": "Muy pronto disponible.",
@@ -567,6 +626,47 @@
     },
     "whyTitle": "¿Por qué elegir las conferencias de Neurofit?"
   },
+  "errors": {
+    "test": {
+      "required": "Este campo es obligatorio",
+      "invalid_format": "Usa de 3 a 40 caracteres: mayúsculas, números o guion bajo",
+      "too_short": "Debe tener al menos {min} caracteres",
+      "too_long": "Debe tener como máximo {max} caracteres",
+      "code_taken": "Ya existe un test con este código",
+      "forbidden": "No tienes permisos para crear tests",
+      "unknown": "No se pudo guardar el test. Inténtalo de nuevo."
+    },
+    "question": {
+      "required": "Este campo es obligatorio",
+      "invalid_format": "Usa de 2 a 40 caracteres: mayúsculas, números o guion bajo",
+      "too_long": "Debe tener como máximo {max} caracteres",
+      "invalid_type": "Elige un tipo de pregunta válido",
+      "min_options": "Agrega al menos {min} opciones",
+      "duplicate_option": "Ya hay otra opción igual",
+      "invalid_score": "El puntaje debe ser un número",
+      "unknown_option": "Las opciones excluyentes deben estar entre las opciones de la pregunta",
+      "min_gte_max": "El máximo debe ser mayor que el mínimo",
+      "min_gt_max": "El máximo no puede ser menor que el mínimo",
+      "labels_count": "La escala necesita exactamente {count} etiquetas",
+      "out_of_range": "Usa un número entero entre {min} y {max}",
+      "invalid_number": "Escribe un número válido",
+      "invalid_direction": "Elige una dirección válida",
+      "question_code_taken": "Ya existe una pregunta con este código en el test",
+      "section_not_found": "La sección no pertenece a este test",
+      "new_version_required": "El test ya no es un borrador. Crea una versión nueva para cambiar sus preguntas.",
+      "question_not_found": "La pregunta ya no existe.",
+      "forbidden": "No tienes permisos para cambiar este test",
+      "unknown": "No se pudo guardar la pregunta. Inténtalo de nuevo.",
+      "invalid_order": "No se pudo guardar el orden. Recarga la página e inténtalo de nuevo."
+    },
+    "condition": {
+      "unknown_question": "Elige una pregunta que exista en este test",
+      "invalid_operator": "Esa condición no sirve para el tipo de la pregunta elegida",
+      "invalid_value": "El valor no es una respuesta posible de esa pregunta",
+      "self_reference": "Una pregunta no puede depender de sí misma",
+      "cycle": "Esta condición crea un ciclo: las preguntas dependerían unas de otras"
+    }
+  },
   "evaluation": {
     "columns": {
       "cognition": {
@@ -684,6 +784,19 @@
       "science": "Ciencia y tecnología\nde vanguardia"
     }
   },
+  "management": {
+    "clearFilters": "Limpiar filtros",
+    "empty": "Todavía no hay elementos.",
+    "emptyFiltered": "Ningún elemento coincide con los filtros.",
+    "error": "No se pudo cargar la lista.",
+    "retry": "Reintentar",
+    "form": {
+      "save": "Guardar",
+      "errors": {
+        "required": "Este campo es obligatorio"
+      }
+    }
+  },
   "mission": {
     "eyebrow": "Nuestra misión y visión",
     "footerHighlight": "inteligente y saludable",
@@ -780,6 +893,22 @@
     "quote": "El futuro de la salud cerebral comienza hoy.",
     "quoteHighlight": "Sé parte del cambio.",
     "title": "Sé de los primeros en conocer {brand}"
+  },
+  "patients": {
+    "active": "Activo",
+    "empty": "Aún no tienes pacientes asignados.",
+    "emptyHint": "Cuando el equipo te asigne personas, aparecerán aquí.",
+    "emptySearch": "Ningún paciente coincide con la búsqueda.",
+    "error": "No pudimos cargar tus pacientes.",
+    "eyebrow": "Evaluación clínica",
+    "inactive": "Inactivo",
+    "intro": "Personas que el equipo de Neurofit te asignó para evaluar y acompañar.",
+    "listTitle": "Pacientes asignados",
+    "retry": "Reintentar",
+    "search": "Buscar por nombre o correo",
+    "since": "Asignado: {date}",
+    "title": "Mis pacientes",
+    "total": "Pacientes asignados"
   },
   "policy": {
     "badge": "Protección de Datos",
@@ -903,7 +1032,39 @@
       "label": "Usuario"
     }
   },
+  "scales": {
+    "label": "Escala de respuesta",
+    "help": "Elige una escala para copiar sus opciones y puntajes. Después puedes ajustarlos solo en esta pregunta; el catálogo no cambia.",
+    "none": "Sin escala (opciones propias)",
+    "apply": "Aplicar escala",
+    "applied": "Se copiaron las opciones de «{name}»",
+    "loading": "Cargando escalas…",
+    "error": "No se pudieron cargar las escalas.",
+    "retry": "Reintentar",
+    "names": {
+      "F5": "Frecuencia 0–4",
+      "IND": "Independiente / Necesita ayuda",
+      "SNN": "Sí / No / No lo sé",
+      "FC": "Frecuencia de consumo",
+      "CMP5": "Comparación con hace 5 años"
+    },
+    "options": {
+      "title": "Opciones",
+      "empty": "Esta pregunta aún no tiene opciones. Aplica una escala o agrega una opción.",
+      "add": "Agregar opción",
+      "remove": "Quitar opción {index}",
+      "option": "Opción {index}",
+      "value": "Valor",
+      "labelEs": "Etiqueta (español)",
+      "labelEn": "Etiqueta (inglés)",
+      "score": "Puntaje",
+      "scoreHelp": "Vacío si la opción no puntúa."
+    }
+  },
   "seo": {
+    "audit": {
+      "title": "Neurofit IA | Auditoría"
+    },
     "confirm": {
       "title": "Neurofit IA | Confirmando acceso"
     },
@@ -930,6 +1091,9 @@
     "newsletter": {
       "title": "Neurofit IA | Newsletter"
     },
+    "patients": {
+      "title": "Neurofit IA | Mis pacientes"
+    },
     "policies": {
       "title": "Neurofit IA | Políticas y tratamiento de datos"
     },
@@ -945,6 +1109,18 @@
     },
     "users": {
       "title": "Neurofit IA | Gestión de usuarios"
+    },
+    "tests": {
+      "title": "Neurofit IA | Tests"
+    },
+    "testsNew": {
+      "title": "Neurofit IA | Nuevo test"
+    },
+    "testDetail": {
+      "title": "Neurofit IA | Estructura del test"
+    },
+    "testQuestions": {
+      "title": "Neurofit IA | Preguntas del test"
     }
   },
   "solution": {
@@ -1068,6 +1244,312 @@
       "science": {
         "description": "Utilizamos evidencia científica y tecnología para prevenir, intervenir y mejorar la salud cerebral.",
         "title": "Ciencia con propósito"
+      }
+    }
+  },
+  "tests": {
+    "admin": {
+      "eyebrow": "Gestión de evaluaciones",
+      "title": "Tests",
+      "intro": "Crea y organiza los tests de la plataforma. Un test nuevo empieza como borrador y no lo ven pacientes ni evaluadores hasta que se publique.",
+      "listTitle": "Tests",
+      "new": "Nuevo test",
+      "total": "{count} tests",
+      "filters": {
+        "status": "Estado",
+        "statusAll": "Todos los estados"
+      },
+      "columns": {
+        "code": "Código",
+        "title": "Título",
+        "version": "Versión",
+        "status": "Estado"
+      },
+      "status": {
+        "draft": "Borrador",
+        "published": "Publicado",
+        "archived": "Archivado"
+      },
+      "version": "v{version}",
+      "empty": "Todavía no hay tests. Crea el primero.",
+      "form": {
+        "eyebrow": "Nuevo test",
+        "title": "Crear un test",
+        "intro": "El código identifica el test y no se puede repetir. El título en inglés es opcional: si falta, se muestra el español.",
+        "code": "Código",
+        "codeHelp": "Mayúsculas, números y guion bajo; de 3 a 40 caracteres. Ej.: EVAL_NEURO_1",
+        "titleEs": "Título (español)",
+        "titleEn": "Título (inglés)",
+        "descriptionEs": "Descripción (español)",
+        "descriptionEn": "Descripción (inglés)",
+        "optional": "Opcional",
+        "save": "Crear test",
+        "cancel": "Cancelar",
+        "created": "Test creado como borrador",
+        "back": "Volver a la lista"
+      }
+    },
+    "sections": {
+      "eyebrow": "Estructura del test",
+      "title": "Secciones",
+      "intro": "Agrupa las preguntas por módulo. Arrastra una sección o usa las flechas para cambiar el orden.",
+      "add": "Agregar sección",
+      "edit": "Editar sección",
+      "delete": "Eliminar sección",
+      "moveUp": "Subir",
+      "moveDown": "Bajar",
+      "dragHandle": "Arrastrar para reordenar",
+      "position": "Posición {position}",
+      "questions": "Sin preguntas | 1 pregunta | {count} preguntas",
+      "domain": "Dominio: {domain}",
+      "empty": "Este test todavía no tiene secciones.",
+      "error": "No se pudieron cargar las secciones.",
+      "retry": "Reintentar",
+      "locked": "Este test ya no es un borrador: su estructura no se puede cambiar. Crea una versión nueva para modificarla.",
+      "saved": "Sección guardada",
+      "deleted": "Sección eliminada",
+      "reordered": "Orden guardado",
+      "form": {
+        "addTitle": "Nueva sección",
+        "editTitle": "Editar sección",
+        "code": "Código",
+        "codeHelp": "Mayúsculas, números y guion bajo; de 2 a 40 caracteres. Único dentro del test.",
+        "titleEs": "Título (español)",
+        "titleEn": "Título (inglés)",
+        "domain": "Dominio",
+        "domainHelp": "Área que evalúa la sección, p. ej. sueño o memoria.",
+        "optional": "Opcional",
+        "save": "Guardar sección",
+        "cancel": "Cancelar"
+      },
+      "confirm": {
+        "title": "¿Eliminar la sección?",
+        "body": "Se eliminará «{title}».",
+        "bodyQuestions": "Se eliminará «{title}» y su pregunta. | Se eliminará «{title}» y sus {count} preguntas.",
+        "confirm": "Eliminar",
+        "cancel": "Cancelar"
+      },
+      "errors": {
+        "required": "Este campo es obligatorio",
+        "invalid_format": "Usa de 2 a 40 caracteres: mayúsculas, números o guion bajo",
+        "too_short": "Debe tener al menos {min} caracteres",
+        "too_long": "Debe tener como máximo {max} caracteres",
+        "section_code_taken": "Ya existe una sección con este código en el test",
+        "new_version_required": "El test ya no es un borrador. Crea una versión nueva para cambiar su estructura.",
+        "forbidden": "No tienes permisos para cambiar este test",
+        "unknown": "No se pudo guardar el cambio. Inténtalo de nuevo."
+      },
+      "back": "Volver a los tests",
+      "notFound": "No se encontró el test."
+    },
+    "questions": {
+      "eyebrow": "Preguntas del test",
+      "title": "Preguntas",
+      "open": "Preguntas",
+      "intro": "Crea las preguntas de cada sección. La vista previa muestra al instante lo que guardas.",
+      "back": "Volver a la estructura",
+      "add": "Agregar pregunta",
+      "edit": "Editar pregunta {code}",
+      "empty": "Esta sección todavía no tiene preguntas.",
+      "noSections": "Agrega secciones al test antes de crear preguntas.",
+      "loading": "Cargando preguntas…",
+      "error": "No se pudieron cargar las preguntas.",
+      "retry": "Reintentar",
+      "saved": "Pregunta guardada",
+      "required": "Obligatoria",
+      "optional": "Opcional",
+      "declinable": "Admite «Prefiero no responder»",
+      "preview": "Vista previa",
+      "previewHelp": "Así quedan las preguntas guardadas, en orden.",
+      "count": "Sin preguntas | 1 pregunta | {count} preguntas",
+      "types": {
+        "single_choice": "Elección única",
+        "multiple_choice": "Elección múltiple",
+        "true_false": "Sí / No",
+        "numeric_scale": "Escala numérica",
+        "agreement": "Grado de acuerdo",
+        "numeric_free": "Número",
+        "open_text": "Texto libre"
+      },
+      "directions": {
+        "neutral": "Neutra",
+        "higher_is_risk": "Más alto es más riesgo",
+        "higher_is_protective": "Más alto es más protector"
+      },
+      "form": {
+        "addTitle": "Nueva pregunta",
+        "editTitle": "Editar pregunta",
+        "section": "Sección",
+        "code": "Código",
+        "codeHelp": "Mayúsculas, números y guion bajo; de 2 a 40 caracteres. Único en todo el test.",
+        "promptEs": "Texto de la pregunta (español)",
+        "promptEn": "Texto de la pregunta (inglés)",
+        "type": "Tipo",
+        "typeHelp": "Al cambiar el tipo, su configuración vuelve a los valores por defecto.",
+        "required": "Obligatoria",
+        "requiredHelp": "El paciente no puede avanzar sin responderla.",
+        "allowsDecline": "Permitir «Prefiero no responder»",
+        "advanced": "Datos opcionales",
+        "variable": "Variable",
+        "variableHelp": "Nombre con el que el modelo de puntaje usa la respuesta.",
+        "direction": "Dirección",
+        "weight": "Peso",
+        "weightHelp": "Número mayor o igual a 0. Vacío si no pondera.",
+        "source": "Fuente",
+        "sourceHelp": "Instrumento o referencia de la que sale la pregunta.",
+        "hintEs": "Pista conversacional (español)",
+        "hintEn": "Pista conversacional (inglés)",
+        "hintHelp": "Cómo puede preguntarla la IA en una conversación.",
+        "optional": "Opcional",
+        "save": "Guardar pregunta",
+        "cancel": "Cancelar",
+        "active": "Activa",
+        "activeHelp": "Si la desactivas, no aparece en evaluaciones nuevas."
+      },
+      "config": {
+        "title": "Configuración",
+        "exclusive": "Excluyente",
+        "exclusiveHelp": "Al elegirla se desmarcan las demás opciones.",
+        "trueEs": "Etiqueta «sí» (español)",
+        "trueEn": "Etiqueta «sí» (inglés)",
+        "falseEs": "Etiqueta «no» (español)",
+        "falseEn": "Etiqueta «no» (inglés)",
+        "presets": "Etiquetas rápidas",
+        "presetYesNo": "Sí / No",
+        "presetTrueFalse": "Verdadero / Falso",
+        "min": "Mínimo",
+        "max": "Máximo",
+        "step": "Paso",
+        "minLabelEs": "Etiqueta del mínimo (español)",
+        "minLabelEn": "Etiqueta del mínimo (inglés)",
+        "maxLabelEs": "Etiqueta del máximo (español)",
+        "maxLabelEn": "Etiqueta del máximo (inglés)",
+        "point": "Punto {index}",
+        "labelEs": "Etiqueta (español)",
+        "labelEn": "Etiqueta (inglés)",
+        "agreementHelp": "Escala fija de 5 puntos; puedes cambiar sus etiquetas.",
+        "unitEs": "Unidad (español)",
+        "unitEn": "Unidad (inglés)",
+        "limitsHelp": "Deja vacío lo que no tenga límite.",
+        "maxLength": "Longitud máxima",
+        "maxLengthHelp": "Entre 1 y 5000 caracteres."
+      },
+      "actions": {
+        "edit": "Editar pregunta {code}",
+        "duplicate": "Duplicar pregunta {code}",
+        "deactivate": "Desactivar pregunta {code}",
+        "activate": "Activar pregunta {code}",
+        "moveUp": "Subir pregunta {code}",
+        "moveDown": "Bajar pregunta {code}",
+        "dragHandle": "Arrastrar para reordenar",
+        "duplicated": "Se creó la copia {code}",
+        "deactivated": "Pregunta desactivada",
+        "activated": "Pregunta activada",
+        "reordered": "Orden guardado",
+        "inactive": "Inactiva",
+        "inactiveHelp": "No aparece en evaluaciones nuevas; sus respuestas anteriores se conservan."
+      },
+      "condition": {
+        "title": "Mostrar solo si…",
+        "help": "La pregunta aparece solo cuando otra pregunta del test tiene la respuesta indicada.",
+        "enable": "Mostrar esta pregunta solo bajo una condición",
+        "question": "Pregunta",
+        "op": "Condición",
+        "value": "Valor",
+        "values": "Valores",
+        "empty": "Este test aún no tiene otras preguntas que puedan servir de condición.",
+        "summary": "Se muestra si {code} {op} {value}",
+        "yes": "Sí",
+        "no": "No",
+        "ops": {
+          "eq": "es igual a",
+          "neq": "es distinto de",
+          "in": "es alguno de",
+          "any_eq": "incluye"
+        }
+      }
+    },
+    "publish": {
+      "publish": "Publicar",
+      "publishing": "Publicando…",
+      "newVersion": "Nueva versión",
+      "archive": "Archivar",
+      "published": "Test publicado",
+      "versionCreated": "Se creó la versión {version} en borrador",
+      "archived": "Test archivado",
+      "errorsTitle": "Antes de publicar, corrige esto",
+      "errorsHelp": "El test no se publicó. Cada error indica su sección y su pregunta.",
+      "general": "Todo el test",
+      "question": "Pregunta {code}",
+      "confirm": {
+        "title": "¿Publicar el test?",
+        "body": "La versión {version} quedará disponible para pacientes y evaluadores, y su estructura ya no se podrá cambiar.",
+        "bodyReplaces": "La versión {version} quedará disponible y la versión publicada hasta ahora pasará a archivada. Las evaluaciones en curso terminan con la versión con la que empezaron.",
+        "confirm": "Publicar",
+        "cancel": "Cancelar"
+      },
+      "archiveConfirm": {
+        "title": "¿Archivar el test?",
+        "body": "Ya no se podrán iniciar evaluaciones con la versión {version}. Las evaluaciones y resultados anteriores se conservan. No se puede deshacer.",
+        "confirm": "Archivar",
+        "cancel": "Cancelar"
+      },
+      "archivedNotice": "Este test está archivado: no se pueden iniciar evaluaciones nuevas, pero sus resultados siguen disponibles.",
+      "errors": {
+        "no_sections": "El test no tiene secciones",
+        "empty_section": "La sección no tiene preguntas activas",
+        "inactive_dependency": "La pregunta {code} depende de una pregunta inactiva",
+        "not_draft": "Solo se puede publicar un borrador",
+        "not_published": "Solo se puede crear una versión nueva desde un test publicado",
+        "draft_exists": "Ya hay una versión en borrador de este test. Termínala o archívala antes de crear otra.",
+        "already_archived": "El test ya está archivado",
+        "forbidden": "No tienes permisos para cambiar este test",
+        "unknown": "No se pudo completar la acción. Inténtalo de nuevo."
+      }
+    },
+    "import": {
+      "open": "Importar archivo",
+      "title": "Importar preguntas desde un archivo",
+      "description": "Sube un archivo Markdown con el formato de docs/test-1.md. Antes de guardar verás un resumen y los errores.",
+      "empty": "Elige un archivo .md para ver la vista previa.",
+      "choose": "Elegir archivo",
+      "file": "Archivo: {name}",
+      "reading": "Leyendo el archivo…",
+      "analyzing": "Analizando el archivo…",
+      "importing": "Importando…",
+      "error": "No se pudo analizar el archivo.",
+      "retry": "Reintentar",
+      "change": "Elegir otro archivo",
+      "summary": "{count} preguntas en {sections} secciones",
+      "bySection": "Por sección",
+      "byType": "Por tipo",
+      "plan": "Qué va a pasar",
+      "planCreate": "Crear: {count}",
+      "planUpdate": "Actualizar: {count}",
+      "planUnchanged": "Sin cambios: {count}",
+      "planUntouched": "{count} preguntas del test no están en el archivo y no se tocan.",
+      "sectionsPlan": "Secciones nuevas: {create} · actualizadas: {update}",
+      "errorsTitle": "El archivo tiene errores. Corrígelos y vuelve a subirlo: no se importará nada.",
+      "line": "Línea {line}",
+      "nothingToDo": "El test ya coincide con el archivo: no hay nada que importar.",
+      "confirm": "Importar",
+      "cancel": "Cancelar",
+      "done": "Importación terminada: {created} creadas, {updated} actualizadas",
+      "question": "{code}",
+      "errors": {
+        "no_modules": "No se encontró ningún módulo con el formato «## Módulo n · Título (`CÓDIGO`)»",
+        "unsupported_type": "Tipo de pregunta no soportado",
+        "invalid_code": "Código inválido: usa mayúsculas, números y guion bajo (2 a 40)",
+        "duplicate_code": "Código repetido en el archivo",
+        "missing_prompt": "Falta el texto de la pregunta",
+        "unknown_scale": "La escala no está en el catálogo",
+        "empty_options": "Faltan las opciones (al menos 2, separadas por «·»)",
+        "empty_file": "El archivo está vacío",
+        "too_large": "El archivo supera 1 MB",
+        "not_markdown": "Elige un archivo .md",
+        "new_version_required": "Solo se puede importar sobre un test en borrador",
+        "forbidden": "No tienes permisos para importar en este test",
+        "unknown": "No se pudo importar. Inténtalo de nuevo."
       }
     }
   },

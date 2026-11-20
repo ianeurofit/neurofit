@@ -82,6 +82,52 @@
     "title": "is designed for {highlight}",
     "titleHighlight": "different people and organizations"
   },
+  "audit": {
+    "eyebrow": "Traceability",
+    "title": "Audit log",
+    "intro": "Who changed what and when in the structure tables. This log is read-only.",
+    "listTitle": "Change log",
+    "filters": {
+      "entity": "Entity",
+      "entityAll": "All entities",
+      "actor": "User",
+      "actorAll": "All users",
+      "from": "From",
+      "to": "To",
+      "clear": "Clear filters"
+    },
+    "columns": {
+      "date": "Date",
+      "actor": "User",
+      "action": "Action",
+      "entity": "Entity",
+      "changes": "Changes"
+    },
+    "actions": {
+      "insert": "Created",
+      "update": "Edited",
+      "delete": "Deleted"
+    },
+    "entities": {
+      "evaluator_patients": "Evaluator patients",
+      "tests": "Tests",
+      "test_sections": "Sections",
+      "questions": "Questions",
+      "question_options": "Question options",
+      "scales": "Scales",
+      "scale_options": "Scale options",
+      "scoring_models": "Scoring models",
+      "alert_rules": "Alert rules",
+      "recommendation_templates": "Recommendation templates"
+    },
+    "system": "System",
+    "empty": "No changes have been recorded yet.",
+    "emptyFiltered": "No record matches the filters.",
+    "error": "We couldn't load the audit log.",
+    "retry": "Try again",
+    "total": "{count} records",
+    "pageOf": "Page {page} of {pages}"
+  },
   "auth": {
     "backHome": "Back to home",
     "brandEyebrow": "Brain Intelligence",
@@ -89,6 +135,10 @@
     "brandTitle": "Measure, monitor and optimize your brain health with artificial intelligence.",
     "confirm": {
       "checking": "Verifying your access…"
+    },
+    "errors": {
+      "generic": "We couldn't sign you in. Please try again.",
+      "invalidCredentials": "Incorrect email or password."
     },
     "login": {
       "email": "Email address",
@@ -323,12 +373,15 @@
     "eyebrow": "Neurofit IA dashboard",
     "loading": "Loading…",
     "nav": {
+      "audit": "Audit log",
       "demo": "Public demo",
       "education": "Education",
       "myPanel": "My dashboard",
       "newUser": "Create user",
       "overview": "Overview",
+      "patients": "My patients",
       "roadmap": "Road Map",
+      "tests": "Assessment management",
       "users": "Users"
     },
     "newUser": {
@@ -440,15 +493,21 @@
       "totalUsers": "Total users"
     },
     "titles": {
+      "audit": "Audit log",
       "dashboard": "Dashboard",
       "demo": "Demo patients",
       "education": "Education",
       "evaluator": "Evaluator dashboard",
       "newUser": "Create user",
+      "patients": "My patients",
       "roadmap": "Road Map",
       "superuser": "Superuser dashboard",
       "user": "My dashboard",
-      "users": "Users"
+      "users": "Users",
+      "tests": "Assessment management",
+      "testsNew": "New test",
+      "testDetail": "Test structure",
+      "testQuestions": "Test questions"
     },
     "user": {
       "comingSoon": "Available very soon.",
@@ -567,6 +626,47 @@
     },
     "whyTitle": "Why choose Neurofit talks?"
   },
+  "errors": {
+    "test": {
+      "required": "This field is required",
+      "invalid_format": "Use 3 to 40 characters: upper case letters, digits or underscore",
+      "too_short": "Must be at least {min} characters",
+      "too_long": "Must be at most {max} characters",
+      "code_taken": "A test with this code already exists",
+      "forbidden": "You are not allowed to create tests",
+      "unknown": "The test could not be saved. Please try again."
+    },
+    "question": {
+      "required": "This field is required",
+      "invalid_format": "Use 2 to 40 characters: uppercase letters, numbers or underscores",
+      "too_long": "It must be at most {max} characters",
+      "invalid_type": "Choose a valid question type",
+      "min_options": "Add at least {min} options",
+      "duplicate_option": "Another option is the same",
+      "invalid_score": "The score must be a number",
+      "unknown_option": "Exclusive options must be among the options of the question",
+      "min_gte_max": "The maximum must be greater than the minimum",
+      "min_gt_max": "The maximum cannot be less than the minimum",
+      "labels_count": "The scale needs exactly {count} labels",
+      "out_of_range": "Use a whole number between {min} and {max}",
+      "invalid_number": "Enter a valid number",
+      "invalid_direction": "Choose a valid direction",
+      "question_code_taken": "A question with this code already exists in the test",
+      "section_not_found": "The section does not belong to this test",
+      "new_version_required": "The test is no longer a draft. Create a new version to change its questions.",
+      "question_not_found": "The question no longer exists.",
+      "forbidden": "You do not have permission to change this test",
+      "unknown": "The question could not be saved. Please try again.",
+      "invalid_order": "The order could not be saved. Reload the page and try again."
+    },
+    "condition": {
+      "unknown_question": "Choose a question that exists in this test",
+      "invalid_operator": "That condition does not work for the type of the chosen question",
+      "invalid_value": "The value is not a possible answer to that question",
+      "self_reference": "A question cannot depend on itself",
+      "cycle": "This condition creates a cycle: the questions would depend on each other"
+    }
+  },
   "evaluation": {
     "columns": {
       "cognition": {
@@ -684,6 +784,19 @@
       "science": "Cutting-edge science\nand technology"
     }
   },
+  "management": {
+    "clearFilters": "Clear filters",
+    "empty": "There are no items yet.",
+    "emptyFiltered": "No items match the filters.",
+    "error": "The list could not be loaded.",
+    "retry": "Retry",
+    "form": {
+      "save": "Save",
+      "errors": {
+        "required": "This field is required"
+      }
+    }
+  },
   "mission": {
     "eyebrow": "Our mission and vision",
     "footerHighlight": "intelligent and healthy",
@@ -780,6 +893,22 @@
     "quote": "The future of brain health starts today.",
     "quoteHighlight": "Be part of the change.",
     "title": "Be among the first to discover {brand}"
+  },
+  "patients": {
+    "active": "Active",
+    "empty": "You don't have assigned patients yet.",
+    "emptyHint": "When the team assigns people to you, they will appear here.",
+    "emptySearch": "No patient matches your search.",
+    "error": "We couldn't load your patients.",
+    "eyebrow": "Clinical assessment",
+    "inactive": "Inactive",
+    "intro": "People the Neurofit team assigned to you to assess and support.",
+    "listTitle": "Assigned patients",
+    "retry": "Try again",
+    "search": "Search by name or email",
+    "since": "Assigned: {date}",
+    "title": "My patients",
+    "total": "Assigned patients"
   },
   "policy": {
     "badge": "Data Protection",
@@ -903,7 +1032,39 @@
       "label": "User"
     }
   },
+  "scales": {
+    "label": "Answer scale",
+    "help": "Choose a scale to copy its options and scores. You can then adjust them for this question only; the catalogue does not change.",
+    "none": "No scale (own options)",
+    "apply": "Apply scale",
+    "applied": "The options of \"{name}\" were copied",
+    "loading": "Loading scales…",
+    "error": "The scales could not be loaded.",
+    "retry": "Retry",
+    "names": {
+      "F5": "Frequency 0–4",
+      "IND": "Independent / Needs help",
+      "SNN": "Yes / No / I don't know",
+      "FC": "Consumption frequency",
+      "CMP5": "Compared with 5 years ago"
+    },
+    "options": {
+      "title": "Options",
+      "empty": "This question has no options yet. Apply a scale or add an option.",
+      "add": "Add option",
+      "remove": "Remove option {index}",
+      "option": "Option {index}",
+      "value": "Value",
+      "labelEs": "Label (Spanish)",
+      "labelEn": "Label (English)",
+      "score": "Score",
+      "scoreHelp": "Empty when the option does not score."
+    }
+  },
   "seo": {
+    "audit": {
+      "title": "Neurofit IA | Audit log"
+    },
     "confirm": {
       "title": "Neurofit IA | Confirming access"
     },
@@ -930,6 +1091,9 @@
     "newsletter": {
       "title": "Neurofit IA | Newsletter"
     },
+    "patients": {
+      "title": "Neurofit IA | My patients"
+    },
     "policies": {
       "title": "Neurofit IA | Policies and data processing"
     },
@@ -945,6 +1109,18 @@
     },
     "users": {
       "title": "Neurofit IA | User management"
+    },
+    "tests": {
+      "title": "Neurofit IA | Tests"
+    },
+    "testsNew": {
+      "title": "Neurofit IA | New test"
+    },
+    "testDetail": {
+      "title": "Neurofit IA | Test structure"
+    },
+    "testQuestions": {
+      "title": "Neurofit IA | Test questions"
     }
   },
   "solution": {
@@ -1068,6 +1244,312 @@
       "science": {
         "description": "We use scientific evidence and technology to prevent, intervene and improve brain health.",
         "title": "Science with purpose"
+      }
+    }
+  },
+  "tests": {
+    "admin": {
+      "eyebrow": "Assessment management",
+      "title": "Tests",
+      "intro": "Create and organise the platform tests. A new test starts as a draft and patients and evaluators do not see it until it is published.",
+      "listTitle": "Tests",
+      "new": "New test",
+      "total": "{count} tests",
+      "filters": {
+        "status": "Status",
+        "statusAll": "All statuses"
+      },
+      "columns": {
+        "code": "Code",
+        "title": "Title",
+        "version": "Version",
+        "status": "Status"
+      },
+      "status": {
+        "draft": "Draft",
+        "published": "Published",
+        "archived": "Archived"
+      },
+      "version": "v{version}",
+      "empty": "There are no tests yet. Create the first one.",
+      "form": {
+        "eyebrow": "New test",
+        "title": "Create a test",
+        "intro": "The code identifies the test and cannot be repeated. The English title is optional: when missing, the Spanish one is shown.",
+        "code": "Code",
+        "codeHelp": "Upper case letters, digits and underscore; 3 to 40 characters. E.g. EVAL_NEURO_1",
+        "titleEs": "Title (Spanish)",
+        "titleEn": "Title (English)",
+        "descriptionEs": "Description (Spanish)",
+        "descriptionEn": "Description (English)",
+        "optional": "Optional",
+        "save": "Create test",
+        "cancel": "Cancel",
+        "created": "Test created as a draft",
+        "back": "Back to the list"
+      }
+    },
+    "sections": {
+      "eyebrow": "Test structure",
+      "title": "Sections",
+      "intro": "Group the questions by module. Drag a section or use the arrows to change the order.",
+      "add": "Add section",
+      "edit": "Edit section",
+      "delete": "Delete section",
+      "moveUp": "Move up",
+      "moveDown": "Move down",
+      "dragHandle": "Drag to reorder",
+      "position": "Position {position}",
+      "questions": "No questions | 1 question | {count} questions",
+      "domain": "Domain: {domain}",
+      "empty": "This test has no sections yet.",
+      "error": "The sections could not be loaded.",
+      "retry": "Retry",
+      "locked": "This test is no longer a draft: its structure cannot change. Create a new version to modify it.",
+      "saved": "Section saved",
+      "deleted": "Section deleted",
+      "reordered": "Order saved",
+      "form": {
+        "addTitle": "New section",
+        "editTitle": "Edit section",
+        "code": "Code",
+        "codeHelp": "Upper case letters, digits and underscore; 2 to 40 characters. Unique within the test.",
+        "titleEs": "Title (Spanish)",
+        "titleEn": "Title (English)",
+        "domain": "Domain",
+        "domainHelp": "Area the section assesses, e.g. sleep or memory.",
+        "optional": "Optional",
+        "save": "Save section",
+        "cancel": "Cancel"
+      },
+      "confirm": {
+        "title": "Delete the section?",
+        "body": "\"{title}\" will be deleted.",
+        "bodyQuestions": "\"{title}\" and its question will be deleted. | \"{title}\" and its {count} questions will be deleted.",
+        "confirm": "Delete",
+        "cancel": "Cancel"
+      },
+      "errors": {
+        "required": "This field is required",
+        "invalid_format": "Use 2 to 40 characters: upper case letters, digits or underscore",
+        "too_short": "Must be at least {min} characters",
+        "too_long": "Must be at most {max} characters",
+        "section_code_taken": "A section with this code already exists in the test",
+        "new_version_required": "The test is no longer a draft. Create a new version to change its structure.",
+        "forbidden": "You are not allowed to change this test",
+        "unknown": "The change could not be saved. Please try again."
+      },
+      "back": "Back to tests",
+      "notFound": "The test was not found."
+    },
+    "questions": {
+      "eyebrow": "Test questions",
+      "title": "Questions",
+      "open": "Questions",
+      "intro": "Create the questions of each section. The preview shows what you save right away.",
+      "back": "Back to the structure",
+      "add": "Add question",
+      "edit": "Edit question {code}",
+      "empty": "This section has no questions yet.",
+      "noSections": "Add sections to the test before creating questions.",
+      "loading": "Loading questions…",
+      "error": "The questions could not be loaded.",
+      "retry": "Retry",
+      "saved": "Question saved",
+      "required": "Required",
+      "optional": "Optional",
+      "declinable": "Allows \"Prefer not to answer\"",
+      "preview": "Preview",
+      "previewHelp": "This is how the saved questions look, in order.",
+      "count": "No questions | 1 question | {count} questions",
+      "types": {
+        "single_choice": "Single choice",
+        "multiple_choice": "Multiple choice",
+        "true_false": "Yes / No",
+        "numeric_scale": "Numeric scale",
+        "agreement": "Agreement",
+        "numeric_free": "Number",
+        "open_text": "Free text"
+      },
+      "directions": {
+        "neutral": "Neutral",
+        "higher_is_risk": "Higher means more risk",
+        "higher_is_protective": "Higher means more protection"
+      },
+      "form": {
+        "addTitle": "New question",
+        "editTitle": "Edit question",
+        "section": "Section",
+        "code": "Code",
+        "codeHelp": "Uppercase letters, numbers and underscores; 2 to 40 characters. Unique in the whole test.",
+        "promptEs": "Question text (Spanish)",
+        "promptEn": "Question text (English)",
+        "type": "Type",
+        "typeHelp": "Changing the type resets its configuration to the defaults.",
+        "required": "Required",
+        "requiredHelp": "The patient cannot go on without answering it.",
+        "allowsDecline": "Allow \"Prefer not to answer\"",
+        "advanced": "Optional data",
+        "variable": "Variable",
+        "variableHelp": "Name the scoring model uses for the answer.",
+        "direction": "Direction",
+        "weight": "Weight",
+        "weightHelp": "A number of 0 or more. Empty if it does not weigh.",
+        "source": "Source",
+        "sourceHelp": "Instrument or reference the question comes from.",
+        "hintEs": "Conversational hint (Spanish)",
+        "hintEn": "Conversational hint (English)",
+        "hintHelp": "How the AI may ask it in a conversation.",
+        "optional": "Optional",
+        "save": "Save question",
+        "cancel": "Cancel",
+        "active": "Active",
+        "activeHelp": "If you deactivate it, it does not appear in new assessments."
+      },
+      "config": {
+        "title": "Configuration",
+        "exclusive": "Exclusive",
+        "exclusiveHelp": "Choosing it clears the other options.",
+        "trueEs": "\"Yes\" label (Spanish)",
+        "trueEn": "\"Yes\" label (English)",
+        "falseEs": "\"No\" label (Spanish)",
+        "falseEn": "\"No\" label (English)",
+        "presets": "Quick labels",
+        "presetYesNo": "Yes / No",
+        "presetTrueFalse": "True / False",
+        "min": "Minimum",
+        "max": "Maximum",
+        "step": "Step",
+        "minLabelEs": "Minimum label (Spanish)",
+        "minLabelEn": "Minimum label (English)",
+        "maxLabelEs": "Maximum label (Spanish)",
+        "maxLabelEn": "Maximum label (English)",
+        "point": "Point {index}",
+        "labelEs": "Label (Spanish)",
+        "labelEn": "Label (English)",
+        "agreementHelp": "A fixed 5-point scale; you can change its labels.",
+        "unitEs": "Unit (Spanish)",
+        "unitEn": "Unit (English)",
+        "limitsHelp": "Leave empty what has no limit.",
+        "maxLength": "Maximum length",
+        "maxLengthHelp": "Between 1 and 5000 characters."
+      },
+      "actions": {
+        "edit": "Edit question {code}",
+        "duplicate": "Duplicate question {code}",
+        "deactivate": "Deactivate question {code}",
+        "activate": "Activate question {code}",
+        "moveUp": "Move question {code} up",
+        "moveDown": "Move question {code} down",
+        "dragHandle": "Drag to reorder",
+        "duplicated": "Copy {code} created",
+        "deactivated": "Question deactivated",
+        "activated": "Question activated",
+        "reordered": "Order saved",
+        "inactive": "Inactive",
+        "inactiveHelp": "It does not appear in new assessments; its previous answers are kept."
+      },
+      "condition": {
+        "title": "Show only if…",
+        "help": "The question appears only when another question of the test has the given answer.",
+        "enable": "Show this question only under a condition",
+        "question": "Question",
+        "op": "Condition",
+        "value": "Value",
+        "values": "Values",
+        "empty": "This test has no other questions that can be used as a condition yet.",
+        "summary": "Shown if {code} {op} {value}",
+        "yes": "Yes",
+        "no": "No",
+        "ops": {
+          "eq": "equals",
+          "neq": "is not",
+          "in": "is one of",
+          "any_eq": "includes"
+        }
+      }
+    },
+    "publish": {
+      "publish": "Publish",
+      "publishing": "Publishing…",
+      "newVersion": "New version",
+      "archive": "Archive",
+      "published": "Test published",
+      "versionCreated": "Version {version} created as a draft",
+      "archived": "Test archived",
+      "errorsTitle": "Fix this before publishing",
+      "errorsHelp": "The test was not published. Each error shows its section and question.",
+      "general": "Whole test",
+      "question": "Question {code}",
+      "confirm": {
+        "title": "Publish the test?",
+        "body": "Version {version} will be available to patients and evaluators, and its structure can no longer change.",
+        "bodyReplaces": "Version {version} will be available and the version published until now will be archived. Assessments in progress finish with the version they started with.",
+        "confirm": "Publish",
+        "cancel": "Cancel"
+      },
+      "archiveConfirm": {
+        "title": "Archive the test?",
+        "body": "New assessments can no longer start with version {version}. Previous assessments and results are kept. This cannot be undone.",
+        "confirm": "Archive",
+        "cancel": "Cancel"
+      },
+      "archivedNotice": "This test is archived: new assessments cannot start, but its results are still available.",
+      "errors": {
+        "no_sections": "The test has no sections",
+        "empty_section": "The section has no active questions",
+        "inactive_dependency": "Question {code} depends on an inactive question",
+        "not_draft": "Only a draft can be published",
+        "not_published": "A new version can only be created from a published test",
+        "draft_exists": "This test already has a draft version. Finish or archive it before creating another one.",
+        "already_archived": "The test is already archived",
+        "forbidden": "You do not have permission to change this test",
+        "unknown": "The action could not be completed. Please try again."
+      }
+    },
+    "import": {
+      "open": "Import file",
+      "title": "Import questions from a file",
+      "description": "Upload a Markdown file with the format of docs/test-1.md. You will see a summary and the errors before anything is saved.",
+      "empty": "Choose a .md file to see the preview.",
+      "choose": "Choose file",
+      "file": "File: {name}",
+      "reading": "Reading the file…",
+      "analyzing": "Analysing the file…",
+      "importing": "Importing…",
+      "error": "The file could not be analysed.",
+      "retry": "Retry",
+      "change": "Choose another file",
+      "summary": "{count} questions in {sections} sections",
+      "bySection": "By section",
+      "byType": "By type",
+      "plan": "What will happen",
+      "planCreate": "Create: {count}",
+      "planUpdate": "Update: {count}",
+      "planUnchanged": "Unchanged: {count}",
+      "planUntouched": "{count} questions of the test are not in the file and are left as they are.",
+      "sectionsPlan": "New sections: {create} · updated: {update}",
+      "errorsTitle": "The file has errors. Fix them and upload it again: nothing will be imported.",
+      "line": "Line {line}",
+      "nothingToDo": "The test already matches the file: there is nothing to import.",
+      "confirm": "Import",
+      "cancel": "Cancel",
+      "done": "Import finished: {created} created, {updated} updated",
+      "question": "{code}",
+      "errors": {
+        "no_modules": "No module with the format \"## Módulo n · Título (`CÓDIGO`)\" was found",
+        "unsupported_type": "Question type not supported",
+        "invalid_code": "Invalid code: use uppercase letters, numbers and underscores (2 to 40)",
+        "duplicate_code": "Code repeated in the file",
+        "missing_prompt": "The question text is missing",
+        "unknown_scale": "The scale is not in the catalogue",
+        "empty_options": "The options are missing (at least 2, separated by \"·\")",
+        "empty_file": "The file is empty",
+        "too_large": "The file is larger than 1 MB",
+        "not_markdown": "Choose a .md file",
+        "new_version_required": "You can only import into a draft test",
+        "forbidden": "You do not have permission to import into this test",
+        "unknown": "The import failed. Please try again."
       }
     }
   },

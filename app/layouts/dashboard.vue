@@ -1,41 +1,24 @@
 <script setup lang="ts">
-import { ROLE_COLORS, type UserRole } from '~/types/user'
+import { ROLE_COLORS } from '~/types/user'
 
 const { t } = useI18n()
 const localePath = useLocalePath()
 const { profile, signOut } = useProfile()
 
-interface NavItem {
-  key: string
-  icon: string
-  to: string
-}
+const router = useRouter()
 
-const NAV: Record<UserRole, NavItem[]> = {
-  superuser: [
-    { key: 'overview', icon: 'i-lucide-layout-dashboard', to: '/dashboard/superusuario' },
-    { key: 'users', icon: 'i-lucide-users', to: '/dashboard/usuarios' },
-    { key: 'newUser', icon: 'i-lucide-user-plus', to: '/dashboard/usuarios/nuevo' },
-    { key: 'roadmap', icon: 'i-lucide-map', to: '/dashboard/roadmap' },
-    { key: 'education', icon: 'i-lucide-graduation-cap', to: '/dashboard/educacion' },
-    { key: 'demo', icon: 'i-lucide-monitor-play', to: '/demo' },
-  ],
-  evaluator: [
-    { key: 'overview', icon: 'i-lucide-layout-dashboard', to: '/dashboard/evaluador' },
-    { key: 'roadmap', icon: 'i-lucide-map', to: '/dashboard/roadmap' },
-  ],
-  user: [
-    { key: 'myPanel', icon: 'i-lucide-brain', to: '/dashboard/usuario' },
-  ],
-}
+// Items whose page does not exist yet (e.g. test management before it is built) stay hidden.
+const items = computed(() => {
+  const existing = new Set(router.getRoutes().map(r => r.path))
 
-const items = computed(() =>
-  (profile.value ? NAV[profile.value.role] : []).map(item => ({
-    ...item,
-    label: t(`dashboard.nav.${item.key}`),
-    path: localePath(item.to),
-  })),
-)
+  return (profile.value ? buildDashboardMenu(profile.value.role) : [])
+    .filter(item => existing.has(localePath(item.to)))
+    .map(item => ({
+      ...item,
+      label: t(`dashboard.nav.${item.key}`),
+      path: localePath(item.to),
+    }))
+})
 const initials = computed(() => {
   const source = profile.value?.full_name || profile.value?.email || '?'
   return source.trim().slice(0, 2).toUpperCase()
@@ -76,7 +59,7 @@ watch(() => route.fullPath, () => {
               variant="ghost"
               class="lg:hidden"
               :aria-label="t('nav.closeMenu')"
-              @click="mobileOpen = false"
+              @click="() => { mobileOpen = false }"
             />
           </div>
 
@@ -135,7 +118,7 @@ watch(() => route.fullPath, () => {
       <div
         v-if="mobileOpen"
         class="fixed inset-0 z-40 bg-black/40 lg:hidden"
-        @click="mobileOpen = false"
+        @click="() => { mobileOpen = false }"
       />
 
       <!-- Contenido -->
@@ -150,7 +133,7 @@ watch(() => route.fullPath, () => {
               variant="ghost"
               class="lg:hidden"
               :aria-label="t('nav.openMenu')"
-              @click="mobileOpen = true"
+              @click="() => { mobileOpen = true }"
             />
 
             <div class="min-w-0">

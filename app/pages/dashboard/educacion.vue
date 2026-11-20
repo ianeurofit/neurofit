@@ -298,7 +298,7 @@ async function confirmDelete() {
             color="neutral"
             variant="ghost"
             class="rounded-full"
-            @click="deleteOpen = false"
+            @click="() => { deleteOpen = false }"
           />
           <UButton
             :label="t('dashboard.education.actions.confirmDelete')"

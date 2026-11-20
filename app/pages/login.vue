@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ROLE_HOME } from '~/types/user'
+import { mapAuthError, resolveHomeRoute, safeRedirect } from '#shared/utils/auth'
 
 definePageMeta({ layout: false })
 
@@ -41,9 +41,7 @@ async function onSubmit() {
   })
 
   if (error) {
-    errorMessage.value = error.message === 'Invalid login credentials'
-      ? t('auth.login.invalidCredentials')
-      : error.message
+    errorMessage.value = t(mapAuthError(error))
     loading.value = false
     return
   }
@@ -69,8 +67,8 @@ async function onSubmit() {
     color: 'primary',
   })
 
-  const redirect = String(route.query.redirect ?? '')
-  await navigateTo(redirect.includes('/dashboard') ? redirect : localePath(ROLE_HOME[profile.role]))
+  const redirect = safeRedirect(route.query.redirect)
+  await navigateTo(redirect === '/dashboard' ? localePath(resolveHomeRoute(profile.role)) : redirect)
 }
 </script>
 
