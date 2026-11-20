@@ -354,7 +354,7 @@ function formatDate(value: string) {
             color="neutral"
             variant="ghost"
             class="rounded-full"
-            @click="editOpen = false"
+            @click="() => { editOpen = false }"
           />
           <UButton
             :label="t('dashboard.users.save')"
@@ -390,7 +390,7 @@ function formatDate(value: string) {
             color="neutral"
             variant="ghost"
             class="rounded-full"
-            @click="deleteOpen = false"
+            @click="() => { deleteOpen = false }"
           />
           <UButton
             :label="t('dashboard.users.delete')"

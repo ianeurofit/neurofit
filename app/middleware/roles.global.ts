@@ -1,15 +1,4 @@
-import { ROLE_HOME, type UserRole } from '~/types/user'
-
-/** Zonas del panel y roles permitidos en cada una (nombres de ruta sin sufijo de idioma). */
-const AREAS: Array<{ name: string, roles: UserRole[] }> = [
-  { name: 'dashboard-usuarios', roles: ['superuser'] },
-  { name: 'dashboard-usuarios-nuevo', roles: ['superuser'] },
-  { name: 'dashboard-superusuario', roles: ['superuser'] },
-  { name: 'dashboard-evaluador', roles: ['evaluator'] },
-  { name: 'dashboard-usuario', roles: ['user'] },
-  { name: 'dashboard-roadmap', roles: ['superuser', 'evaluator'] },
-  { name: 'dashboard-educacion', roles: ['superuser'] },
-]
+import { canAccessArea, resolveHomeRoute } from '#shared/utils/auth'
 
 /** 'dashboard-usuarios___en' -> 'dashboard-usuarios' */
 function baseName(name: unknown) {
@@ -26,7 +15,7 @@ export default defineNuxtRouteMiddleware(async (to) => {
   if (['login', 'registro'].includes(name) && user.value) {
     const { fetchProfile } = useProfile()
     const profile = await fetchProfile()
-    return navigateTo(localePath(profile ? ROLE_HOME[profile.role] : '/dashboard'))
+    return navigateTo(localePath(profile ? resolveHomeRoute(profile.role) : '/dashboard'))
   }
 
   // El listado de pacientes de la demo (/demo) solo es visible para el
@@ -66,15 +55,13 @@ export default defineNuxtRouteMiddleware(async (to) => {
     return navigateTo(`${localePath('/login')}?error=cuenta-inactiva`)
   }
 
-  const home = localePath(ROLE_HOME[profile.role])
+  const home = localePath(resolveHomeRoute(profile.role))
 
   if (name === 'dashboard') {
     return navigateTo(home)
   }
 
-  const area = AREAS.find(a => a.name === name)
-
-  if (area && !area.roles.includes(profile.role)) {
+  if (!canAccessArea(name, profile.role)) {
     return navigateTo(home)
   }
 })

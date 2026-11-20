@@ -8,7 +8,7 @@ const columns = [
   { number: 4, key: 'risk', icon: 'i-lucide-shield-alert', color: 'orange' as const },
 ]
 
-const colorMap: Record<string, { text: string, dot: string, ring: string }> = {
+const colorMap: Record<'brand' | 'blue' | 'violet' | 'orange', { text: string, dot: string, ring: string }> = {
   brand: { text: 'text-brand-600 dark:text-brand-400', dot: 'bg-brand-500', ring: 'bg-brand-50 dark:bg-brand-950/40' },
   blue: { text: 'text-blue-600 dark:text-blue-400', dot: 'bg-blue-500', ring: 'bg-blue-50 dark:bg-blue-950/40' },
   violet: { text: 'text-violet-600 dark:text-violet-400', dot: 'bg-violet-500', ring: 'bg-violet-50 dark:bg-violet-950/40' },

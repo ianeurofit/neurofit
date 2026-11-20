@@ -1,8 +1,14 @@
+import type { Json } from '~/types/database.types'
 import type { RoadmapNode, RoadmapNodeInput } from '~/types/roadmap'
 import { normalizeRoadmapItems } from '~/types/roadmap'
 
 /** Código de Postgres cuando la tabla todavía no existe. */
 const UNDEFINED_TABLE = '42P01'
+
+/** Los hitos viajan como JSON; el tipo `RoadmapItem[]` no tiene firma de índice. */
+function serializeItems(items: RoadmapNodeInput['items']): Json {
+  return items as unknown as Json
+}
 
 /**
  * Nodos del Road Map. La escritura la autoriza RLS (solo superusuario),
@@ -44,7 +50,7 @@ export function useRoadmap() {
   async function createNode(input: RoadmapNodeInput) {
     const { data, error } = await client
       .from('roadmap_nodes')
-      .insert(input)
+      .insert({ ...input, items: serializeItems(input.items) })
       .select()
       .single()
 
@@ -57,9 +63,10 @@ export function useRoadmap() {
   }
 
   async function updateNode(id: string, input: Partial<RoadmapNodeInput>) {
+    const { items, ...rest } = input
     const { data, error } = await client
       .from('roadmap_nodes')
-      .update(input)
+      .update(items === undefined ? rest : { ...rest, items: serializeItems(items) })
       .eq('id', id)
       .select()
       .single()
