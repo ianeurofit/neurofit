@@ -27,12 +27,14 @@ describe('architecture: the database tests gate the integration', () => {
     expect(workflow).toMatch(/pull_request:/)
   })
 
-  it('TK-S1-14 the checks job runs lint, typecheck and test', () => {
+  it('TK-S1-14 the checks job runs lint, typecheck, test and the production build', () => {
     const checks = jobBody(read(WORKFLOW), 'checks')
 
     expect(checks).toContain('pnpm lint')
     expect(checks).toContain('pnpm typecheck')
     expect(checks).toContain('pnpm test')
+    // Some errors only appear when compiling for production (e.g. a cast inside v-model).
+    expect(checks).toContain('pnpm run build')
   })
 
   it('TK-S1-14 the database job starts Postgres and runs supabase test db', () => {
