@@ -139,18 +139,23 @@ function setConditionOp(op: ConditionOperator) {
 }
 
 /** Select values are strings for booleans; the condition stores real booleans and numbers. */
-const conditionValue = computed({
-  get: () => {
-    const value = state.value.dependsOn?.value
-    return typeof value === 'boolean' ? String(value) : value as string | number | Array<string | number> | null
-  },
-  set: (value: unknown) => {
-    if (!state.value.dependsOn) return
-    const type = conditionTarget.value?.type
-    const parse = (item: unknown) => (type === 'true_false' ? item === 'true' : type === 'numeric_free' ? (item === '' ? null : Number(item)) : item)
-    state.value.dependsOn = { ...state.value.dependsOn, value: Array.isArray(value) ? value.map(parse) : parse(value) }
-  },
+// Read with :model-value and written with setConditionValue: a cast inside v-model does not
+// compile for production (it becomes an assignment to a cast).
+const conditionValue = computed(() => {
+  const value = state.value.dependsOn?.value
+  return typeof value === 'boolean' ? String(value) : value as string | number | Array<string | number> | null
 })
+
+/** The same value typed for each control, so the template needs no casts. */
+const conditionNumber = computed(() => conditionValue.value as string | number)
+const conditionSelection = computed(() => conditionValue.value as never)
+
+function setConditionValue(value: unknown) {
+  if (!state.value.dependsOn) return
+  const type = conditionTarget.value?.type
+  const parse = (item: unknown) => (type === 'true_false' ? item === 'true' : type === 'numeric_free' ? (item === '' ? null : Number(item)) : item)
+  state.value.dependsOn = { ...state.value.dependsOn, value: Array.isArray(value) ? value.map(parse) : parse(value) }
+}
 
 defineExpose({ setErrors, changeType, setConditionQuestion })
 </script>
@@ -366,20 +371,22 @@ defineExpose({ setErrors, changeType, setConditionQuestion })
               >
                 <UInput
                   v-if="conditionTarget?.type === 'numeric_free'"
-                  v-model="conditionValue as string | number"
+                  :model-value="conditionNumber"
                   data-test="condition-value"
                   name="dependsOn.value"
                   type="number"
                   step="any"
                   class="w-full"
+                  @update:model-value="setConditionValue"
                 />
                 <USelect
                   v-else
-                  v-model="conditionValue as never"
+                  :model-value="conditionSelection"
                   data-test="condition-value"
                   :items="conditionValueItems"
                   :multiple="state.dependsOn.op === 'in'"
                   class="w-full"
+                  @update:model-value="setConditionValue"
                 />
                 <template #error="{ error }">
                   <span data-test="condition-error">{{ error }}</span>

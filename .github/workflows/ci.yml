@@ -27,6 +27,8 @@ jobs:
       - run: pnpm lint
       - run: pnpm typecheck
       - run: pnpm test
+      # Some errors only show when compiling for production, as in Netlify.
+      - run: pnpm run build
 
   database:
     runs-on: ubuntu-latest
