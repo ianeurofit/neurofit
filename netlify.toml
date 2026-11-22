@@ -3,6 +3,9 @@
   publish = "dist"
 
 [build.environment]
+  # El paso final de Nitro (empaquetar la función de servidor) llega a ~1,7 GB de heap,
+  # cerca del límite por defecto de Node (~2 GB) con el que el build se quedaba sin memoria.
+  NODE_OPTIONS = "--max-old-space-size=4096"
   # Nitro incrusta estas variables en el bundle de la función de servidor
   # (nunca llegan al navegador): NUXT_PUBLIC_SUPABASE_URL/KEY son públicas
   # por diseño (Nuxt las expone como runtimeConfig.public para el cliente

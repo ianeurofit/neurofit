@@ -67,6 +67,18 @@ export default defineNuxtConfig({
     },
   },
 
+  // The icons the app uses go to the client bundle; the server bundle only carries lucide (also
+  // used inside Nuxt UI). Bundling every installed collection — simple-icons alone is 4.6 MB —
+  // made the Netlify build run out of memory.
+  icon: {
+    serverBundle: {
+      collections: ['lucide'],
+    },
+    clientBundle: {
+      scan: true,
+    },
+  },
+
   supabase: {
     redirect: true,
     redirectOptions: {

@@ -24,4 +24,12 @@ describe('architecture: the deploy is gated by the checks', () => {
     expect(buildSteps('[build]\n  command = "a && b"\n  publish = "dist"')).toEqual(['a', 'b'])
     expect(buildSteps('')).toEqual([])
   })
+
+  it('the Netlify build gives Node at least 4 GB of heap (the Nitro step peaks near 2 GB)', () => {
+    const toml = read('netlify.toml')
+    const options = toml.match(/^\s*NODE_OPTIONS\s*=\s*"([^"]*)"/m)?.[1] ?? ''
+    const heap = Number(options.match(/--max-old-space-size=(\d+)/)?.[1] ?? 0)
+
+    expect(heap).toBeGreaterThanOrEqual(4096)
+  })
 })
